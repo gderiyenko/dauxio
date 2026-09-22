@@ -58,21 +58,18 @@ sealed class Tab(open val type: MusicType) {
         // MusicMode for this tab.
 
         /** The maximum index that a well-formed tab sequence should be. */
-        const val MAX_SEQUENCE_IDX = 4
+        const val MAX_SEQUENCE_IDX = 1
 
         /**
-         * The default tab sequence, in integer form. This represents a set of four visible tabs
-         * ordered as "Song", "Album", "Artist", "Genre", and "Playlists
+         * The default tab sequence, in integer form. This represents a set of two visible tabs
+         * ordered as "Song" and "Playlists"
          */
-        const val SEQUENCE_DEFAULT = 0b1000_1001_1010_1011_1100
+        const val SEQUENCE_DEFAULT = 0b1000_1001
 
         /** Maps between the integer code in the tab sequence and it's [MusicType]. */
         private val MODE_TABLE =
             arrayOf(
                 MusicType.SONGS,
-                MusicType.ALBUMS,
-                MusicType.ARTISTS,
-                MusicType.GENRES,
                 MusicType.PLAYLISTS,
             )
 
@@ -139,8 +136,8 @@ sealed class Tab(open val type: MusicType) {
                 )
             }
 
-            // For safety, return null if we have an empty or larger-than-expected tab array.
-            if (distinct.isEmpty() || distinct.size < MAX_SEQUENCE_IDX) {
+            // For safety, return null if we have an unexpected number of tabs.
+            if (distinct.size != MAX_SEQUENCE_IDX + 1) {
                 L.e("Sequence size was ${distinct.size}, which is invalid")
                 return null
             }

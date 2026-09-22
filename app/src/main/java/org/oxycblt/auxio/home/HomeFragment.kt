@@ -210,12 +210,10 @@ class HomeFragment : SelectionFragment<FragmentHomeBinding>() {
                 val directions =
                     when (homeModel.currentTabType.value) {
                         MusicType.SONGS -> HomeFragmentDirections.sortSongs()
-                        MusicType.ALBUMS -> HomeFragmentDirections.sortAlbums()
-                        MusicType.ARTISTS -> HomeFragmentDirections.sortArtists()
-                        MusicType.GENRES -> HomeFragmentDirections.sortGenres()
                         MusicType.PLAYLISTS -> HomeFragmentDirections.sortPlaylists()
+                        else -> null
                     }
-                findNavController().navigateSafe(directions)
+                directions?.let { findNavController().navigateSafe(it) }
                 true
             }
             else -> {
@@ -484,10 +482,8 @@ class HomeFragment : SelectionFragment<FragmentHomeBinding>() {
         override fun createFragment(position: Int): Fragment =
             when (tabs[position]) {
                 MusicType.SONGS -> SongListFragment()
-                MusicType.ALBUMS -> AlbumListFragment()
-                MusicType.ARTISTS -> ArtistListFragment()
-                MusicType.GENRES -> GenreListFragment()
                 MusicType.PLAYLISTS -> PlaylistListFragment()
+                else -> error("Unsupported tab type ${tabs[position]}")
             }
     }
 }

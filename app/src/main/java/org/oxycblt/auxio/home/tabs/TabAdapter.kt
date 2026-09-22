@@ -111,10 +111,8 @@ class TabViewHolder private constructor(private val binding: ItemTabBinding) :
             setText(
                 when (tab.type) {
                     MusicType.SONGS -> R.string.lbl_songs
-                    MusicType.ALBUMS -> R.string.lbl_albums
-                    MusicType.ARTISTS -> R.string.lbl_artists
-                    MusicType.GENRES -> R.string.lbl_genres
                     MusicType.PLAYLISTS -> R.string.lbl_playlists
+                    else -> 0
                 }
             )
 
