@@ -76,6 +76,12 @@ constructor(
     val playlistMessage: Event<PlaylistMessage>
         field = MutableEvent<PlaylistMessage>()
 
+    /**
+     * A [List] of [Song]s awaiting deletion confirmation from a view capable of responding to it.
+     */
+    val songDeleteDecision: Event<List<Song>>
+        field = MutableEvent<List<Song>>()
+
     init {
         musicRepository.addUpdateListener(this)
         musicRepository.addIndexingListener(this)
@@ -286,6 +292,17 @@ constructor(
             L.d("Launching deletion dialog for $playlist")
             playlistDecision.put(PlaylistDecision.Delete(playlist))
         }
+    }
+
+    /**
+     * Request deletion of a list of [Song]s from the filesystem.
+     *
+     * @param songs The songs to delete.
+     */
+    fun deleteSongs(songs: List<Song>) {
+        if (songs.isEmpty()) return
+        L.d("Requesting deletion for ${songs.size} songs")
+        songDeleteDecision.put(songs)
     }
 
     /**

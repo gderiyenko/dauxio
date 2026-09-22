@@ -380,6 +380,7 @@ class SelectionMenuDialogFragment : MenuDialogFragment<Menu.ForSelection>() {
                 requireContext().showToast(R.string.lng_queue_added)
             }
             R.id.action_playlist_add -> musicModel.addToPlaylist(menu.songs)
+            R.id.action_delete -> musicModel.deleteSongs(menu.songs)
             R.id.action_share -> requireContext().share(menu.songs)
             else -> error("Unexpected menu item selected $item")
         }
