@@ -1,5 +1,5 @@
 set -e
-WORKING_DIR=$1
+WORKING_DIR=$(cd "$1" && pwd)
 echo "Working directory is at $WORKING_DIR"
 cd "$WORKING_DIR"
 
@@ -14,6 +14,16 @@ echo "Taglib package is at $TAGLIB_PKG_DIR"
 echo "NDK toolchain is at $NDK_TOOLCHAIN"
 echo "NDK path is at $NDK_PATH"
 
+# Ensure cmake is available in PATH
+if ! command -v cmake &> /dev/null; then
+  SDK_CMAKE=$(dirname "$NDK_PATH")/../cmake/3.22.1/bin
+  if [ -d "$SDK_CMAKE" ]; then
+    export PATH="$SDK_CMAKE:$PATH"
+  fi
+fi
+
+NPROC=$(nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 4)
+
 X86_ARCH=x86
 X86_64_ARCH=x86_64
 ARMV7_ARCH=armeabi-v7a
@@ -24,17 +34,18 @@ build_for_arch() {
   local DST_DIR=$TAGLIB_DST_DIR/$ARCH
   local PKG_DIR=$TAGLIB_PKG_DIR/$ARCH
 
+  rm -rf $DST_DIR
+  rm -rf $PKG_DIR
+
   cd $TAGLIB_SRC_DIR
   cmake -B $DST_DIR -DANDROID_NDK_PATH=${NDK_PATH} -DCMAKE_TOOLCHAIN_FILE=${NDK_TOOLCHAIN}  \
     -DANDROID_ABI=$ARCH -DBUILD_SHARED_LIBS=OFF -DVISIBILITY_HIDDEN=ON -DBUILD_TESTING=OFF \
     -DBUILD_EXAMPLES=OFF -DBUILD_BINDINGS=OFF -DWITH_ZLIB=OFF -DCMAKE_BUILD_TYPE=Release \
     -DWITH_APE=OFF -DWITH_ASF=OFF -DWITH_ASF=OFF -DWITH_MOD=OFF -DWITH_SHORTEN=OFF \
-    -DWITH_TRUEAUDIO=OFF -DCMAKE_CXX_FLAGS="-fPIC"
-  # Try to parallelize the build
-  cmake --build $DST_DIR --config Release -j$(nproc)
+    -DWITH_TRUEAUDIO=OFF -DCMAKE_CXX_FLAGS="-fPIC" -DCMAKE_INSTALL_PREFIX=$PKG_DIR
+  # Try to parallelize the build and install
+  cmake --build $DST_DIR --config Release --target install -j$NPROC
   cd $WORKING_DIR
-
-  cmake --install $DST_DIR --config Release --prefix $PKG_DIR --strip
 }
 
 build_for_arch $X86_ARCH

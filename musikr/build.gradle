@@ -84,8 +84,8 @@ dependencies {
 
 tasks.register("assembleTaglib", Exec, {
     def jniDir = "$projectDir/src/main/cpp"
-    def libs = new File("$jniDir/taglib/pkg")
-    if (libs.exists()) {
+    def arm64Pkg = new File("$jniDir/taglib/pkg/arm64-v8a")
+    if (arm64Pkg.exists()) {
         commandLine "true"
         return
     }
@@ -96,6 +96,9 @@ tasks.register("assembleTaglib", Exec, {
 afterEvaluate {
     preDebugBuild.dependsOn assembleTaglib
     preReleaseBuild.dependsOn assembleTaglib
+    tasks.matching { it.name.startsWith("configureCMake") }.configureEach {
+        dependsOn(assembleTaglib)
+    }
 }
 
 clean {

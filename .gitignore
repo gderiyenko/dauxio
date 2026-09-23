@@ -16,3 +16,6 @@ captures/
 .kotlin
 .aider*
 .env
+musikr/src/main/cpp/taglib/pkg/
+musikr/src/main/cpp/taglib/taglib/build/
+media/libraries/decoder_ffmpeg/src/main/jni/ffmpeg/build/
