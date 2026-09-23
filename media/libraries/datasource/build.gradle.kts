@@ -18,11 +18,6 @@ plugins {
 
 android {
   namespace = "androidx.media3.datasource"
-
-  sourceSets {
-    getByName("androidTest") { assets.directories.add("../test_data/src/test/assets") }
-    getByName("test") { assets.directories.add("../test_data/src/test/assets") }
-  }
 }
 
 dependencies {

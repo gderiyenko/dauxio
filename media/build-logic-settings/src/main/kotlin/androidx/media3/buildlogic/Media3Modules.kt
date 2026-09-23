@@ -60,13 +60,6 @@ object Media3Modules {
           "media3-decoder-ffmpeg",
           "Media3 FFmpeg decoder module",
         ),
-      "lib-decoder-midi" to
-        Media3Module(
-          "libraries/decoder_midi",
-          "media3-exoplayer-midi",
-          "Media3 MIDI decoder module",
-          includeInCompositeBuild = false,
-        ),
       "lib-exoplayer" to
         Media3Module(
           "libraries/exoplayer",

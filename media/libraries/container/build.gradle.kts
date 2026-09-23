@@ -19,11 +19,6 @@ plugins {
 
 android {
   namespace = "androidx.media3.container"
-
-  sourceSets {
-    getByName("androidTest").assets.directories.add("../test_data/src/test/assets/")
-    getByName("test").assets.directories.add("../test_data/src/test/assets/")
-  }
 }
 
 dependencies {
