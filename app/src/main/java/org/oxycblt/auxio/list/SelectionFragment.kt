@@ -61,9 +61,8 @@ abstract class SelectionFragment<VB : ViewBinding> :
     override fun onBindingCreated(binding: VB, savedInstanceState: Bundle?) {
         super.onBindingCreated(binding, savedInstanceState)
         deleteResultLauncher =
-            registerForActivityResult(
-                ActivityResultContracts.StartIntentSenderForResult()
-            ) { result ->
+            registerForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { result
+                ->
                 if (result.resultCode == Activity.RESULT_OK) {
                     musicModel.refresh()
                     requireContext().showToast(R.string.lng_songs_deleted)

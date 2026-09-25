@@ -42,9 +42,6 @@ import org.oxycblt.auxio.R
 import org.oxycblt.auxio.databinding.FragmentHomeBinding
 import org.oxycblt.auxio.detail.DetailViewModel
 import org.oxycblt.auxio.detail.Show
-import org.oxycblt.auxio.home.list.AlbumListFragment
-import org.oxycblt.auxio.home.list.ArtistListFragment
-import org.oxycblt.auxio.home.list.GenreListFragment
 import org.oxycblt.auxio.home.list.PlaylistListFragment
 import org.oxycblt.auxio.home.list.SongListFragment
 import org.oxycblt.auxio.home.tabs.NamedTabStrategy
