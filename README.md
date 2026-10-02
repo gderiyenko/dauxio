@@ -1,5 +1,4 @@
 <p align="center"><img src="docs/images/dauxio.png" width="300"></p>
-<h1 align="center"><b>Dauxio</b></h1>
 <h4 align="center">A simple, rational music player for Android.</h4>
 <p align="center">
     <a href="https://www.gnu.org/licenses/gpl-3.0">

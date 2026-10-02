@@ -19,9 +19,11 @@
 package org.oxycblt.auxio.playback
 
 import android.annotation.SuppressLint
+import android.app.SearchManager
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.media.audiofx.AudioEffect
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -170,6 +172,30 @@ class PlaybackPanelFragment :
         binding.playbackMore?.setOnClickListener {
             playbackModel.song.value?.let {
                 listModel.openMenu(R.menu.playback_song, it, PlaySong.ByItself)
+            }
+        }
+        binding.playbackFindLyrics?.setOnClickListener {
+            playbackModel.song.value?.let { song ->
+                val context = requireContext()
+                val artist = song.artists.resolveNames(context)
+                val songName = song.name.resolve(context)
+                val query = "$artist $songName lyrics".trim()
+                val webIntent = Intent(Intent.ACTION_WEB_SEARCH).apply {
+                    putExtra(SearchManager.QUERY, query)
+                }
+                try {
+                    startActivity(webIntent)
+                } catch (e: ActivityNotFoundException) {
+                    val fallbackIntent = Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("https://www.google.com/search?q=" + Uri.encode(query))
+                    )
+                    try {
+                        startActivity(fallbackIntent)
+                    } catch (e2: ActivityNotFoundException) {
+                        context.showToast(R.string.err_no_app)
+                    }
+                }
             }
         }
 
