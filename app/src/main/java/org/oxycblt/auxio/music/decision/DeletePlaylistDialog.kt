@@ -39,7 +39,6 @@ import timber.log.Timber as L
 /**
  * A [ViewBindingMaterialDialogFragment] that asks the user to confirm the deletion of a [Playlist].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class DeletePlaylistDialog : ViewBindingMaterialDialogFragment<DialogDeletePlaylistBinding>() {

@@ -33,7 +33,6 @@ import timber.log.Timber as L
 /**
  * Display preferences.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class UIPreferenceFragment : BasePreferenceFragment(R.xml.preferences_ui) {

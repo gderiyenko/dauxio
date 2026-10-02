@@ -44,7 +44,6 @@ import timber.log.Timber as L
  * such as an animation when lifting items. Note that this requires a [ViewHolder] implementation in
  * order to function.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 abstract class MaterialDragCallback : ItemTouchHelper.Callback() {
     data class AnimBundle(

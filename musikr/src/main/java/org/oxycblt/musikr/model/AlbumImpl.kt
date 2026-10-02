@@ -35,7 +35,6 @@ internal interface AlbumCore {
 /**
  * Library-backed implementation of [Album].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class AlbumImpl internal constructor(private val core: AlbumCore) : Album {
     private val preAlbum = core.preAlbum

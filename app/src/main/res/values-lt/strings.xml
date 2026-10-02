@@ -116,7 +116,6 @@
     <string name="lbl_live_group">Gyvai</string>
     <string name="set_headset_autoplay_desc">Visada pradėti leisti, kai ausinės prijungtos (gali neveikti visuose įrenginiuose).</string>
     <string name="cdc_ogg">Ogg garsas</string>
-    <string name="lbl_author_name">Aleksandras Keiphartas (angl. Alexander Capehart)</string>
     <string name="set_replay_gain_mode_track">Pageidauti takelį</string>
     <string name="err_bad_location">Šis aplankas nepalaikomas.</string>
     <string name="desc_play_pause">Leisti arba pristabdyti</string>
@@ -282,10 +281,6 @@
     <string name="err_export_failed">Nepavyksta eksportuoti grojaraščio į šį failą.</string>
     <string name="lbl_replaygain_track">„ReplayGain“ takelio priderinimas</string>
     <string name="lbl_replaygain_album">„ReplayGain“ albumo priderinimas</string>
-    <string name="lbl_author">Autorius</string>
-    <string name="lbl_donate">Aukoti</string>
-    <string name="lbl_supporters">Palaikytojai</string>
-    <string name="lng_supporters_promo">Paaukokite projektui, kad jūsų vardas būtų pridėtas čia!</string>
     <string name="err_import_failed">Nepavyksta importuoti grojaraščio iš šio failo.</string>
     <string name="lbl_empty_playlist">Tuščias grojaraštis</string>
     <string name="lbl_import_playlist">Importuoti grojaraštį</string>
@@ -312,7 +307,6 @@
     <string name="lng_empty_artists">Čia bus rodomi jūsų atlikėjai.</string>
     <string name="lng_empty_playlists">Čia bus rodomi jūsų grojaraščiai.</string>
     <string name="lng_empty_genres">Čia bus rodomi jūsų žanrai.</string>
-    <string name="lbl_email">Siųsti el. laišką</string>
     <string name="cdc_alac">„Apple“ nenuostolingas garso kodekas (ALAC)</string>
     <string name="cdc_unknown">Nežinomas</string>
     <string name="set_cover_mode_save_space">Išsaugoti vietos</string>

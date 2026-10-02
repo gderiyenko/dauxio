@@ -44,7 +44,6 @@ import timber.log.Timber as L
 /**
  * An [ViewModel] that keeps performs search operations and tracks their results.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @HiltViewModel
 class SearchViewModel

@@ -25,7 +25,6 @@ import androidx.recyclerview.widget.RecyclerView
 /**
  * An [ItemTouchHelper.Callback] that implements dragging in the [TabAdapter].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class TabDragCallback(private val adapter: TabAdapter) : ItemTouchHelper.Callback() {
     override fun getMovementFlags(

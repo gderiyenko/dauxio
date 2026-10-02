@@ -28,7 +28,6 @@ import timber.log.Timber as L
 /**
  * Personalization settings interface.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class PersonalizePreferenceFragment : BasePreferenceFragment(R.xml.preferences_personalize) {
     override fun onOpenDialogPreference(preference: WrappedDialogPreference) {

@@ -42,7 +42,6 @@ import timber.log.Timber as L
 /**
  * A dialog that allows the user to pick a specific playlist to add song(s) to.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class AddToPlaylistDialog :

@@ -45,7 +45,6 @@ import timber.log.Timber as L
 /**
  * A [ViewModel] providing data specific to the music loading process.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @HiltViewModel
 class MusicViewModel
@@ -390,7 +389,6 @@ constructor(
 /**
  * Navigation command for when a [Playlist] must have some operation performed on it by the user.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 sealed interface PlaylistDecision {
     /**

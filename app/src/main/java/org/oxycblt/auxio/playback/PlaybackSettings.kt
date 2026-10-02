@@ -32,7 +32,6 @@ import timber.log.Timber as L
 /**
  * User configuration specific to the playback system.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 interface PlaybackSettings : Settings<PlaybackSettings.Listener> {
     /** The action to display on the playback bar. */

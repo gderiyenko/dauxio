@@ -35,7 +35,6 @@ import timber.log.Timber
 /**
  * A simple, rational music player for android.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @HiltAndroidApp
 class Auxio : Application() {

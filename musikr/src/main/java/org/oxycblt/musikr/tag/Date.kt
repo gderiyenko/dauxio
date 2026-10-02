@@ -29,7 +29,6 @@ import org.oxycblt.musikr.util.positiveOrNull
  * any other time management or validation. In general, this should only be used for display. Use
  * [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class Date private constructor(private val tokens: List<Int>) : Comparable<Date> {
     val year = tokens[0]
@@ -83,7 +82,6 @@ class Date private constructor(private val tokens: List<Int>) : Comparable<Date>
      * several sub-items and thus can have a "range" of release dates. Use [from] to create an
      * instance.
      *
-     * @author Alexander Capehart
      */
     class Range(
         /** The earliest [Date] in the range. */

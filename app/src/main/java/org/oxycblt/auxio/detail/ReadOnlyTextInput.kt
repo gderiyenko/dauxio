@@ -30,7 +30,6 @@ import com.google.android.material.textfield.TextInputEditText
  *
  * Adapted from Material Files: https://github.com/zhanghai/MaterialFiles
  *
- * @author Hai Zhang, Alexander Capehart (OxygenCobalt)
  */
 class ReadOnlyTextInput
 @JvmOverloads

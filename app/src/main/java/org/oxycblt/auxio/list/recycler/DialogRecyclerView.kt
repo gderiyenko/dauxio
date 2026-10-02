@@ -32,7 +32,6 @@ import org.oxycblt.auxio.util.getDimenPixels
 /**
  * A [RecyclerView] intended for use in dialogs, with NestedScrollView-style scroll indicators.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class DialogRecyclerView
 @JvmOverloads

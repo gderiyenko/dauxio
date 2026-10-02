@@ -32,7 +32,6 @@ import timber.log.Timber as L
 /**
  * User configuration for the general app UI.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 interface UISettings : Settings<UISettings.Listener> {
     /** The current theme. Represented by the AppCompatDelegate constants. */

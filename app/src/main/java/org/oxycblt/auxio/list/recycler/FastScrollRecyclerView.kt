@@ -96,7 +96,6 @@ import org.oxycblt.auxio.util.systemBarInsetsCompat
  * - M3 (Expressive) Redesign
  * - Dynamic popups
  *
- * @author Hai Zhang, Alexander Capehart (OxygenCobalt)
  */
 @SuppressLint("PrivateResource")
 class FastScrollRecyclerView

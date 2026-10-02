@@ -29,7 +29,6 @@ import timber.log.Timber as L
 /**
  * User configuration specific to image loading.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 interface ImageSettings : Settings<ImageSettings.Listener> {
     /** The strategy to use when loading album covers. */

@@ -42,7 +42,6 @@ import timber.log.Timber as L
 /**
  * A picker [ViewBindingMaterialDialogFragment] intended for when [Artist] playback is ambiguous.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class PlayFromArtistDialog :

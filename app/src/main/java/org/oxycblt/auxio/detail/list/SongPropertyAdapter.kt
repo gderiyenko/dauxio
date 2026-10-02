@@ -40,7 +40,6 @@ import org.oxycblt.musikr.tag.Date
 /**
  * An adapter for [SongProperty] instances.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class SongPropertyAdapter :
     FlexibleListAdapter<SongProperty, SongPropertyViewHolder>(
@@ -59,7 +58,6 @@ class SongPropertyAdapter :
  *
  * @param name The contextual title to use for the property.
  * @param value The value of the property.
- * @author Alexander Capehart (OxygenCobalt)
  */
 data class SongProperty(@StringRes val name: Int, val value: Value) {
     sealed interface Value {
@@ -90,7 +88,6 @@ data class SongProperty(@StringRes val name: Int, val value: Value) {
 /**
  * A [RecyclerView.ViewHolder] that displays a [SongProperty]. Use [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class SongPropertyViewHolder private constructor(private val binding: ItemSongPropertyBinding) :
     RecyclerView.ViewHolder(binding.root) {

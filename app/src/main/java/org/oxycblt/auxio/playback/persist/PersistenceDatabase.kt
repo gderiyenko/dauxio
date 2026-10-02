@@ -34,7 +34,6 @@ import org.oxycblt.musikr.Music
 /**
  * Provides raw access to the database storing the persisted playback state.
  *
- * @author Alexander Capehart
  */
 @Database(
     entities = [PlaybackState::class, QueueHeapItem::class, QueueShuffledMappingItem::class],
@@ -71,7 +70,6 @@ abstract class PersistenceDatabase : RoomDatabase() {
 /**
  * Provides control of the persisted playback state table.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @Dao
 interface PlaybackStateDao {
@@ -96,7 +94,6 @@ interface PlaybackStateDao {
 /**
  * Provides control of the persisted queue state tables.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @Dao
 interface QueueDao {

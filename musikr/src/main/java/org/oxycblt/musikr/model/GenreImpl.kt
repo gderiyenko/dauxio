@@ -35,7 +35,6 @@ internal interface GenreCore {
 /**
  * Library-backed implementation of [Genre].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 internal class GenreImpl(private val core: GenreCore) : Genre {
     override val uid = Music.UID.auxio(Music.UID.Item.GENRE) { update(core.preGenre.rawName) }

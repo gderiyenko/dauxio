@@ -27,7 +27,6 @@ import androidx.viewpager2.widget.ViewPager2
  *
  * @param viewPager [ViewPager2] that this will be attached to (must do this separately)
  * @param userCallback The callback to run on a user-driven swipe
- * @author Alexander Capehart (OxygenCobalt), Idea from GPT-5.5 (Rewritten)
  */
 class UserAwarePagerCallback(
     private val viewPager: ViewPager2,

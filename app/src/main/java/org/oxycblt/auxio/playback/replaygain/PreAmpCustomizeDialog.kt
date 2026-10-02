@@ -34,7 +34,6 @@ import timber.log.Timber as L
  * aa [ViewBindingMaterialDialogFragment] that allows user configuration of the current
  * [ReplayGainPreAmp].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class PreAmpCustomizeDialog : ViewBindingMaterialDialogFragment<DialogPreAmpBinding>() {

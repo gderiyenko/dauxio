@@ -42,7 +42,6 @@ import timber.log.Timber as L
  *
  * Derived from Material Files: https://github.com/zhanghai/MaterialFiles
  *
- * @author Hai Zhang, Alexander Capehart (OxygenCobalt)
  */
 open class CoordinatorAppBarLayout
 @JvmOverloads

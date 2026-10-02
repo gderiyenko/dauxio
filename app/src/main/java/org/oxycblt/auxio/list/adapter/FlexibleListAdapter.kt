@@ -31,7 +31,6 @@ import timber.log.Timber as L
  * A variant of ListDiffer with more flexible updates.
  *
  * @param diffCallback A [DiffUtil.ItemCallback] to compare list updates with.
- * @author Alexander Capehart (OxygenCobalt)
  */
 abstract class FlexibleListAdapter<T, VH : RecyclerView.ViewHolder>(
     diffCallback: DiffUtil.ItemCallback<T>
@@ -68,7 +67,6 @@ abstract class FlexibleListAdapter<T, VH : RecyclerView.ViewHolder>(
  * Arbitrary instructions that can be given to a [FlexibleListAdapter] to direct how it updates
  * data.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 sealed interface UpdateInstructions {
     /** Use an asynchronous diff. Useful for unpredictable updates, but looks chaotic and janky. */
@@ -109,7 +107,6 @@ sealed interface UpdateInstructions {
 /**
  * Vendor of AsyncListDiffer with more flexible update functionality.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 private class FlexibleListDiffer<T>(
     adapter: RecyclerView.Adapter<*>,

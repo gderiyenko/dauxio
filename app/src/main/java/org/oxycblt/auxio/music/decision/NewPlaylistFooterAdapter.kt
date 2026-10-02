@@ -27,7 +27,6 @@ import org.oxycblt.auxio.util.inflater
  * A purely-visual [RecyclerView.Adapter] that acts as a footer providing a "New Playlist" choice in
  * [AddToPlaylistDialog].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class NewPlaylistFooterAdapter(private val listener: Listener) :
     RecyclerView.Adapter<NewPlaylistFooterViewHolder>() {
@@ -53,7 +52,6 @@ class NewPlaylistFooterAdapter(private val listener: Listener) :
  * A [RecyclerView.ViewHolder] that displays a "New Playlist" choice in [NewPlaylistFooterAdapter].
  * Use [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class NewPlaylistFooterViewHolder
 private constructor(private val binding: ItemNewPlaylistChoiceBinding) :

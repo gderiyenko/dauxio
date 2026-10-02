@@ -27,7 +27,6 @@ import timber.log.Timber as L
  * A [RecyclerView.Adapter] that supports indicating the playback status of a particular item.
  *
  * @param diffCallback A [DiffUtil.ItemCallback] to compare list updates with.
- * @author Alexander Capehart (OxygenCobalt)
  */
 abstract class PlayingIndicatorAdapter<T, VH : RecyclerView.ViewHolder>(
     diffCallback: DiffUtil.ItemCallback<T>

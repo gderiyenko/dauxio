@@ -184,13 +184,8 @@
     <!-- As in to report an error -->
     <string name="lbl_report">Report</string>
 
-    <string name="lbl_author">Author</string>
-    <string name="lbl_author_name">Alexander Capehart</string>
     <string name="lbl_feedback">Feedback</string>
     <string name="lbl_github">Make an issue on GitHub</string>
-    <string name="lbl_email">Send an email</string>
-    <string name="lbl_donate">Donate</string>
-    <string name="lbl_supporters">Supporters</string>
 
     <!-- Long Namespace | Longer Descriptions -->
     <eat-comment />
@@ -207,7 +202,6 @@
     <string name="lng_playlist_deleted">Playlist deleted</string>
     <string name="lng_songs_deleted">Deleted selected songs</string>
     <string name="lng_playlist_added">Added to playlist</string>
-    <string name="lng_supporters_promo">Donate to the project to get your name added here!</string>
     <!-- As in music library -->
     <string name="lng_search_library">Search your library…</string>
     <string name="lng_tasker_start">

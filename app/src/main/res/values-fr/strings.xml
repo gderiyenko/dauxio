@@ -24,7 +24,6 @@
     <string name="lbl_version">Version</string>
     <string name="lbl_code">Code source</string>
     <string name="lbl_licenses">Licences</string>
-    <string name="lbl_author_name">Développé par Alexandre Capehart</string>
     <string name="set_root_title">Paramètres</string>
     <string name="set_ui">Apparence</string>
     <string name="set_theme">Thème</string>
@@ -278,15 +277,11 @@
     <string name="lbl_replaygain_track">Réglage du titre ReplayGain</string>
     <string name="lbl_replaygain_album">Réglage de l\'album ReplayGain</string>
     <string name="err_export_failed">Impossible d\'exporter la playlist dans ce fichier</string>
-    <string name="lbl_author">Auteur</string>
     <string name="err_import_failed">Impossible d’importer une playlist depuis ce fichier</string>
     <string name="lbl_empty_playlist">Playlist vide</string>
     <string name="lbl_import_playlist">Importer une playlist</string>
     <string name="lbl_path">Chemin</string>
-    <string name="lbl_donate">Faire un don</string>
     <string name="lng_playlist_imported">Playlist importée</string>
-    <string name="lbl_supporters">Soutiens</string>
-    <string name="lng_supporters_promo">Faites un don au projet pour que votre nom soit ajouté ici !</string>
     <string name="set_remember_pause">Garder la pause</string>
     <string name="set_remember_pause_desc">La lecture/pause reste active lors du passage à la file d\'attente ou de sa modification</string>
     <string name="lbl_export">Exporter</string>
@@ -302,7 +297,6 @@
     <string name="lbl_more">Plus</string>
     <string name="lbl_feedback">Avis</string>
     <string name="lbl_github">Faire un ticket sur GitHub</string>
-    <string name="lbl_email">Envoyer un courriel</string>
     <string name="cdc_unknown">Inconnu</string>
     <string name="cnt_mp4">MPEG-4 contenant %s</string>
     <string name="lng_empty_songs">Vos titres s\'afficheront ici.</string>

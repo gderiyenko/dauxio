@@ -40,7 +40,6 @@ import timber.log.Timber as L
  * 2. Strange corner radius behaviors.
  * 3. Inability to skip half-expanded state when full-screen.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 abstract class BaseBottomSheetBehavior<V : View>(context: Context, attributeSet: AttributeSet?) :
     BackportBottomSheetBehavior<V>(context, attributeSet) {

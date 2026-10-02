@@ -35,7 +35,6 @@ import timber.log.Timber as L
 /**
  * A [ViewModel] that manages the current queue state and allows navigation through the queue.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @HiltViewModel
 class QueueViewModel @Inject constructor(private val playbackManager: PlaybackStateManager) :

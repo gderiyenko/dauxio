@@ -50,7 +50,6 @@ class PlaylistChoiceAdapter(val listener: ClickableListListener<PlaylistChoice>)
  * A [RecyclerView.ViewHolder] that displays an individual playlist choice. Use [from] to create an
  * instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class PlaylistChoiceViewHolder private constructor(private val binding: ItemPickerChoiceBinding) :
     RecyclerView.ViewHolder(binding.root) {

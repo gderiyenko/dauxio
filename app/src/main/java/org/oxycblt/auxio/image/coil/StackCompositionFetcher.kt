@@ -50,7 +50,6 @@ data class StackCoverComposition(
  * A fetcher that stacks covers towards the upper left corner, creating an orderly feeling. Used for
  * playlists.
  *
- * @author OxygenCobalt (Alexander Capehart)
  */
 class StackCompositionFetcher
 private constructor(context: Context, val data: StackCoverComposition, size: Size) :

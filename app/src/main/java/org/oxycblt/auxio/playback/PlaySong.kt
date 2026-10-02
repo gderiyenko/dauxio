@@ -33,7 +33,6 @@ import org.oxycblt.musikr.Playlist
  * enum-like datatype when configuration is needed, and an algebraic datatype when data transfer is
  * needed.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 sealed interface PlaySong {
     /**

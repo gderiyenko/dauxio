@@ -39,7 +39,6 @@ import org.oxycblt.musikr.Music
 /**
  * Allows persistence of all user-created music information.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @Database(
     entities = [PlaylistInfo::class, PlaylistSong::class, PlaylistSongCrossRef::class],
@@ -130,7 +129,6 @@ internal abstract class PlaylistDatabase : RoomDatabase() {
 /**
  * The DAO for persisted playlist information.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @Dao
 internal abstract class PlaylistDao {

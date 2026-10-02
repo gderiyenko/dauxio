@@ -43,7 +43,6 @@ import timber.log.Timber as L
 /**
  * Shared [PreferenceFragmentCompat] used across all preference screens.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 abstract class BasePreferenceFragment(@XmlRes private val screen: Int) :
     PreferenceFragmentCompat() {

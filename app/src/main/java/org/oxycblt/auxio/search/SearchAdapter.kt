@@ -44,7 +44,6 @@ import org.oxycblt.musikr.Song
  * An adapter that displays search results.
  *
  * @param listener An [SelectableListListener] to bind interactions to.
- * @author Alexander Capehart (OxygenCobalt)
  */
 class SearchAdapter(private val listener: SelectableListListener<Music>) :
     SelectionIndicatorAdapter<Item, RecyclerView.ViewHolder>(DIFF_CALLBACK) {

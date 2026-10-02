@@ -43,7 +43,6 @@ import timber.log.Timber as L
 /**
  * A dialog that allows the user to configure how a playlist will be exported to a file.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class ExportPlaylistDialog : ViewBindingMaterialDialogFragment<DialogPlaylistExportBinding>() {

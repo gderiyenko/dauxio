@@ -33,7 +33,6 @@ import timber.log.Timber as L
 /**
  * A [SortDialog] that controls the [Sort] of [DetailViewModel.genreSongSort].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class PlaylistSongSortDialog : SortDialog() {

@@ -42,7 +42,6 @@ import timber.log.Timber as L
 /**
  * The ViewModel for managing the tab data and lists of the home view.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @HiltViewModel
 class HomeViewModel
@@ -268,14 +267,8 @@ constructor(
     fun showSettings() {
         showOuter.put(Outer.Settings)
     }
-
-    fun showAbout() {
-        showOuter.put(Outer.About)
-    }
 }
 
 sealed interface Outer {
     data object Settings : Outer
-
-    data object About : Outer
 }

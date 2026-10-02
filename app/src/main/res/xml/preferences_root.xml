@@ -45,4 +45,29 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory app:title="@string/lbl_about">
+
+        <Preference
+            app:icon="@drawable/ic_about_24"
+            app:key="@string/set_key_version"
+            app:title="@string/lbl_version" />
+
+        <Preference
+            app:icon="@drawable/ic_code_24"
+            app:key="@string/set_key_code"
+            app:summary="https://github.com/gderiyenko/dauxio"
+            app:title="@string/lbl_code" />
+
+        <Preference
+            app:icon="@drawable/ic_feature_request_24"
+            app:key="@string/set_key_feedback_github"
+            app:title="@string/lbl_github" />
+
+        <Preference
+            app:icon="@drawable/ic_license_24"
+            app:key="@string/set_key_licenses"
+            app:title="@string/lbl_licenses" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

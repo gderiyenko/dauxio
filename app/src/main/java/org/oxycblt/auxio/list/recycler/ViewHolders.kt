@@ -47,7 +47,6 @@ import org.oxycblt.musikr.Song
 /**
  * A [RecyclerView.ViewHolder] that displays a [Song]. Use [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class SongViewHolder private constructor(private val binding: ItemSongBinding) :
     SelectionIndicatorAdapter.ViewHolder(binding.root) {
@@ -98,7 +97,6 @@ class SongViewHolder private constructor(private val binding: ItemSongBinding) :
 /**
  * A [RecyclerView.ViewHolder] that displays a [Album]. Use [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class AlbumViewHolder private constructor(private val binding: ItemParentBinding) :
     SelectionIndicatorAdapter.ViewHolder(binding.root) {
@@ -151,7 +149,6 @@ class AlbumViewHolder private constructor(private val binding: ItemParentBinding
 /**
  * A [RecyclerView.ViewHolder] that displays a [Artist]. Use [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class ArtistViewHolder private constructor(private val binding: ItemParentBinding) :
     SelectionIndicatorAdapter.ViewHolder(binding.root) {
@@ -217,7 +214,6 @@ class ArtistViewHolder private constructor(private val binding: ItemParentBindin
 /**
  * A [RecyclerView.ViewHolder] that displays a [Genre]. Use [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class GenreViewHolder private constructor(private val binding: ItemParentBinding) :
     SelectionIndicatorAdapter.ViewHolder(binding.root) {
@@ -275,7 +271,6 @@ class GenreViewHolder private constructor(private val binding: ItemParentBinding
 /**
  * A [RecyclerView.ViewHolder] that displays a [Playlist]. Use [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class PlaylistViewHolder private constructor(private val binding: ItemParentBinding) :
     SelectionIndicatorAdapter.ViewHolder(binding.root) {
@@ -331,7 +326,6 @@ class PlaylistViewHolder private constructor(private val binding: ItemParentBind
 /**
  * A [RecyclerView.ViewHolder] that displays a [BasicHeader]. Use [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class BasicHeaderViewHolder private constructor(private val binding: ItemHeaderBinding) :
     RecyclerView.ViewHolder(binding.root) {
@@ -369,7 +363,6 @@ class BasicHeaderViewHolder private constructor(private val binding: ItemHeaderB
 /**
  * A [RecyclerView.ViewHolder] that displays a [PlainDivider]. Use [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class DividerViewHolder private constructor(divider: MaterialDivider) :
     RecyclerView.ViewHolder(divider) {

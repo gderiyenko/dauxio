@@ -183,7 +183,6 @@
     <string name="lbl_track">Spor</string>
     <string name="lbl_date_added">Dato tillagt</string>
     <string name="lbl_sort">Sortér</string>
-    <string name="lbl_author_name">Utviklet av Alexander Capehart</string>
     <string name="lng_search_library">Søk i biblioteket ditt …</string>
     <string name="set_root_title">Innstillinger</string>
     <string name="lng_playlist_created">Spilleliste opprettet</string>
@@ -280,10 +279,6 @@
     <string name="lbl_error_info">Feilopplysninger</string>
     <string name="lbl_copied">Kopiert</string>
     <string name="lbl_replaygain_album">ReplayGain-albumjustering</string>
-    <string name="lbl_author">Forfatter</string>
-    <string name="lbl_donate">Donér</string>
-    <string name="lbl_supporters">Støttespillere</string>
-    <string name="lng_supporters_promo">Donér til prosjektet slik at navnet ditt kan legges til her!</string>
     <string name="lbl_report">Rapportér</string>
     <string name="set_remember_pause">Husk pause</string>
     <string name="desc_selection_image">Utvalgsbild</string>
@@ -299,5 +294,4 @@
     <string name="lbl_start_playback">Begynn avspilling</string>
     <string name="lbl_github">Opprett en sak på GitHub</string>
     <string name="lbl_feedback">Gi tilbakemelding</string>
-    <string name="lbl_email">Send en e-post</string>
 </resources>

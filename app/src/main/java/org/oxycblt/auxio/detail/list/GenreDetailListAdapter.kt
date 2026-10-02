@@ -33,7 +33,6 @@ import org.oxycblt.musikr.Song
  * A [DetailListAdapter] implementing the header and sub-items for the [Genre] detail view.
  *
  * @param listener A [DetailListAdapter.Listener] to bind interactions to.
- * @author Alexander Capehart (OxygenCobalt)
  */
 class GenreDetailListAdapter(private val listener: Listener<Music>) :
     DetailListAdapter(listener, DIFF_CALLBACK) {

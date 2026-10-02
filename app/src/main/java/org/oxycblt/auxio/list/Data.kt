@@ -29,7 +29,6 @@ interface Header
 /**
  * A "header" used for delimiting groups of data.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 interface PlainHeader : Header {
     /** The string resource used for the header's title. */
@@ -40,7 +39,6 @@ interface PlainHeader : Header {
  * A basic header with no additional actions.
  *
  * @param titleRes The string resource used for the header's title.
- * @author Alexander Capehart (OxygenCobalt)
  */
 data class BasicHeader(@StringRes override val titleRes: Int) : PlainHeader
 

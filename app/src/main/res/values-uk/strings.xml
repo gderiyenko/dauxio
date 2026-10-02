@@ -119,7 +119,6 @@
     <string name="lbl_ep_live">Концертний мініальбом</string>
     <string name="lbl_library_counts">Статистика бібліотеки</string>
     <string name="lng_indexing">Завантаження музичної бібліотеки…</string>
-    <string name="lbl_author_name">Розроблено Олександром Кейпхартом</string>
     <string name="fmt_lib_artist_count">Завантажено виконавців: %d</string>
     <string name="set_theme_auto">Автоматично</string>
     <string name="set_accent">Кольоровий акцент</string>
@@ -291,12 +290,8 @@
     <string name="lbl_export_playlist">Експортувати список відтворення</string>
     <string name="err_export_failed">Неможливо експортувати список відтворення в цей файл</string>
     <string name="lbl_import_playlist">Імпортувати список відтворення</string>
-    <string name="lbl_donate">Пожертвувати</string>
-    <string name="lbl_supporters">Прибічники</string>
     <string name="lbl_replaygain_track">Налаштування треку ReplayGain</string>
     <string name="lbl_replaygain_album">Налаштування альбому ReplayGain</string>
-    <string name="lng_supporters_promo">Пожертвуйте на проєкт, щоб ваше ім\'я було додано сюди!</string>
-    <string name="lbl_author">Автор</string>
     <string name="set_remember_pause_desc">Залишати відтворення/паузу під час пропуску або редагування черги</string>
     <string name="set_remember_pause">Запам\'ятовувати паузу</string>
     <string name="set_replay_gain_mode_off">Вимкнено</string>
@@ -305,7 +300,6 @@
     <string name="lbl_more">Більше</string>
     <string name="lbl_feedback">Зворотній зв\'язок</string>
     <string name="lbl_github">Зробіть випуск на GitHub</string>
-    <string name="lbl_email">Надіслати електронний лист</string>
     <string name="def_album">Невідомий альбом</string>
     <string name="cnt_mp4">MPEG-4, що містить %s</string>
     <string name="cdc_unknown">Невідомий</string>

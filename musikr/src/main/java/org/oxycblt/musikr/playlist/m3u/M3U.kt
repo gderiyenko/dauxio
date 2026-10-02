@@ -39,7 +39,6 @@ import org.oxycblt.musikr.util.unlikelyToBeNull
 /**
  * Minimal M3U file format implementation.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 abstract class M3U {
     /**

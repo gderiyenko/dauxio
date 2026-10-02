@@ -33,7 +33,6 @@ import org.oxycblt.musikr.Song
 /**
  * A playback command that can be passed to [PlaybackStateManager] to start new playback.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 interface PlaybackCommand {
     /** A particular [Song] to play, or null to play the first [Song] in the new queue. * */

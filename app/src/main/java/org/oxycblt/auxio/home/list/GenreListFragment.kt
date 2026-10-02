@@ -49,7 +49,6 @@ import org.oxycblt.musikr.Song
 /**
  * A [ListFragment] that shows a list of [Genre]s.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class GenreListFragment :

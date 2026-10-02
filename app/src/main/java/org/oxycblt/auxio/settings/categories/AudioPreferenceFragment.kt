@@ -28,7 +28,6 @@ import timber.log.Timber as L
 /**
  * Audio settings interface.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class AudioPreferenceFragment : BasePreferenceFragment(R.xml.preferences_audio) {
 

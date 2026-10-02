@@ -59,7 +59,6 @@ private val punctRegex by lazy { Regex("[\\p{Punct}+]") }
 /**
  * Plain [Name.Known] implementation that is internationalization-safe.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 private data class SimpleKnownName(override val raw: String, override val sort: String?) :
     Name.Known() {
@@ -77,7 +76,6 @@ private data class SimpleKnownName(override val raw: String, override val sort: 
 /**
  * [Name.Known] implementation that adds advanced sorting behavior at the cost of localization.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 private data class IntelligentKnownName(override val raw: String, override val sort: String?) :
     Name.Known() {

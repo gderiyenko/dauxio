@@ -30,7 +30,6 @@ import timber.log.Timber as L
 /**
  * A fragment enabling ViewBinding inflation and usage across the fragment lifecycle.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 abstract class ViewBindingFragment<VB : ViewBinding> : Fragment() {
     private var _binding: VB? = null

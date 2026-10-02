@@ -48,7 +48,6 @@ import timber.log.Timber as L
 /**
  * A [ListFragment] that shows information for a particular [Genre].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class GenreDetailFragment : DetailFragment<Genre, Music>() {

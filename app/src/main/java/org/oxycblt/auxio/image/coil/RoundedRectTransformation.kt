@@ -41,7 +41,6 @@ import kotlin.math.roundToInt
  * A vendoring of coil's RoundedCornersTransformation that can handle non-1:1 aspect ratio images
  * without cropping them.
  *
- * @author Coil Team, Alexander Capehart (OxygenCobalt)
  */
 class RoundedRectTransformation(
     @Px private val topLeft: Float = 0f,

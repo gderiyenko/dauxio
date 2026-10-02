@@ -66,7 +66,6 @@ import org.oxycblt.auxio.util.getDimenPixels
  * - Removed dynamic theme changes based on the MaterialFile's Material 3 setting
  * - Adapted code to the extensions in this project
  *
- * @author Hai Zhang, Alexander Capehart (OxygenCobalt)
  */
 @SuppressLint("PrivateResource")
 class ThemedSpeedDialView : SpeedDialView {

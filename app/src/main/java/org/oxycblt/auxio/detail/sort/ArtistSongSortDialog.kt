@@ -33,7 +33,6 @@ import timber.log.Timber as L
 /**
  * A [SortDialog] that controls the [Sort] of [DetailViewModel.artistSongSort].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class ArtistSongSortDialog : SortDialog() {

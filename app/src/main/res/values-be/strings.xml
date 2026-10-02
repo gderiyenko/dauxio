@@ -10,7 +10,6 @@
     <string name="set_personalize">Персаналізаваць</string>
     <string name="lng_observing">Адсочванне змяненняў у вашай музычнай бібліятэцы…</string>
     <string name="lng_queue_added">Дададзены ў чаргу</string>
-    <string name="lbl_author_name">Распрацавана Аляксандрам Кейпхартам</string>
     <string name="set_bar_action">Карыстальніцкае дзеянне панэлі прайгравання</string>
     <string name="set_play_song_from_album">Прайграць з альбома</string>
     <string name="set_separators_comma">Коска (,)</string>
@@ -293,10 +292,6 @@
     <string name="lbl_import_playlist">Імпартаваць плэйліст</string>
     <string name="lbl_replaygain_track">Рэгуляванне ReplayGain песні</string>
     <string name="lbl_replaygain_album">Рэгуляванне ReplayGain альбома</string>
-    <string name="lbl_author">Аўтар</string>
-    <string name="lbl_donate">Ахвярнасць</string>
-    <string name="lbl_supporters">Прыхільнікі</string>
-    <string name="lng_supporters_promo">Ахвяруйце на праект, каб ваша імя было дададзена тут!</string>
     <string name="set_remember_pause">Запамінаць паўзу</string>
     <string name="set_remember_pause_desc">Пакідаць прайграванне/паўзу падчас пропуску або рэдагаванні чаргі</string>
     <string name="set_replay_gain_mode_off">Адкл.</string>
@@ -309,7 +304,6 @@
     <string name="lng_empty_genres">Тут будуць адлюстроўвацца вашыя жанры.</string>
     <string name="cdc_alac">Apple Lossless Audio Codec (ALAC)</string>
     <string name="cdc_unknown">Невядомы</string>
-    <string name="lbl_email">Адправіць электронны ліст</string>
     <string name="lbl_feedback">Водгукі</string>
     <string name="lng_empty_songs">Вашыя песні будуць адлюстроўвацца тут.</string>
     <string name="lng_empty_artists">Тут з\'явяцца вашыя выканаўцы.</string>

@@ -84,7 +84,6 @@
     <string name="lbl_version">Utgåve</string>
     <string name="lbl_library_counts">Samlingsstatistikk</string>
     <string name="lbl_report">Rapporter</string>
-    <string name="lbl_author_name">Utvikla av Alexander Capehart</string>
     <string name="lbl_indexing">Lader inn musikk</string>
     <string name="lbl_retry">Prøv atter</string>
     <string name="lbl_single_live">Live-singel</string>
@@ -110,15 +109,11 @@
     <string name="lbl_filter_all">Alle</string>
     <string name="lbl_sort_mode">Sorter etter</string>
     <string name="lbl_sort_dsc">Fallande</string>
-    <string name="lbl_author">Utviklar</string>
     <string name="lbl_selection">Utval</string>
     <string name="lbl_error_info">Feilopplysingar</string>
     <string name="lng_playlist_added">La til i speleliste</string>
     <string name="desc_album_cover">Albumomslag for %s</string>
     <string name="lbl_github">Oppretta ei sak på GitHub</string>
-    <string name="lbl_email">Send ein e-post</string>
-    <string name="lbl_donate">Doner</string>
-    <string name="lbl_supporters">Støttespelarar</string>
     <string name="lng_widget">Sjå og styra musikkavspeling</string>
     <string name="lng_observing">Held auga med brigdingar i musikksamlinga di…</string>
     <string name="lng_queue_added">La til i køen</string>
@@ -126,7 +121,6 @@
     <string name="lng_playlist_renamed">Namn på speleliste brigdt</string>
     <string name="lng_playlist_exported">Speleliste eksportert</string>
     <string name="lng_playlist_deleted">Spelelista vart teken bort</string>
-    <string name="lng_supporters_promo">Doner til prosjektet, så skal namnet ditt leggjast til her!</string>
     <string name="lng_search_library">Søk i gjenom samlinga di…</string>
     <string name="set_ui">Utsjånad</string>
     <string name="set_theme">Drakt</string>

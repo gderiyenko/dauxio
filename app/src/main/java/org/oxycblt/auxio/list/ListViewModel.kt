@@ -41,7 +41,6 @@ import timber.log.Timber as L
 /**
  * A [ViewModel] that orchestrates menu dialogs and selection state.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @HiltViewModel
 class ListViewModel

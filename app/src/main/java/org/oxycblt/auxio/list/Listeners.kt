@@ -25,7 +25,6 @@ import androidx.recyclerview.widget.RecyclerView
 /**
  * A basic listener for list interactions.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 interface ClickableListListener<in T> {
     /**
@@ -52,7 +51,6 @@ interface ClickableListListener<in T> {
 /**
  * A listener for lists that can be edited.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 interface EditableListListener {
     /**
@@ -82,7 +80,6 @@ interface EditableListListener {
 /**
  * A listener for lists that can be clicked and edited at the same time.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 interface EditClickListListener<in T> : ClickableListListener<T>, EditableListListener {
     /**
@@ -108,7 +105,6 @@ interface EditClickListListener<in T> : ClickableListListener<T>, EditableListLi
 /**
  * An extension of [ClickableListListener] that enables menu and selection functionality.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 interface SelectableListListener<in T> : ClickableListListener<T> {
     /**

@@ -39,7 +39,6 @@ import timber.log.Timber as L
  * A [ViewBindingBottomSheetDialogFragment] that displays basic music information and a series of
  * options.
  *
- * @author Alexander Capehart (OxygenCobalt)
  *
  * TODO: Extend the amount of music info shown in the dialog
  */

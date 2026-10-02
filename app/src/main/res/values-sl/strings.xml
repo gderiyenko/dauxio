@@ -112,7 +112,6 @@
     <string name="set_play_song_from_album">Predvajaj iz albuma</string>
     <string name="set_music">Glasba</string>
     <string name="err_bad_location">Ta mapa ni podprta</string>
-    <string name="lbl_author_name">Razvil Alexander Capehart</string>
     <string name="desc_music_location_delete">Odstrani mapo</string>
     <string name="lbl_copied">Kopirano</string>
     <string name="err_index_failed">Nalaganje glasbe ni uspelo</string>
@@ -280,12 +279,8 @@
     <string name="lbl_demo">Demo</string>
     <string name="lbl_replaygain_track">ReplayGain Prilagoditev Posnetka</string>
     <string name="lbl_replaygain_album">ReplayGain Prilagoditev Albuma</string>
-    <string name="lbl_author">Avtor</string>
-    <string name="lbl_donate">Donacija</string>
-    <string name="lbl_supporters">Podporniki</string>
     <string name="lng_playlist_imported">Seznam predvajanja uspešno uvožen</string>
     <string name="lng_playlist_exported">Seznam predvajanja uspešno izvožen</string>
-    <string name="lng_supporters_promo">Donirajte projektu, da se vaše ime doda tukaj!</string>
     <string name="def_album_count">Ni albumov</string>
     <string name="set_remember_pause">Zapomni si pavzo</string>
     <string name="set_remember_pause_desc">Predvajaj/pavza med preskakovanjem ali urejanjem čakalne vrste</string>

@@ -36,7 +36,6 @@ internal interface ArtistCore {
 /**
  * Library-backed implementation of [Artist].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 internal class ArtistImpl(private val core: ArtistCore) : Artist {
     override val uid = core.preArtist.uid

@@ -81,11 +81,11 @@ body:
       label: Duplicates
       description: By submitting this issue, you aknowledge the following
       options:
-        - label: I have checked the [Troubleshooting](https://github.com/OxygenCobalt/Auxio/wiki/Troubleshooting) page.
+        - label: I have checked the [Troubleshooting](https://github.com/gderiyenko/dauxio/wiki/Troubleshooting) page.
           required: true
         - label: I have checked this issue for duplicates.
           required: true
-        - label: I have checked that this issue occurs on the [lastest version](https://github.com/OxygenCobalt/Auxio/releases).
+        - label: I have checked that this issue occurs on the [lastest version](https://github.com/gderiyenko/dauxio/releases).
           required: true
-        - label: I agree to the [Contribution Guidelines](https://github.com/OxygenCobalt/Auxio/blob/dev/.github/CONTRIBUTING.md).
+        - label: I agree to the [Contribution Guidelines](https://github.com/gderiyenko/dauxio/blob/dev/.github/CONTRIBUTING.md).
           required: true          

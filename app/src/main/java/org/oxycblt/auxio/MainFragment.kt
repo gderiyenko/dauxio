@@ -76,7 +76,6 @@ import timber.log.Timber as L
 /**
  * A wrapper around the home fragment that shows the playback fragment and high-level navigation.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class MainFragment :
@@ -564,7 +563,6 @@ class MainFragment :
         val directions =
             when (outer) {
                 is Outer.Settings -> MainFragmentDirections.preferences()
-                is Outer.About -> MainFragmentDirections.about()
                 null -> return
             }
         findNavController().navigateSafe(directions)

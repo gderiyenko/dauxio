@@ -31,7 +31,6 @@ import org.oxycblt.auxio.util.inflater
  * A [FlexibleListAdapter] that displays a list of [Sort.Mode]s.
  *
  * @param listener A [ClickableListListener] to bind interactions to.
- * @author Alexander Capehart (OxygenCobalt)
  */
 class SortModeAdapter(private val listener: ClickableListListener<Sort.Mode>) :
     FlexibleListAdapter<Sort.Mode, SortModeViewHolder>(SortModeViewHolder.DIFF_CALLBACK) {
@@ -79,7 +78,6 @@ class SortModeAdapter(private val listener: ClickableListListener<Sort.Mode>) :
 /**
  * A [RecyclerView.ViewHolder] that displays a [Sort.Mode].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class SortModeViewHolder private constructor(private val binding: ItemSortModeBinding) :
     RecyclerView.ViewHolder(binding.root) {

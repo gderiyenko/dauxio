@@ -40,7 +40,6 @@ import org.oxycblt.musikr.Song
  * A [DetailListAdapter] implementing the header and sub-items for the [Artist] detail view.
  *
  * @param listener A [DetailListAdapter.Listener] to bind interactions to.
- * @author Alexander Capehart (OxygenCobalt)
  */
 class ArtistDetailListAdapter(private val listener: Listener<Music>) :
     DetailListAdapter(listener, DIFF_CALLBACK) {
@@ -90,7 +89,6 @@ class ArtistDetailListAdapter(private val listener: Listener<Music>) :
  * A [RecyclerView.ViewHolder] that displays an [Album] in the context of an [Artist]. Use [from] to
  * create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 private class ArtistAlbumViewHolder private constructor(private val binding: ItemParentBinding) :
     SelectionIndicatorAdapter.ViewHolder(binding.root) {
@@ -144,7 +142,6 @@ private class ArtistAlbumViewHolder private constructor(private val binding: Ite
  * A [RecyclerView.ViewHolder] that displays a [Song] in the context of an [Artist]. Use [from] to
  * create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 private class ArtistSongViewHolder private constructor(private val binding: ItemSongBinding) :
     SelectionIndicatorAdapter.ViewHolder(binding.root) {

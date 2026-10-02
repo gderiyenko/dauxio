@@ -33,7 +33,6 @@ import org.oxycblt.musikr.Song
  *
  * @param mode A [Mode] dictating how to sort the list.
  * @param direction The [Direction] to sort in.
- * @author Alexander Capehart (OxygenCobalt)
  */
 data class Sort(val mode: Mode, val direction: Direction) {
     /**

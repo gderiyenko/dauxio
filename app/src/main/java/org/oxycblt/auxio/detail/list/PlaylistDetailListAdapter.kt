@@ -54,7 +54,6 @@ import timber.log.Timber as L
  * detail view.
  *
  * @param listener A [DetailListAdapter.Listener] to bind interactions to.
- * @author Alexander Capehart (OxygenCobalt)
  */
 class PlaylistDetailListAdapter(private val listener: Listener) :
     DetailListAdapter(listener, DIFF_CALLBACK) {
@@ -148,14 +147,12 @@ class PlaylistDetailListAdapter(private val listener: Listener) :
  * A [PlainHeader] variant that displays an edit button.
  *
  * @param titleRes The string resource to use as the header title
- * @author Alexander Capehart (OxygenCobalt)
  */
 data class EditHeader(@StringRes override val titleRes: Int) : PlainHeader
 
 /**
  * Displays an [EditHeader] and it's actions. Use [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 private class EditHeaderViewHolder private constructor(private val binding: ItemEditHeaderBinding) :
     RecyclerView.ViewHolder(binding.root), PlaylistDetailListAdapter.ViewHolder {
@@ -222,7 +219,6 @@ private class EditHeaderViewHolder private constructor(private val binding: Item
  * A [PlayingIndicatorAdapter.ViewHolder] that displays a queue [Song] which can be re-ordered and
  * removed. Use [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 private class PlaylistSongViewHolder
 private constructor(private val binding: ItemEditableSongBinding) :

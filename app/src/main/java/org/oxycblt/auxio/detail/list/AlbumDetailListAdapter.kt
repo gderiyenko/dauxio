@@ -52,7 +52,6 @@ import org.oxycblt.musikr.tag.Disc
  * An [DetailListAdapter] implementing the header and sub-items for the [Album] detail view.
  *
  * @param listener A [DetailListAdapter.Listener] to bind interactions to.
- * @author Alexander Capehart (OxygenCobalt)
  */
 class AlbumDetailListAdapter(private val listener: Listener<Song>) :
     DetailListAdapter(listener, DIFF_CALLBACK) {
@@ -106,7 +105,6 @@ class AlbumDetailListAdapter(private val listener: Listener<Song>) :
 /**
  * A wrapper around [Disc] signifying that a header should be shown for a disc group.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 data class DiscHeader(val inner: Disc?) : Header
 
@@ -116,7 +114,6 @@ data class DiscDivider(override val anchor: DiscHeader?) : Divider<DiscHeader>
  * A [RecyclerView.ViewHolder] that displays a [DiscHeader] to delimit different disc groups. Use
  * [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 private class DiscHeaderViewHolder(private val binding: ItemDiscHeaderBinding) :
     RecyclerView.ViewHolder(binding.root) {
@@ -162,7 +159,6 @@ private class DiscHeaderViewHolder(private val binding: ItemDiscHeaderBinding) :
 /**
  * A [RecyclerView.ViewHolder] that displays a [DiscHeader]. Use [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class DiscDividerViewHolder private constructor(divider: MaterialDivider) :
     RecyclerView.ViewHolder(divider) {
@@ -208,7 +204,6 @@ class DiscDividerViewHolder private constructor(divider: MaterialDivider) :
  * A [RecyclerView.ViewHolder] that displays a [Song] in the context of an [Album]. Use [from] to
  * create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 private class AlbumSongViewHolder private constructor(private val binding: ItemAlbumSongBinding) :
     SelectionIndicatorAdapter.ViewHolder(binding.root) {

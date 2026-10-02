@@ -70,7 +70,6 @@ import timber.log.Timber as L
 /**
  * The [ListFragment] providing search functionality for the music library.
  *
- * @author Alexander Capehart (OxygenCobalt)
  *
  * TODO: Better keyboard management
  */

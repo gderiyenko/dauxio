@@ -65,7 +65,6 @@
     <style name="Preference.Auxio" parent="Preference.Material">
         <item name="allowDividerBelow">false</item>
         <item name="iconSpaceReserved">false</item>
-        <item name="android:background">@android:color/black</item>
     </style>
 
     <style name="Preference.Auxio.DialogPreference" parent="Preference.DialogPreference.Material">

@@ -37,7 +37,6 @@ import timber.log.Timber as L
  * A [ViewBindingMaterialDialogFragment] that allows the user to configure the separator characters
  * used to split tags with multiple values.
  *
- * @author Alexander Capehart (OxygenCobalt)
  *
  * TODO: Replace with unsplit names dialog
  */

@@ -36,7 +36,6 @@ import timber.log.Timber as L
 /**
  * A [ViewBindingMaterialDialogFragment] that allows the user to configure the current [Accent].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class AccentCustomizeDialog :

@@ -34,7 +34,6 @@ import timber.log.Timber as L
 /**
  * "Content" settings.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class MusicPreferenceFragment : BasePreferenceFragment(R.xml.preferences_music) {

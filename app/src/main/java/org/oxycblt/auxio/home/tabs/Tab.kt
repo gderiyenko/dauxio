@@ -25,7 +25,6 @@ import timber.log.Timber as L
  * A representation of a library tab suitable for configuration.
  *
  * @param type The type of list in the home view this instance corresponds to.
- * @author Alexander Capehart (OxygenCobalt)
  */
 sealed class Tab(open val type: MusicType) {
     /**

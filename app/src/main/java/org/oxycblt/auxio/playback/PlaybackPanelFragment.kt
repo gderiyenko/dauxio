@@ -67,7 +67,6 @@ import timber.log.Timber as L
  * A [ViewBindingFragment] more information about the currently playing song, alongside all
  * available controls.
  *
- * @author Alexander Capehart (OxygenCobalt)
  *
  * TODO: Improve flickering situation on play button
  */

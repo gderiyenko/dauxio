@@ -29,7 +29,6 @@ import org.oxycblt.musikr.Music
 /**
  * Raw playlist information persisted to [PlaylistDatabase].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 internal data class RawPlaylist(
     @Embedded val playlistInfo: PlaylistInfo,
@@ -44,21 +43,18 @@ internal data class RawPlaylist(
 /**
  * UID and name information corresponding to a [RawPlaylist] entry.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @Entity internal data class PlaylistInfo(@PrimaryKey val playlistUid: Music.UID, val name: String)
 
 /**
  * Song information corresponding to a [RawPlaylist] entry.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @Entity internal data class PlaylistSong(@PrimaryKey val songUid: Music.UID)
 
 /**
  * Links individual songs to a playlist entry.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @Entity
 internal data class PlaylistSongCrossRef(

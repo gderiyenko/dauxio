@@ -33,7 +33,6 @@ import timber.log.Timber as L
  * A dynamic [ForegroundServiceNotification] that shows the current music loading state.
  *
  * @param context [Context] required to create the notification.
- * @author Alexander Capehart (OxygenCobalt)
  */
 class IndexingNotification(private val context: Context) :
     ForegroundServiceNotification(context, indexerChannel) {
@@ -96,7 +95,6 @@ class IndexingNotification(private val context: Context) :
  * A static [ForegroundServiceNotification] that signals to the user that the app is currently
  * monitoring the music library for changes.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class ObservingNotification(context: Context) :
     ForegroundServiceNotification(context, indexerChannel) {

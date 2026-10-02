@@ -101,8 +101,6 @@
     <string name="lbl_copied">Kopyalandı</string>
     <string name="lbl_report">Bildiriş et</string>
     <string name="lbl_error_info">Xəta məlumatı</string>
-    <string name="lbl_author">Yaradıcı</string>
-    <string name="lbl_author_name">Aleksandr Keyphart</string>
     <string name="lbl_version">Versiya</string>
     <string name="lbl_code">Mənbə kodu</string>
     <string name="lbl_wiki">Viki</string>
@@ -114,12 +112,9 @@
     <string name="lbl_path_style_relative">Nisbi</string>
     <string name="lbl_windows_paths">Windows-a uyuşan yolları istifadə et</string>
     <string name="lng_widget">Musiqi səslənməsinə bax və idarə et</string>
-    <string name="lbl_donate">İanə ver</string>
-    <string name="lbl_supporters">Dəstəkçilər</string>
     <string name="lng_indexing">Musiqi kitabxananız yüklənir…</string>
     <string name="lng_observing">Musiqi kitabxananız dəyişikliklər üçün yoxlanılır…</string>
     <string name="lbl_feedback">Rəy bildir</string>
-    <string name="lbl_email">E-poçt göndər</string>
     <string name="lbl_github">GitHub-da problem yarat</string>
     <string name="lng_playlist_exported">Pleylist ixrac edildi</string>
     <string name="lng_playlist_added">Pleylistə əlavə edildi</string>
@@ -128,7 +123,6 @@
     <string name="lng_playlist_deleted">Pleylist silindi</string>
     <string name="lng_playlist_created">Pleylist yaradıldı</string>
     <string name="lng_queue_added">Növbəyə əlavə edildi</string>
-    <string name="lng_supporters_promo">Bura adınızı əlavə etmək üçün layihəyə bağışlayın!</string>
     <string name="lng_search_library">Musiqi kitabxananızı axtarın…</string>
     <string name="lng_empty_songs">Sizin mahnılarınız burada görünəcək.</string>
     <string name="lng_empty_albums">Sizin albomlarınız burada görünəcək.</string>

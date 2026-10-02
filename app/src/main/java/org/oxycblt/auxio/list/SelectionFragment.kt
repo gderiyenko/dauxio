@@ -46,7 +46,6 @@ import org.oxycblt.musikr.Song
 /**
  * A subset of ListFragment that implements aspects of the selection UI.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 abstract class SelectionFragment<VB : ViewBinding> :
     ViewBindingFragment<VB>(), Toolbar.OnMenuItemClickListener {

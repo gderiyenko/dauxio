@@ -25,7 +25,6 @@ import org.oxycblt.auxio.list.recycler.MaterialDragCallback
 /**
  * A [MaterialDragCallback] extension for playlist-specific item editing.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class PlaylistDragCallback(private val detailModel: DetailViewModel) : MaterialDragCallback() {
     override fun onMove(

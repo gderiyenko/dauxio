@@ -42,7 +42,6 @@ import timber.log.Timber as L
 /**
  * A picker [ViewBindingMaterialDialogFragment] intended for when [Genre] playback is ambiguous.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class PlayFromGenreDialog :

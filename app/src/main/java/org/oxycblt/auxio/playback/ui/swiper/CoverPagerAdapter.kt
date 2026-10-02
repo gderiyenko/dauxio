@@ -32,7 +32,6 @@ import org.oxycblt.musikr.Song
  * gesture overlays.
  *
  * @param listener The [StepperOverlay.Listener] that step gesture events will be forwarded to
- * @author Alexander Capehart (OxygenCobalt)
  */
 class CoverPagerAdapter(private val listener: StepperOverlay.Listener) :
     FlexibleListAdapter<Song, CoverViewHolder>(CoverViewHolder.DIFF_CALLBACK) {
@@ -47,7 +46,6 @@ class CoverPagerAdapter(private val listener: StepperOverlay.Listener) :
 /**
  * A [RecyclerView.ViewHolder] that displays a [Song]'s cover and step gesture overlays.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class CoverViewHolder private constructor(private val binding: ItemCoverBinding) :
     RecyclerView.ViewHolder(binding.root) {

@@ -33,7 +33,6 @@ import org.oxycblt.auxio.util.inflater
  * A [RecyclerView.Adapter] that displays [Accent] choices.
  *
  * @param listener A [ClickableListListener] to bind interactions to.
- * @author Alexander Capehart (OxygenCobalt)
  */
 class AccentAdapter(private val listener: ClickableListListener<Accent>) :
     RecyclerView.Adapter<AccentViewHolder>() {
@@ -87,7 +86,6 @@ class AccentAdapter(private val listener: ClickableListListener<Accent>) :
 /**
  * A [RecyclerView.ViewHolder] that displays an [Accent] choice. Use [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class AccentViewHolder private constructor(private val binding: ItemAccentBinding) :
     RecyclerView.ViewHolder(binding.root) {

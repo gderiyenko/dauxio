@@ -33,7 +33,6 @@ import org.oxycblt.musikr.fs.saf.useQuery
 /**
  * A factory for parsing the reverse-engineered format of the URIs obtained from document picker.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 internal interface DocumentPathFactory {
     /**

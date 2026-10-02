@@ -50,7 +50,6 @@ import org.oxycblt.musikr.Song
 /**
  * A [ListFragment] that shows a list of [Album]s.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class AlbumListFragment :

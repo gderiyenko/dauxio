@@ -112,7 +112,6 @@ private val accentPrimaryColors =
  * option in nearly all cases.
  *
  * @param index The unique number for this particular accent.
- * @author Alexander Capehart (OxygenCobalt)
  */
 class Accent private constructor(val index: Int) {
     /** The name of this [Accent]. */

@@ -38,7 +38,6 @@ import org.oxycblt.musikr.Song
  * request is queued or if another, competing request is newer.
  *
  * @param context [Context] required to load images.
- * @author Alexander Capehart (OxygenCobalt)
  */
 class BitmapProvider
 @Inject

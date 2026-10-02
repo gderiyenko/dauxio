@@ -30,12 +30,11 @@ import org.oxycblt.auxio.R
 import org.oxycblt.auxio.music.MusicViewModel
 import org.oxycblt.auxio.settings.ui.WrappedDialogPreference
 import org.oxycblt.auxio.util.navigateSafe
+import org.oxycblt.auxio.util.openInBrowser
 import timber.log.Timber as L
 
 /**
  * The [PreferenceFragmentCompat] that displays the root settings list.
- *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class RootPreferenceFragment : BasePreferenceFragment(R.xml.preferences_root) {
@@ -56,6 +55,13 @@ class RootPreferenceFragment : BasePreferenceFragment(R.xml.preferences_root) {
                 findNavController()
                     .navigateSafe(RootPreferenceFragmentDirections.musicLocationsSettings())
             }
+        }
+    }
+
+    override fun onSetupPreference(preference: Preference) {
+        super.onSetupPreference(preference)
+        if (preference.key == getString(R.string.set_key_version)) {
+            preference.summary = org.oxycblt.auxio.BuildConfig.VERSION_NAME
         }
     }
 
@@ -84,9 +90,24 @@ class RootPreferenceFragment : BasePreferenceFragment(R.xml.preferences_root) {
             }
             getString(R.string.set_key_reindex) -> musicModel.refresh()
             getString(R.string.set_key_rescan) -> musicModel.rescan()
+            getString(R.string.set_key_code) -> {
+                requireContext().openInBrowser(LINK_SOURCE)
+            }
+            getString(R.string.set_key_feedback_github) -> {
+                requireContext().openInBrowser(LINK_NEW_ISSUE)
+            }
+            getString(R.string.set_key_licenses) -> {
+                requireContext().openInBrowser(LINK_LICENSES)
+            }
             else -> return super.onPreferenceTreeClick(preference)
         }
 
         return true
+    }
+
+    private companion object {
+        const val LINK_SOURCE = "https://github.com/gderiyenko/dauxio"
+        const val LINK_NEW_ISSUE = "$LINK_SOURCE/issues/new"
+        const val LINK_LICENSES = "$LINK_SOURCE/blob/main/LICENSE"
     }
 }

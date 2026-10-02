@@ -27,7 +27,6 @@ import org.oxycblt.musikr.fs.Path
 /**
  * Wrapper around a [Cursor] that interprets path information on a per-API/manufacturer basis.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 internal sealed interface MediaStorePathInterpreter {
     /**

@@ -43,7 +43,6 @@ import org.oxycblt.musikr.Song
 /**
  * [MenuDialogFragment] implementation for a [Song].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class SongMenuDialogFragment : MenuDialogFragment<Menu.ForSong>() {
@@ -93,7 +92,6 @@ class SongMenuDialogFragment : MenuDialogFragment<Menu.ForSong>() {
 /**
  * [MenuDialogFragment] implementation for a [AlbumMenuDialogFragment].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class AlbumMenuDialogFragment : MenuDialogFragment<Menu.ForAlbum>() {
@@ -142,7 +140,6 @@ class AlbumMenuDialogFragment : MenuDialogFragment<Menu.ForAlbum>() {
 /**
  * [MenuDialogFragment] implementation for a [Artist].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class ArtistMenuDialogFragment : MenuDialogFragment<Menu.ForArtist>() {
@@ -216,7 +213,6 @@ class ArtistMenuDialogFragment : MenuDialogFragment<Menu.ForArtist>() {
 /**
  * [MenuDialogFragment] implementation for a [Genre].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class GenreMenuDialogFragment : MenuDialogFragment<Menu.ForGenre>() {
@@ -268,7 +264,6 @@ class GenreMenuDialogFragment : MenuDialogFragment<Menu.ForGenre>() {
 /**
  * [MenuDialogFragment] implementation for a [Playlist].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class PlaylistMenuDialogFragment : MenuDialogFragment<Menu.ForPlaylist>() {
@@ -338,7 +333,6 @@ class PlaylistMenuDialogFragment : MenuDialogFragment<Menu.ForPlaylist>() {
 /**
  * [MenuDialogFragment] implementation for a [Song] selection.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class SelectionMenuDialogFragment : MenuDialogFragment<Menu.ForSelection>() {

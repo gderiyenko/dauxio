@@ -27,7 +27,6 @@ import android.widget.FrameLayout
  * direction. This is useful for "Timeline" elements that Material Design recommends be LTR in all
  * cases. This layout can only contain one child, to prevent conflicts with other layout components.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 open class ForcedLTRFrameLayout
 @JvmOverloads

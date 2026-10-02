@@ -48,7 +48,6 @@ import org.oxycblt.musikr.Song
 /**
  * A [ListFragment] that shows a list of [Playlist]s.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class PlaylistListFragment :
     ListFragment<Playlist, FragmentHomeListBinding>(),

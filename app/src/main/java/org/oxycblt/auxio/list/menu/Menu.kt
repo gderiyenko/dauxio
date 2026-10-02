@@ -32,7 +32,6 @@ import org.oxycblt.musikr.Song
 /**
  * Command to navigate to a specific menu dialog configuration.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 sealed interface Menu {
     /** The menu resource to inflate in the menu dialog. */

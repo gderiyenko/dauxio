@@ -72,7 +72,6 @@ import timber.log.Timber as L
  * The starting [SelectionFragment] of Auxio. Shows the user's music library and enables navigation
  * to other views.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class HomeFragment : SelectionFragment<FragmentHomeBinding>() {
@@ -193,11 +192,6 @@ class HomeFragment : SelectionFragment<FragmentHomeBinding>() {
             R.id.action_settings -> {
                 L.d("Navigating to preferences")
                 homeModel.showSettings()
-                true
-            }
-            R.id.action_about -> {
-                L.d("Navigating to about")
-                homeModel.showAbout()
                 true
             }
 

@@ -29,7 +29,6 @@ import timber.log.Timber as L
  * items.
  *
  * @param diffCallback A [DiffUtil.ItemCallback] to compare list updates with.
- * @author Alexander Capehart (OxygenCobalt)
  */
 abstract class SelectionIndicatorAdapter<T, VH : RecyclerView.ViewHolder>(
     diffCallback: DiffUtil.ItemCallback<T>

@@ -39,7 +39,6 @@ import timber.log.Timber as L
 /**
  * Auxio's single [AppCompatActivity].
  *
- * @author Alexander Capehart (OxygenCobalt)
  *
  * TODO: Add error screens
  * TODO: Custom language support

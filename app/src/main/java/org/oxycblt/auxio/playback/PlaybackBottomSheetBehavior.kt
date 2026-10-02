@@ -39,7 +39,6 @@ import org.oxycblt.auxio.util.systemBarInsetsCompat
 /**
  * The [BaseBottomSheetBehavior] for the playback bottom sheet. This bottom sheet
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class PlaybackBottomSheetBehavior<V : View>(context: Context, attributeSet: AttributeSet?) :
     BaseBottomSheetBehavior<V>(context, attributeSet) {

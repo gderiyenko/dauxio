@@ -25,7 +25,6 @@ import org.oxycblt.musikr.Music
 /**
  * A Fragment containing a selectable list.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 abstract class ListFragment<in T : Music, VB : ViewBinding> :
     SelectionFragment<VB>(), SelectableListListener<T> {

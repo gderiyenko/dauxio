@@ -32,7 +32,6 @@ import timber.log.Timber as L
 /**
  * A [ViewModel] that stores the choices shown in the playback picker dialogs.
  *
- * @author OxygenCobalt (Alexander Capehart)
  */
 @HiltViewModel
 class PlaybackPickerViewModel @Inject constructor(private val musicRepository: MusicRepository) :

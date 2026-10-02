@@ -24,7 +24,6 @@ import org.oxycblt.auxio.R
 /**
  * General configuration enum to control what kind of music is being worked with.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 enum class MusicType {
     SONGS,

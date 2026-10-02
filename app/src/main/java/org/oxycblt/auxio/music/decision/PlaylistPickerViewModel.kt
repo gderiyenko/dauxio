@@ -38,7 +38,6 @@ import timber.log.Timber as L
 /**
  * A [ViewModel] managing the state of the playlist picker dialogs.
  *
- * @author Alexander Capehart
  */
 @HiltViewModel
 class PlaylistPickerViewModel @Inject constructor(private val musicRepository: MusicRepository) :
@@ -307,7 +306,6 @@ class PlaylistPickerViewModel @Inject constructor(private val musicRepository: M
  * @param preferredName The name to be used by default if no other name is chosen.
  * @param songs The [Song]s to be contained in the [PendingNewPlaylist]
  * @param reason The reason the playlist is being created.
- * @author Alexander Capehart (OxygenCobalt)
  */
 data class PendingNewPlaylist(
     val preferredName: String,
@@ -326,7 +324,6 @@ data class PendingRenamePlaylist(
 /**
  * Represents the (processed) user input from the playlist naming dialogs.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 sealed interface ChosenName {
     /** The current name is valid. */
@@ -348,6 +345,5 @@ sealed interface ChosenName {
  * @param playlist The [Playlist] represented.
  * @param alreadyAdded Whether the songs currently pending addition have already been added to the
  *   [Playlist].
- * @author Alexander Capehart (OxygenCobalt)
  */
 data class PlaylistChoice(val playlist: Playlist, val alreadyAdded: Boolean)

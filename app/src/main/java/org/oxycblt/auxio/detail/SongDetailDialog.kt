@@ -38,7 +38,6 @@ import timber.log.Timber as L
 /**
  * A [ViewBindingMaterialDialogFragment] that shows information about a Song.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class SongDetailDialog : ViewBindingMaterialDialogFragment<DialogSongDetailBinding>() {

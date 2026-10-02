@@ -27,7 +27,6 @@ import timber.log.Timber as L
 /**
  * Manages the persisted playback state in a structured manner.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 interface PersistenceRepository {
     /** Read the previously persisted [PlaybackStateManager.SavedState]. */

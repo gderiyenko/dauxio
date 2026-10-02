@@ -55,7 +55,6 @@ import timber.log.Timber as L
  * Music information is loaded in-memory by this repository using an [IndexingWorker]. Changes in
  * music (loading) can be reacted to with [UpdateListener] and [IndexingListener].
  *
- * @author Alexander Capehart (OxygenCobalt)
  *
  * TODO: Switch listeners to set when you can confirm there are no order-dependent listener
  *   configurations
@@ -218,7 +217,6 @@ interface MusicRepository {
 /**
  * Represents the current state of the music loader.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 sealed interface IndexingState {
     /**

@@ -51,7 +51,6 @@ import org.oxycblt.auxio.util.unlikelyToBeNull
  * Minimal MaterialToolbar replacement that implements everything with MaterialButtons compared to
  * the main androidx/MDC toolbar which is more or less unusable.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class AuxioToolbar
 @JvmOverloads

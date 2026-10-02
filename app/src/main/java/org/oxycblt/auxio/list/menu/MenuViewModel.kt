@@ -31,7 +31,6 @@ import timber.log.Timber as L
 /**
  * Manages the state information for [MenuDialogFragment] implementations.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @HiltViewModel
 class MenuViewModel @Inject constructor(private val musicRepository: MusicRepository) :

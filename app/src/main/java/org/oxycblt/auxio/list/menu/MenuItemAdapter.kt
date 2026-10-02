@@ -31,7 +31,6 @@ import org.oxycblt.auxio.util.inflater
  * Displays a list of [MenuItem]s as custom list items.
  *
  * @param listener A [ClickableListListener] to bind interactions to.
- * @author Alexander Capehart (OxygenCobalt)
  */
 class MenuItemAdapter(private val listener: ClickableListListener<MenuItem>) :
     FlexibleListAdapter<MenuItem, MenuItemViewHolder>(MenuItemViewHolder.DIFF_CALLBACK) {
@@ -46,7 +45,6 @@ class MenuItemAdapter(private val listener: ClickableListListener<MenuItem>) :
 /**
  * A [RecyclerView.ViewHolder] that displays a [MenuItem].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class MenuItemViewHolder private constructor(private val binding: ItemMenuOptionBinding) :
     RecyclerView.ViewHolder(binding.root) {

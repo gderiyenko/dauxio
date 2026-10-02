@@ -28,7 +28,6 @@ import androidx.media3.exoplayer.source.ShuffleOrder
  * the default implementation will randomly spread out added media items, this implementation will
  * insert them in the order they are added contiguously.
  *
- * @author media3 team, Alexander Capehart (OxygenCobalt)
  */
 @OptIn(UnstableApi::class)
 class BetterShuffleOrder(private val shuffled: IntArray) : ShuffleOrder {

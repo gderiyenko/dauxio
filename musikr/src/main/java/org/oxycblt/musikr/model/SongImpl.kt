@@ -37,7 +37,6 @@ internal interface SongCore {
 /**
  * Library-backed implementation of [Song].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 internal class SongImpl(private val handle: SongCore) : Song {
     private val preSong = handle.preSong

@@ -51,7 +51,6 @@ class ArtistPlaybackChoiceAdapter(private val listener: ClickableListListener<Ar
  * A [RecyclerView.ViewHolder] that displays a smaller variant of a typical [Artist] item, for use
  * [ArtistPlaybackChoiceAdapter]. Use [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class ArtistPlaybackChoiceViewHolder
 private constructor(private val binding: ItemPickerChoiceBinding) :

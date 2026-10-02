@@ -39,7 +39,6 @@ import timber.log.Timber as L
 /**
  * A [ViewBindingFragment] that displays an editable queue.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class QueueFragment : ViewBindingFragment<FragmentQueueBinding>(), EditClickListListener<Song> {

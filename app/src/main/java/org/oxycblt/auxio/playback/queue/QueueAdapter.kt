@@ -44,7 +44,6 @@ import timber.log.Timber as L
  * A [RecyclerView.Adapter] that shows an editable list of queue items.
  *
  * @param listener A [EditClickListListener] to bind interactions to.
- * @author Alexander Capehart (OxygenCobalt)
  */
 class QueueAdapter(private val listener: EditClickListListener<Song>) :
     FlexibleListAdapter<Song, QueueSongViewHolder>(QueueSongViewHolder.DIFF_CALLBACK) {
@@ -109,7 +108,6 @@ class QueueAdapter(private val listener: EditClickListListener<Song>) :
  * A [PlayingIndicatorAdapter.ViewHolder] that displays an queue [Song] which can be re-ordered and
  * removed. Use [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class QueueSongViewHolder private constructor(private val binding: ItemEditableSongBinding) :
     PlayingIndicatorAdapter.ViewHolder(binding.root), MaterialDragCallback.ViewHolder {

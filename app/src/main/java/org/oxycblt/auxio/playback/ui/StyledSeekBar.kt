@@ -31,7 +31,6 @@ import timber.log.Timber as L
  * A wrapper around [Slider] that shows position and duration values and sanitizes input to reduce
  * crashes from invalid values.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class StyledSeekBar
 @JvmOverloads

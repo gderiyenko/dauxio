@@ -27,7 +27,6 @@ import org.oxycblt.auxio.list.sort.SortDialog
 /**
  * A [SortDialog] that controls the [Sort] of [HomeViewModel.playlistList].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class PlaylistSortDialog : SortDialog() {

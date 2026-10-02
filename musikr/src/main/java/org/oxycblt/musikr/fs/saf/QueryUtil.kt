@@ -24,8 +24,7 @@ import android.database.Cursor
 import android.net.Uri
 
 /**
- * Get a content resolver that will not mangle MediaStore queries on certain devices. See
- * https://github.com/OxygenCobalt/Auxio/issues/50 for more info.
+ * Get a content resolver that will not mangle MediaStore queries on certain devices.
  */
 internal val Context.contentResolverSafe: ContentResolver
     get() = applicationContext.contentResolver

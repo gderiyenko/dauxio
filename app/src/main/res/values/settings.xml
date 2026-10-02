@@ -13,6 +13,12 @@
     <string name="set_key_reindex" translatable="false">auxio_reindex</string>
     <string name="set_key_rescan" translatable="false">auxio_rescan</string>
     <string name="set_key_observing" translatable="false">auxio_observing</string>
+
+    <string name="set_key_version" translatable="false">auxio_version</string>
+    <string name="set_key_code" translatable="false">auxio_code</string>
+    <string name="set_key_wiki" translatable="false">auxio_wiki</string>
+    <string name="set_key_licenses" translatable="false">auxio_licenses</string>
+    <string name="set_key_feedback_github" translatable="false">auxio_feedback_github</string>
     <string name="set_key_music_dirs" translatable="false">auxio_music_dirs</string>
     <string name="set_key_excluded_dirs" translatable="false">auxio_excluded_dirs</string>
     <string name="set_key_fs_cache" translatable="false">auxio_fs_cache</string>

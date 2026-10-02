@@ -35,7 +35,6 @@ import timber.log.Timber as L
 /**
  * Implements the fuzzy-ish searching algorithm used in the search view.
  *
- * @author Alexander Capehart
  */
 interface SearchEngine {
     /**

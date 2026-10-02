@@ -30,7 +30,6 @@ import org.oxycblt.auxio.util.fixDoubleRipple
 /**
  * The companion dialog to [IntListPreference]. Use [from] to create an instance.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class IntListPreferenceDialog : PreferenceDialogFragmentCompat() {
     private val listPreference: IntListPreference

@@ -23,7 +23,6 @@ import org.oxycblt.auxio.IntegerTable
 /**
  * Represents the options available for album cover loading.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 enum class CoverMode {
     OFF,

@@ -57,7 +57,6 @@ import timber.log.Timber as L
 /**
  * A [ListFragment] that shows information for a particular [Playlist].
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class PlaylistDetailFragment :

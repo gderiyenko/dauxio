@@ -37,7 +37,6 @@ import timber.log.Timber as L
  * A [ViewBindingMaterialDialogFragment] that allows the user to modify the home [Tab]
  * configuration.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class TabCustomizeDialog :

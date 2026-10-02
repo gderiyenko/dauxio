@@ -23,7 +23,6 @@ import org.oxycblt.auxio.IntegerTable
 /**
  * The current ReplayGain configuration.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 enum class ReplayGainMode {
     /** Do not apply any ReplayGain adjustments. */

@@ -51,7 +51,6 @@ import timber.log.Timber as L
 /**
  * An [ViewModel] that provides a safe UI frontend for the current playback state.
  *
- * @author Alexander Capehart (OxygenCobalt)
  *
  * TODO: Debug subtle backwards movement of position on pause
  */
@@ -662,7 +661,6 @@ data class PagerCommand(val update: UpdateInstructions?, val scroll: Int?)
 /**
  * Command for controlling the main playback panel UI.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 enum class OpenPanel {
     /** Open the main view, collapsing all other panels. */
@@ -679,7 +677,6 @@ enum class OpenPanel {
 /**
  * Command for opening decision dialogs when playback from a [Song] is ambiguous.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 sealed interface PlaybackDecision {
     /** The [Song] currently attempting to be played from. */

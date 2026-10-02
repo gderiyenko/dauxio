@@ -38,7 +38,6 @@ import org.oxycblt.auxio.util.lazyReflectedMethod
 /**
  * Companion scalable button to [ScaledPlaybackButtonGroup], see that.
  *
- * @author Codex w/cleanup + cognitive ownership by Alexander Capehart (OxygenCobalt)
  */
 @SuppressLint("RestrictedApi")
 class ScaledPlaybackButton

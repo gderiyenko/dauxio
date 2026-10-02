@@ -40,7 +40,6 @@ import timber.log.Timber as L
 /**
  * A picker [ViewBindingMaterialDialogFragment] intended for when the [Artist] to show is ambiguous.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class ShowArtistDialog :

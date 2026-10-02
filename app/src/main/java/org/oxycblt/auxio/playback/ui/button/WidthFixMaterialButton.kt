@@ -29,7 +29,6 @@ import org.oxycblt.auxio.ui.RippleFixMaterialButton
  * [org.oxycblt.auxio.ui.RippleFixMaterialButton] that works around another bug where switching the
  * icon during a press breaks width expansion animations.
  *
- * @author Alexander Capehart (OxygenCobalt)
  *
  * TODO: Should animate icon transitions to make this look less bad.
  */

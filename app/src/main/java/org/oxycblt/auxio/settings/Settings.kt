@@ -29,7 +29,6 @@ import timber.log.Timber as L
  * Abstract user configuration information. This interface has no functionality whatsoever. Concrete
  * implementations should be preferred instead.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 interface Settings<Listener> {
     /**

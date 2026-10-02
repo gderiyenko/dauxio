@@ -33,7 +33,6 @@ import org.oxycblt.musikr.playlist.m3u.M3U
  *
  * @see ImportedPlaylist
  * @see M3U
- * @author Alexander Capehart (OxygenCobalt)
  */
 interface ExternalPlaylistManager {
     /**

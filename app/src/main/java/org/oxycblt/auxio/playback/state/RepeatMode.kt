@@ -24,7 +24,6 @@ import org.oxycblt.auxio.R
 /**
  * Represents the current repeat mode of the player.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 enum class RepeatMode {
     /**

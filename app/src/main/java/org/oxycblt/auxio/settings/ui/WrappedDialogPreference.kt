@@ -26,7 +26,6 @@ import androidx.preference.DialogPreference
  * Wraps a [DialogPreference] to be instantiatable. This has no purpose other to ensure that custom
  * dialog preferences are handled.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 class WrappedDialogPreference
 @JvmOverloads

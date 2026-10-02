@@ -23,5 +23,5 @@
 debug.zip
 
 #### Due diligence
-- [ ] I have read the [Contribution Guidelines](https://github.com/OxygenCobalt/Auxio/blob/dev/.github/CONTRIBUTING.md).
-- [ ] I have read the [Why Are These Features Missing?](https://github.com/OxygenCobalt/Auxio/wiki/Why-Are-These-Features-Missing%3F) page.
+- [ ] I have read the [Contribution Guidelines](https://github.com/gderiyenko/dauxio/blob/dev/.github/CONTRIBUTING.md).
+- [ ] I have read the [Why Are These Features Missing?](https://github.com/gderiyenko/dauxio/wiki/Why-Are-These-Features-Missing%3F) page.

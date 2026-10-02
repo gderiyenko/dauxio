@@ -32,7 +32,6 @@ import org.oxycblt.auxio.util.systemBarInsetsCompat
  * - Automatic edge-to-edge support
  * - Automatic [setHasFixedSize] setup
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 open class AuxioRecyclerView
 @JvmOverloads

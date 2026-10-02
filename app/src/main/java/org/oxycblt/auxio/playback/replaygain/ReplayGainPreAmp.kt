@@ -23,6 +23,5 @@ package org.oxycblt.auxio.playback.replaygain
  *
  * @param with The pre-amp (in dB) to use when ReplayGain tags are present.
  * @param without The pre-amp (in dB) to use when ReplayGain tags are not present.
- * @author Alexander Capehart (OxygenCobalt)
  */
 data class ReplayGainPreAmp(val with: Float, val without: Float)

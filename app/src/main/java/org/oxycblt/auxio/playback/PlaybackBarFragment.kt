@@ -36,7 +36,6 @@ import timber.log.Timber as L
 /**
  * A [ViewBindingFragment] that shows the current playback state in a compact manner.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 @AndroidEntryPoint
 class PlaybackBarFragment : ViewBindingFragment<FragmentPlaybackBarBinding>() {

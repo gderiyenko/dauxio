@@ -25,8 +25,6 @@ import android.content.Intent
 
 /**
  * A [BroadcastReceiver] that starts music playback when a bluetooth headset is connected.
- *
- * @author seijikun, OxygenCobalt
  */
 class BluetoothHeadsetReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {

@@ -32,7 +32,6 @@ import timber.log.Timber as L
 /**
  * User configuration specific to the home UI.
  *
- * @author Alexander Capehart (OxygenCobalt)
  */
 interface HomeSettings : Settings<HomeSettings.Listener> {
     /** The tabs to show in the home UI. */
