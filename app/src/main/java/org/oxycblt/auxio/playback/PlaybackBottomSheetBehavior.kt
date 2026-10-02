@@ -48,7 +48,8 @@ class PlaybackBottomSheetBehavior<V : View>(context: Context, attributeSet: Attr
     fun makeBackgroundDrawable(context: Context) {
         sheetBackgroundDrawable =
             MaterialShapeDrawable.createWithElevationOverlay(context).apply {
-                fillColor = android.content.res.ColorStateList.valueOf(android.graphics.Color.BLACK)
+                fillColor = context.getAttrColorCompat(MR.attr.colorSurfaceContainerLow)
+
                 shapeAppearanceModel =
                     if (uiSettings.roundMode) {
                         ShapeAppearanceModel.builder(
