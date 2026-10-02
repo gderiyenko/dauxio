@@ -7,14 +7,11 @@
 
     <com.google.android.material.slider.WavySlider
         android:id="@+id/seek_bar_slider"
+        style="@style/Widget.Auxio.Slider.Playback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/spacing_medium"
-        app:waveAmplitudeRampProgressMin="0.0"
-        app:waveAmplitudeRampProgressMax="0.03"
-        app:wavelength="@dimen/progress_wavelength"
-        app:waveSpeed="@dimen/progress_wave_speed"
-        app:waveAmplitude="@dimen/progress_amplitude"
+        app:waveAmplitude="0dp"
         android:valueFrom="0"
         android:valueTo="1" />
 
@@ -25,8 +22,8 @@
         android:layout_gravity="bottom|start"
         android:layout_marginStart="@dimen/spacing_medium"
         android:layout_marginBottom="@dimen/spacing_tiny"
-        android:textAppearance="?attr/textAppearanceBodySmall"
-        android:textColor="@color/sel_activatable_text_secondary"
+        android:textAppearance="?attr/textAppearanceLabelMediumEmphasized"
+        android:textColor="@android:color/white"
         tools:text="11:38" />
 
     <TextView
@@ -36,8 +33,8 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/spacing_medium"
         android:layout_marginBottom="@dimen/spacing_tiny"
-        android:textAppearance="?attr/textAppearanceBodySmall"
-        android:textColor="?android:attr/textColorSecondary"
+        android:textAppearance="?attr/textAppearanceLabelMediumEmphasized"
+        android:textColor="#B3FFFFFF"
         tools:text="16:16" />
 
 </FrameLayout>

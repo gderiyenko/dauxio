@@ -46,9 +46,9 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
         binding.seekBarSlider.addOnChangeListener(this)
     }
 
-    /** Enables/disables wavy active-track rendering to match playback state. */
+    /** Enables/disables wavy active-track rendering (kept disabled for straight line). */
     fun setWaveEnabled(enabled: Boolean) {
-        binding.seekBarSlider.setWaveEnabled(enabled)
+        binding.seekBarSlider.setWaveEnabled(false)
     }
 
     /** The current [Listener] attached to this instance. */

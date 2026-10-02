@@ -42,6 +42,18 @@
         <item name="thumbHeight">@dimen/slider_thumb_height</item>
     </style>
 
+    <style name="Widget.Auxio.Slider.Playback" parent="Widget.Auxio.Slider">
+        <item name="trackHeight">8dp</item>
+        <item name="trackCornerSize">4dp</item>
+        <item name="trackInsideCornerSize">4dp</item>
+        <item name="thumbHeight">16dp</item>
+        <item name="thumbWidth">16dp</item>
+        <item name="trackColorActive">@android:color/white</item>
+        <item name="trackColorInactive">#333333</item>
+        <item name="thumbColor">@android:color/white</item>
+        <item name="haloColor">#33FFFFFF</item>
+    </style>
+
     <style name="Widget.Auxio.LinearProgressIndicator" parent="Widget.Material3.LinearProgressIndicator">
 <!--        <item name="trackColor">@color/sel_track</item>-->
         <item name="trackCornerRadius">@dimen/m3_shape_corners_full</item>
@@ -467,28 +479,31 @@
         <item name="android:checkable">true</item>
     </style>
 
-    <style name="Widget.Auxio.Button.Playback.More" parent="Widget.Auxio.Button.Icon.Base" />
+    <style name="Widget.Auxio.Button.Playback.More" parent="Widget.Auxio.Button.Icon.Base">
+        <item name="iconTint">@android:color/white</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Medium</item>
+    </style>
 
     <style name="Widget.Auxio.Button.Playback.Toggle" parent="Widget.Material3Expressive.Button.IconButton.Outlined">
         <item name="android:checkable">true</item>
         <item name="toggleCheckedStateOnClick">false</item>
-        <item name="iconTint">@color/sel_checkable_icon</item>
-        <item name="strokeColor">@color/sel_checkable_outline</item>
-        <item name="backgroundTint">?attr/colorSurfaceContainerLow</item>
+        <item name="iconTint">@color/sel_playback_toggle_icon</item>
+        <item name="strokeColor">@color/sel_playback_toggle_stroke</item>
+        <item name="backgroundTint">@color/sel_playback_toggle_bg</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Medium</item>
     </style>
 
-    <style name="Widget.Auxio.Button.Playback.Skip" parent="Widget.Material3Expressive.Button.IconButton.Tonal" />
+    <style name="Widget.Auxio.Button.Playback.Skip" parent="Widget.Material3Expressive.Button.IconButton.Outlined">
+        <item name="iconTint">@android:color/white</item>
+        <item name="strokeColor">#33FFFFFF</item>
+        <item name="backgroundTint">#1AFFFFFF</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Large</item>
+    </style>
 
-    <style name="Widget.Auxio.Button.Playback.PlayPause" parent="Widget.Material3Expressive.Button.IconButton.Tonal">
+    <style name="Widget.Auxio.Button.Playback.PlayPause" parent="Widget.Material3Expressive.Button.IconButton.Filled">
         <item name="android:checkable">true</item>
-        <item name="materialThemeOverlay">@style/ThemeOverlay.Auxio.Button.PrimaryTonal</item>
-    </style>
-    <style name="ThemeOverlay.Auxio.Button.PrimaryTonal" parent="">
-        <item name="colorContainer">?attr/colorPrimaryContainer</item>
-        <item name="colorContainerChecked">?attr/colorPrimary</item>
-        <item name="colorContainerUnchecked">?attr/colorPrimaryContainer</item>
-        <item name="colorOnContainer">?attr/colorOnPrimaryContainer</item>
-        <item name="colorOnContainerChecked">?attr/colorOnPrimary</item>
-        <item name="colorOnContainerUnchecked">?attr/colorOnPrimaryContainer</item>
+        <item name="iconTint">@android:color/black</item>
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Large</item>
     </style>
 </resources>

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
 
     <org.oxycblt.auxio.ui.AuxioToolbar
         android:id="@+id/playback_toolbar"
@@ -13,6 +14,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/toolbar_playback"
         app:navigationIcon="@drawable/ic_down_24"
+        app:navigationIconTint="@android:color/white"
+        app:titleTextColor="@android:color/white"
+        app:subtitleTextColor="#B3FFFFFF"
         app:subtitleCentered="true"
         app:subtitleTextAppearance="?attr/textAppearanceBodySmall"
         app:title="@string/lbl_playback"
@@ -24,7 +28,10 @@
         android:id="@+id/playback_pager"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="@dimen/spacing_medium"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_marginEnd="@dimen/spacing_medium"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginBottom="@dimen/spacing_small"
         android:clickable="true"
         android:focusable="true"
         app:layout_constraintDimensionRatio="1"
@@ -36,15 +43,19 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/playback_find_lyrics"
-        style="@style/Widget.Auxio.Button.TonalButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacing_medium"
         android:layout_marginEnd="@dimen/spacing_medium"
-        android:layout_marginTop="@dimen/spacing_tiny"
-        android:layout_marginBottom="@dimen/spacing_tiny"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginBottom="@dimen/spacing_small"
         android:text="@string/lbl_find_lyrics"
+        android:textColor="@android:color/black"
+        android:textAppearance="?attr/textAppearanceLabelLargeEmphasized"
+        app:backgroundTint="@android:color/white"
+        app:cornerRadius="16dp"
         app:icon="@drawable/ic_search_24"
+        app:iconTint="@android:color/black"
         app:iconGravity="textStart"
         app:layout_constraintBottom_toTopOf="@+id/playback_info_container"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,6 +82,8 @@
             style="@style/Widget.Auxio.TextView.Primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
             android:fallbackLineSpacing="false"
             tools:text="Song Name" />
 
@@ -79,6 +92,7 @@
             style="@style/Widget.Auxio.TextView.Secondary.Marquee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#CCFFFFFF"
             android:fallbackLineSpacing="false"
             tools:text="Artist Name" />
 
@@ -87,6 +101,7 @@
             style="@style/Widget.Auxio.TextView.Secondary.Marquee"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#99FFFFFF"
             android:fallbackLineSpacing="false"
             tools:text="Album Name" />
 

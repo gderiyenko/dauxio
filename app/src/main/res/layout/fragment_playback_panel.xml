@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
 
     <org.oxycblt.auxio.ui.AuxioToolbar
         android:id="@+id/playback_toolbar"
@@ -13,11 +13,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/toolbar_playback"
         app:navigationIcon="@drawable/ic_down_24"
+        app:navigationIconTint="@android:color/white"
         app:subtitleCentered="true"
         app:subtitleTextAppearance="?attr/textAppearanceBodySmall"
+        app:subtitleTextColor="#B3FFFFFF"
         app:title="@string/lbl_playback"
         app:titleCentered="true"
         app:titleTextAppearance="?attr/textAppearanceLabelLargeEmphasized"
+        app:titleTextColor="@android:color/white"
         tools:subtitle="@string/lbl_all_songs" />
 
 
@@ -53,6 +56,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fallbackLineSpacing="false"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
             tools:text="Song Name" />
 
         <TextView
@@ -61,6 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fallbackLineSpacing="false"
+            android:textColor="#CCFFFFFF"
             tools:text="Artist Name" />
 
     </LinearLayout>
