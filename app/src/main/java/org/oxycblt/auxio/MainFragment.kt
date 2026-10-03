@@ -205,10 +205,7 @@ class MainFragment :
         )
 
         // --- VIEWMODEL SETUP ---
-        // This has to be done here instead of the playback panel to make sure that it's prioritized
-        // by StateFlow over any detail fragment.
-        // FIXME: This is a consequence of sharing events across several consumers. There has to be
-        //  a better way of doing this.
+        // Collapse playback sheet on detail navigation commands to ensure detail views are visible.
         collect(detailModel.toShow.flow, ::handleShow)
         collectImmediately(detailModel.editedPlaylist, detailBackCallback::invalidateEnabled)
         collectImmediately(homeModel.showOuter.flow, ::handleShowOuter)

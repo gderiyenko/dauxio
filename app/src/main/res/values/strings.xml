@@ -94,6 +94,8 @@
     <string name="lbl_rename">Rename</string>
     <string name="lbl_rename_playlist">Rename playlist</string>
     <string name="lbl_delete">Delete</string>
+    <string name="lbl_undo">Undo</string>
+    <string name="fmt_song_delete_countdown">File will be removed in %d</string>
     <string name="lbl_confirm_delete_playlist">Delete playlist?</string>
     <string name="lbl_confirm_delete_songs">Delete selected songs?</string>
     <string name="lbl_delete_songs_info">Delete the selected songs from device storage? This cannot be undone.</string>

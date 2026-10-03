@@ -22,7 +22,17 @@ import android.annotation.SuppressLint
 import android.app.SearchManager
 import android.content.ActivityNotFoundException
 import android.content.Intent
-import android.media.audiofx.AudioEffect
+import android.provider.DocumentsContract
+import android.provider.MediaStore
+import androidx.activity.result.IntentSenderRequest
+import androidx.lifecycle.lifecycleScope
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import org.oxycblt.auxio.music.MusicViewModel
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -80,8 +90,10 @@ class PlaybackPanelFragment :
     private val playbackModel: PlaybackViewModel by activityViewModels()
     private val detailModel: DetailViewModel by activityViewModels()
     private val listModel: ListViewModel by activityViewModels()
+    private val musicModel: MusicViewModel by activityViewModels()
     private val queueModel: QueueViewModel by viewModels()
-    private var equalizerLauncher: ActivityResultLauncher<Intent>? = null
+    private var pendingDeleteJob: Job? = null
+    private var deleteResultLauncher: ActivityResultLauncher<IntentSenderRequest>? = null
     private var userAwarePagerCallback: UserAwarePagerCallback? = null
 
     override fun onCreateBinding(inflater: LayoutInflater) =
@@ -93,11 +105,12 @@ class PlaybackPanelFragment :
     ) {
         super.onBindingCreated(binding, savedInstanceState)
 
-        // AudioEffect expects you to use startActivityForResult with the panel intent. There is no
-        // contract analogue for this intent, so the generic contract is used instead.
-        equalizerLauncher =
-            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-                // Nothing to do
+        deleteResultLauncher =
+            registerForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { result ->
+                if (result.resultCode == android.app.Activity.RESULT_OK) {
+                    musicModel.refresh()
+                    context?.showToast(R.string.lng_songs_deleted)
+                }
             }
 
         // --- UI SETUP ---
@@ -209,7 +222,7 @@ class PlaybackPanelFragment :
     }
 
     override fun onDestroyBinding(binding: FragmentPlaybackPanelBinding) {
-        equalizerLauncher = null
+        deleteResultLauncher = null
         binding.playbackRepeat.clearPendingIcon()
         binding.playbackSong.isSelected = false
         binding.playbackArtist.isSelected = false
@@ -220,27 +233,80 @@ class PlaybackPanelFragment :
     }
 
     override fun onMenuItemClick(item: MenuItem): Boolean {
-        if (item.itemId == R.id.action_open_equalizer) {
-            // Launch the system equalizer app, if possible.
-            L.d("Launching equalizer")
-            val equalizerIntent =
-                Intent(AudioEffect.ACTION_DISPLAY_AUDIO_EFFECT_CONTROL_PANEL)
-                    // Provide audio session ID so the equalizer can show options for this app
-                    // in particular.
-                    .putExtra(AudioEffect.EXTRA_AUDIO_SESSION, playbackModel.currentAudioSessionId)
-                    // Signal music type so that the equalizer settings are appropriate for
-                    // music playback.
-                    .putExtra(AudioEffect.EXTRA_CONTENT_TYPE, AudioEffect.CONTENT_TYPE_MUSIC)
-            try {
-                requireNotNull(equalizerLauncher) { "Equalizer panel launcher was not available" }
-                    .launch(equalizerIntent)
-            } catch (e: ActivityNotFoundException) {
-                requireContext().showToast(R.string.err_no_app)
+        if (item.itemId == R.id.action_delete_current_song) {
+            val songToDelete = playbackModel.song.value ?: return true
+            L.d("Initiating deletion for song: $songToDelete")
+
+            // Skip to next track if playback is ongoing
+            playbackModel.next()
+
+            // Cancel any previously scheduled deletion
+            pendingDeleteJob?.cancel()
+
+            val binding = binding ?: return true
+            val root = binding.root
+
+            var isUndone = false
+            var countdown = 3
+
+            val snackbar = Snackbar.make(
+                root,
+                getString(R.string.fmt_song_delete_countdown, countdown),
+                Snackbar.LENGTH_INDEFINITE,
+            ).setAction(R.string.lbl_undo) {
+                isUndone = true
+                pendingDeleteJob?.cancel()
+                L.d("Song deletion undone for $songToDelete")
+            }
+            snackbar.show()
+
+            pendingDeleteJob = viewLifecycleOwner.lifecycleScope.launch {
+                while (countdown > 1) {
+                    delay(1000)
+                    countdown--
+                    if (isUndone) break
+                    snackbar.setText(getString(R.string.fmt_song_delete_countdown, countdown))
+                }
+                if (!isUndone) {
+                    delay(1000)
+                    snackbar.dismiss()
+                    executeSongDeletion(songToDelete)
+                }
             }
             return true
         }
 
         return false
+    }
+
+    private fun executeSongDeletion(song: Song) {
+        val context = context ?: return
+        val resolver = context.contentResolver
+
+        playbackModel.removeSong(song)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && song.uri.authority == MediaStore.AUTHORITY) {
+            val mediaStoreUris = listOf(song.uri)
+            val pendingIntent = MediaStore.createDeleteRequest(resolver, mediaStoreUris)
+            val request = IntentSenderRequest.Builder(pendingIntent.intentSender).build()
+            deleteResultLauncher?.launch(request)
+        } else {
+            viewLifecycleOwner.lifecycleScope.launch(Dispatchers.IO) {
+                try {
+                    if (DocumentsContract.isDocumentUri(context, song.uri)) {
+                        DocumentsContract.deleteDocument(resolver, song.uri)
+                    } else {
+                        resolver.delete(song.uri, null, null)
+                    }
+                } catch (e: Exception) {
+                    L.e(e, "Failed to delete song file: ${song.uri}")
+                }
+                withContext(Dispatchers.Main) {
+                    musicModel.refresh()
+                    context.showToast(R.string.lng_songs_deleted)
+                }
+            }
+        }
     }
 
     override fun onSeekConfirmed(positionDs: Long) {
@@ -289,43 +355,15 @@ class PlaybackPanelFragment :
     }
 
     private fun updatePager(queue: PagerQueue) {
-        // Right now there's easily 140ms of frame skipping when going next/prev. This is primarily
-        // the fault of specifically the nested bottom sheet UI setup, which is intractable to
-        // optimize. If I don't do multiple remeasures/relayouts on every slightest state
-        // instability
-        // I will suddenly encounter insane issues where the sheet fails to measure, appears below
-        // the sidebar, flies away, not changing with ui scale, etc, often only on third-party OEM
-        // ROMs that randomly mangle  SDK APIs and the SystemUI chrome for no reason.
-        //
-        // Historically this was not an issue, as I did not animate next/prev. Now I do, and it's
-        // highly noticeable. So at least for plain next/prev I have to hack around it, do not
-        // execute any transition until the state has fully adjudicated and laid out the UI. It's
-        // not effective for swiping but there's nothing I can do there.
-        //
-        // Eventually one day Claude Fable 6.7 will probably be able to figure out that you need to
-        // reflect into System.FoobaCrumbo::beegieConnector(GoolaUtils.PlubBud) and call it
-        // specifically with 0x189B31FA alongside disabling the AndroidX Helpo SuperCharge by
-        // manually clobbering `BottomSheetM2InternalBoogieCompat::scrimbloManager` to null for it
-        // to not actually randomly mangle the sheets and do it in 1 clean layout, but for now I
-        // must do this to keep my sanity.
-        //
-        // Actual snippet here was codex, just cleaned & adapted it / cognitive ownership
-        requireBinding().playbackPager.apply {
-            if (!isAttachedToWindow) {
-                post { updatePagerImpl(queue) }
-                return
-            }
+        val pager = requireBinding().playbackPager
+        if (!pager.isAttachedToWindow) {
+            pager.post { updatePagerImpl(queue) }
+            return
+        }
 
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && isHardwareAccelerated) {
-                // New version using post-Q frame hooks
-                viewTreeObserver.registerFrameCommitCallback {
-                    post { postOnAnimation { updatePagerImpl(queue) } }
-                }
-                postInvalidateOnAnimation()
-            } else {
-                // Let current layout happen, then wait for the next to conclude
-                postOnAnimation { postOnAnimation { updatePagerImpl(queue) } }
-            }
+        // Post on animation frame so the layout stabilizes before scrolling/updating pages
+        pager.postOnAnimation {
+            updatePagerImpl(queue)
         }
     }
 
@@ -370,15 +408,24 @@ class PlaybackPanelFragment :
     }
 
     private fun navigateToCurrentSong() {
-        playbackModel.song.value?.let(detailModel::showAlbum)
+        playbackModel.song.value?.let {
+            playbackModel.openMain()
+            detailModel.showAlbum(it)
+        }
     }
 
     private fun navigateToCurrentArtist() {
-        playbackModel.song.value?.let(detailModel::showArtist)
+        playbackModel.song.value?.let {
+            playbackModel.openMain()
+            detailModel.showArtist(it)
+        }
     }
 
     private fun navigateToCurrentAlbum() {
-        playbackModel.song.value?.let { detailModel.showAlbum(it.album) }
+        playbackModel.song.value?.let {
+            playbackModel.openMain()
+            detailModel.showAlbum(it.album)
+        }
     }
 
     override fun seek(direction: Direction) {

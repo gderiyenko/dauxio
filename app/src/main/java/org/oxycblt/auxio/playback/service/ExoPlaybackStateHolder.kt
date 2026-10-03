@@ -159,6 +159,13 @@ class ExoPlaybackStateHolder(
         when (action) {
             // Restore state -> Start a new restoreState job
             is DeferredPlayback.RestoreState -> {
+                if (sessionOngoing || playbackManager.currentSong != null) {
+                    L.d("Session is already ongoing, skipping RestoreState")
+                    if (action.play && !playbackManager.progression.isPlaying) {
+                        playbackManager.playing(true)
+                    }
+                    return true
+                }
                 L.d("Restoring playback state")
                 restoreScope.launch {
                     val state = persistenceRepository.readState()

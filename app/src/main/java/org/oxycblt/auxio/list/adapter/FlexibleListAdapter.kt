@@ -168,6 +168,14 @@ private class FlexibleListDiffer<T>(
         runGeneration: Int,
         callback: (() -> Unit)?,
     ) {
+        // Fast short-circuit: if the list reference hasn't changed or contents are identical, no-op
+        if (oldList === newList || oldList == newList) {
+            L.d("Short-circuiting diff: list unchanged")
+            currentList = newList
+            callback?.invoke()
+            return
+        }
+
         // fast simple remove all
         if (newList.isEmpty()) {
             L.d("Short-circuiting diff to remove all")

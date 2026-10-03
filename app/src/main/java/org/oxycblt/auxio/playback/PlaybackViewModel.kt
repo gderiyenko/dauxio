@@ -483,6 +483,20 @@ constructor(
     }
 
     /**
+     * Remove a [Song] from the current queue.
+     *
+     * @param song The [Song] to remove.
+     */
+    fun removeSong(song: Song) {
+        val currentQueue = playbackManager.queue
+        val index = currentQueue.indexOf(song)
+        if (index != -1) {
+            L.d("Removing song from queue at index $index: $song")
+            playbackManager.removeQueueItem(index)
+        }
+    }
+
+    /**
      * Add a [Song] to the top of the queue.
      *
      * @param song The [Song] to add.

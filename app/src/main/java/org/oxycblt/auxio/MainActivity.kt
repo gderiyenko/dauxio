@@ -51,6 +51,7 @@ import timber.log.Timber as L
  */
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+    private var hasRestoredPlayback = false
     private val playbackModel: PlaybackViewModel by viewModels()
     @Inject lateinit var uiSettings: UISettings
 
@@ -74,8 +75,11 @@ class MainActivity : AppCompatActivity() {
         )
 
         if (!startIntentAction(intent)) {
-            // No intent action to do, just restore the previously saved state.
-            playbackModel.playDeferred(DeferredPlayback.RestoreState(false))
+            // No intent action to do, only restore the previously saved state once on startup.
+            if (!hasRestoredPlayback) {
+                hasRestoredPlayback = true
+                playbackModel.playDeferred(DeferredPlayback.RestoreState(false))
+            }
         }
     }
 
