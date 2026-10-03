@@ -15,7 +15,6 @@ Auxio는 다른 음악 플레이어에 존재하는 쓸모없는 기능 없이, 
 - Android Auto 지원
 - 자동 갭리스 재생 지원
 - ReplayGain 완벽 지원 (MP3, FLAC, OGG, OPUS, MP4)
-- 외부 이퀄라이저 지원 (Wavelet 등)
 - Edge-to-edge
 - 파일 내장 앨범 커버 지원
 - 검색 기능

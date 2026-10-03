@@ -15,7 +15,6 @@ tumpak/orihinal na mga petsa, pag-uuri ng mga tag, at higit pa
 - Suporta sa Android auto
 - Awtomatikong walang gap na pag-playback
 - Buong suporta sa ReplayGain (Sa mga MP3, FLAC, OGG, OPUS, at MP4 na mga file)
-- Panlabas na suporta sa equalizer (hal. Wavelet)
 - Gilid-sa-gilid
 - Naka-embed na sumasaklaw sa suporta
 - Pag-andar ng paghahanap

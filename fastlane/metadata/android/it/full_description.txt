@@ -14,7 +14,6 @@ Auxio è un lettore musicale locale veloce, con un'interfaccia utente intuitiva 
 - Riproduzione gapless automatica
 - Supporto Android Auto
 - Supporto completo di ReplayGain (su file MP3, FLAC, OGG, OPUS e MP4)
-- Supporto di equalizzatori esterni (come Wavelet)
 - Visualizzazione edge-to-edge
 - Supporto per copertine integrate
 - Funzionalità di ricerca

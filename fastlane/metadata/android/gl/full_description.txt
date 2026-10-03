@@ -12,7 +12,6 @@ Clasificación de pestanas e moito máis
 - A función de xestión de cartafoles é compatible coa tarxeta SD
 - Disposición fiable e persistente do progreso da reprodución
 - Soporte total para ReplayGain (incluíndo ficheiros MP3, FLAC, OGG, OPUS e MP4)
-- Soporte para ecualizadores externos (aplicacións como Wavelet)
 - Deseño borde a bordo
 - Soporte de cuberta integrado
 - buscar función

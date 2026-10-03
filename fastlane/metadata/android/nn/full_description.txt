@@ -14,7 +14,6 @@ Auxio er ein lokal musikkspelar med ei snøgg, pålitade nøytaroppleving utan d
 - Støtte for Android Auto
 - Automatisk holfri avspeling
 - Full støtte for ReplayGain (på MP3, FLAC, OGG, OPUS og MP4-filer)
-- Støtte for ekstern tonekontroll (t.d. Wavelet)
 - Rand-til-rand nøytargrensesned
 - Støtte for innebyggde omslag
 - Søkjefunksjon

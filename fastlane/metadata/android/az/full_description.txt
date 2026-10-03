@@ -14,7 +14,6 @@ Auxio, digər musiqi pleyerlərində mövcud olan bir çox faydasız xüsusiyyə
 - Android Auto dəstəyi
 - Avtomatik fasiləsiz oxutma
 - Tam ReplayGain dəstəyi (MP3, FLAC, OGG, OPUS və MP4 fayllarında)
-- Xarici ekvalayzer dəstəyi (məsələn, Wavelet)
 - Kənardan kənara
 - Daxili üz qabığı dəstəyi
 - Axtarış funksiyası

@@ -14,7 +14,6 @@ Auxio on kohalikus nutiseadmes töötav kiire ja usaldusväärse kasutajaliidese
 - tugi Android Auto liidestusele
 - automaatne taasesitus lugudevahelise vaikusteta
 - taasesituse valjuse tundlikkuse tugi (MP3, FLAC, OGG, OPUS ja MP4 failide puhul)
-- välise ekvalaiseri tugi (nt. Wavelet)
 - äärest-ääreni visuaal
 - lõimitud albumikaante tugi
 - otsing

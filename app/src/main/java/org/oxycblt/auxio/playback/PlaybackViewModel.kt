@@ -115,12 +115,6 @@ constructor(
     val playbackDecision: Event<PlaybackDecision>
         field = MutableEvent<PlaybackDecision>()
 
-    /**
-     * The current audio session ID of the internal player. Null if no audio player is available.
-     */
-    val currentAudioSessionId: Int?
-        get() = playbackManager.currentAudioSessionId
-
     init {
         playbackManager.addListener(this)
         playbackSettings.registerListener(this)

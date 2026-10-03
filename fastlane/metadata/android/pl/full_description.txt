@@ -15,7 +15,6 @@ precyzyjnych/oryginalnych dat wydania, tagów sortujących i więcej
 - Wsparcie dla Android auto
 - Automatyczne bezproblemowe odtwarzanie
 - Pełne wsparcie dla ReplayGain (dla plików MP3, FLAC, OGG, OPUS, i MP4)
-- Wsparcie dla zewnętrznego korektora (np. Wavelet)
 - Obsługa ekranu od krawędzi do krawędzi
 - Obsługa wbudowanych okładek
 - Funkcje wyszukiwania

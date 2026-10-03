@@ -20,7 +20,6 @@ package org.oxycblt.auxio.playback.service
 
 import android.content.Context
 import android.content.Intent
-import android.media.audiofx.AudioEffect
 import android.provider.OpenableColumns
 import androidx.annotation.OptIn
 import androidx.media3.common.AudioAttributes
@@ -87,7 +86,6 @@ class ExoPlaybackStateHolder(
     private val saveScope = CoroutineScope(Dispatchers.IO + saveJob)
     private val restoreScope = CoroutineScope(Dispatchers.IO + saveJob)
     private var currentSaveJob: Job? = null
-    private var openAudioEffectSession = false
 
     var sessionOngoing = false
         private set
@@ -131,9 +129,6 @@ class ExoPlaybackStateHolder(
                 Player.REPEAT_MODE_ALL -> RepeatMode.ALL
                 else -> throw IllegalStateException("Unknown repeat mode: $repeatMode")
             }
-
-    override val audioSessionId: Int
-        get() = player.audioSessionId
 
     override fun resolveQueue(): RawQueue {
         if (musicRepository.library == null) {
@@ -479,18 +474,6 @@ class ExoPlaybackStateHolder(
             // Mark that we have started playing so that the notification can now be posted.
             L.d("Player has started playing")
             sessionOngoing = true
-            if (!openAudioEffectSession) {
-                // Convention to start an audioeffect session on play/pause rather than
-                // start/stop
-                L.d("Opening audio effect session")
-                broadcastAudioEffectAction(AudioEffect.ACTION_OPEN_AUDIO_EFFECT_CONTROL_SESSION)
-                openAudioEffectSession = true
-            }
-        } else if (openAudioEffectSession) {
-            // Make sure to close the audio session when we stop playback.
-            L.d("Closing audio effect session")
-            broadcastAudioEffectAction(AudioEffect.ACTION_CLOSE_AUDIO_EFFECT_CONTROL_SESSION)
-            openAudioEffectSession = false
         }
     }
 
@@ -536,16 +519,6 @@ class ExoPlaybackStateHolder(
         L.e(error.stackTraceToString())
         player.prepare()
         playbackManager.next()
-    }
-
-    private fun broadcastAudioEffectAction(event: String) {
-        L.d("Broadcasting AudioEffect event: $event")
-        context.sendBroadcast(
-            Intent(event)
-                .putExtra(AudioEffect.EXTRA_PACKAGE_NAME, context.packageName)
-                .putExtra(AudioEffect.EXTRA_AUDIO_SESSION, audioSessionId)
-                .putExtra(AudioEffect.EXTRA_CONTENT_TYPE, AudioEffect.CONTENT_TYPE_MUSIC)
-        )
     }
 
     // --- MUSICREPOSITORY METHODS ---

@@ -14,7 +14,6 @@ Az Auxio egy helyi zenelejátszó gyors, megbízható UI/UX felülettel, anélk�
 - Android Auto támogatás
 - Automatikus gapless lejátszás
 - Teljes ReplayGain támogatás (MP3, FLAC, OGG, OPUS és MP4 fájlokhoz)
-- Külső ekvalizátor támogatás (pl. Wavelet)
 - Szélről-szélre
 - Beágyazott borítók támogatása
 - Keresési funkció

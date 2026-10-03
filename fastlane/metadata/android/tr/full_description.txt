@@ -13,7 +13,6 @@ Auxio, diğer müzik çalarlarda bulunan birçok gereksiz özellik olmadan hızl
 - Oynatma durumu kalıcılığı
 - Android Auto desteği
 - Tam ReplayGain desteği (MP3, FLAC, OGG, OPUS ve MP4 dosyalarında)
-- Harici ekolayzer desteği (örn. Wavelet)
 - Kenardan kenara
 - Gömülü kapak desteği
 - Arama işlevi

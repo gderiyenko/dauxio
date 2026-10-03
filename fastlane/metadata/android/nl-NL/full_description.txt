@@ -14,7 +14,6 @@ exacte/originele data, sorteertags en meer
 - Persistentie van afspeelstatus
 - Automatisch gapless afspelen
 - Volledige ondersteuning voor ReplayGain (op MP3-, FLAC-, OGG-, OPUS- en MP4-bestanden)
-- Ondersteuning voor externe equalizer (bijv. Wavelet)
 - Rand-tot-rand
 - Ondersteuning voor ingesloten omslagen
 - Zoek functionaliteit

@@ -14,7 +14,6 @@ Auxio on paikallinen musiikkisoitin, jossa on nopea ja luotettava käyttöliitty
 - Android Auto -tuki
 - Automaattinen välitön toisto
 - Täysi ReplayGain-tuki (MP3-, FLAC-, OGG-, OPUS- ja MP4-tiedostoissa)
-- Ulkoisen taajuuskorjaimen tuki (esim. Wavelet)
 - Reunasta reunaan
 - Upotettu kansituki
 - Hakutoiminto

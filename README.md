@@ -40,14 +40,12 @@ Dauxio is a local music player with a fast, reliable UI/UX without unnecessary b
 - Android Auto support
 - Automatic gapless playback
 - Full ReplayGain support (On MP3, FLAC, OGG, OPUS, and MP4 files)
-- External equalizer support (ex. Wavelet)
 - Edge-to-edge
 - Embedded covers support
 - Search functionality
 - Headset autoplay
 - Stylish widgets that automatically adapt to their size
 - Completely private and offline
-- No rounded album covers (if you want them)
 
 ## Permissions
 

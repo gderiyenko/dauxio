@@ -14,7 +14,6 @@
 - „Android Auto“ palaikymas.
 - Automatinė betarpinė įrašo perklausa.
 - Pilnas „ReplayGain“ palaikymas (MP3, MP4, FLAC, OGG, OPUS ir MP4 failuose).
-- Išorinio ekvalaizerio palaikymas (pvz., „Wavelet“).
 - Kraštas iki krašto.
 - Įterptųjų viršelių palaikymas.
 - Paieškos funkcionalumas.

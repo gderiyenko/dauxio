@@ -14,7 +14,6 @@ Auxio ist ein lokaler Musik-Player mit einer schnellen, verlässlichen UI/UX, ab
 - Unterstützung für Android Auto
 - automatische lückenlose Wiedergabe
 - Vollständiger ReplayGain-Support (für MP3-, FLAC-, OGG-, OPUS- und MP4-Dateien)
-- Externer Equalizerunterstützung (z.B. Wavelet)
 - Edge-to-Edge
 - Unterstützung für eingebettete Cover
 - Suche

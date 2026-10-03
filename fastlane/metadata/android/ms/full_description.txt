@@ -14,7 +14,6 @@ Ciri-ciri
 - Sokongan Android Auto
 - Main balik tanpa sela secara automatik
 - Sokongan penuh ReplayGain (Pada fail MP3, FLAC, OGG, OPUS, dan MP4)
-- Sokongan penyama (equalizer) luaran (cth. Wavelet)
 - Paparan skrin penuh
 - Sokongan hiasan kulit album
 - Fungsi carian

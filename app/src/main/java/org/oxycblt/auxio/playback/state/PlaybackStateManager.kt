@@ -65,9 +65,6 @@ interface PlaybackStateManager {
     /** Whether the queue is shuffled or not. */
     val isShuffled: Boolean
 
-    /** The audio session ID of the internal player. Null if no internal player exists. */
-    val currentAudioSessionId: Int?
-
     /**
      * Add a [Listener] to this instance. This can be used to receive changes in the playback state.
      * Will immediately invoke [Listener] methods to initialize the instance with the current state.
@@ -381,9 +378,6 @@ class PlaybackStateManagerImpl @Inject constructor() : PlaybackStateManager {
 
     override val isShuffled
         get() = stateMirror.isShuffled
-
-    override val currentAudioSessionId: Int?
-        get() = stateHolder?.audioSessionId
 
     @Synchronized
     override fun addListener(listener: Listener) {

@@ -14,7 +14,6 @@ Auxio je lokalni plejer za muziku sa brzim i pouzdanim UI/UX-om, bez mnogih besk
 - Podrška za Android Auto
 - Automatska reprodukcija bez prekida
 - Puna ReplayGain podrška (za MP3, FLAC, OGG, OPUS i MP4 fajlove)
-- Podrška za spoljašnji ekvilajzer (npr. Wavelet)
 - Od ivice do ivice dizajn
 - Podrška za ugrađene omote albuma
 - Funkcija pretrage

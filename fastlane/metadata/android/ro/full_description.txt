@@ -11,7 +11,6 @@ Auxio este un player de muzică locală cu un UI/UX rapid și fiabil, fără mul
 - Gestionare a dosarelor compatibilă cu cardul SD
 - Persistența fiabilă a stării de redare
 - Suport complet pentru ReplayGain (pe MP3, MP4, FLAC, OGG și OPUS)
-- Funcționalitate de egalizator extern (În aplicații precum Wavelet)
 - Edge-to-edge
 - Suport pentru coperți încorporate
 - Funcționalitate de căutare
