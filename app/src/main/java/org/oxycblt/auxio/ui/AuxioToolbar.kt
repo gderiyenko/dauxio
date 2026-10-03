@@ -162,11 +162,13 @@ constructor(
         if (inflatingLayout) {
             super.addView(child, index, params)
         } else {
-            // hardcode layoutparams because injectable children logic is insane and never
-            binding.toolbarTitleContainer.addView(
-                child,
-                LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT),
-            )
+            val childParams =
+                if (params != null) {
+                    LinearLayout.LayoutParams(params)
+                } else {
+                    LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
+                }
+            binding.toolbarTitleContainer.addView(child, childParams)
         }
     }
 

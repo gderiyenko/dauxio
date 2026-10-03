@@ -80,23 +80,32 @@ class QueueAdapter(private val listener: EditClickListListener<Song>) :
      * @param isPlaying Whether playback is ongoing or paused.
      */
     fun setPosition(index: Int, isPlaying: Boolean) {
-        L.d("Updating index")
-        val lastIndex = currentIndex
-        currentIndex = index
-
-        // Have to update not only the currently playing item, but also all items marked
-        // as playing.
-        // TODO: Optimize this by only updating the range between old and new indices?
-        // TODO: Don't update when the index has not moved.
-        if (currentIndex < lastIndex) {
-            L.d("Moved backwards, must update items above last index")
-            notifyItemRangeChanged(0, lastIndex + 1, PAYLOAD_UPDATE_POSITION)
-        } else {
-            L.d("Moved forwards, update items after index")
-            notifyItemRangeChanged(0, currentIndex + 1, PAYLOAD_UPDATE_POSITION)
+        // If nothing changed, do nothing.
+        if (currentIndex == index && this.isPlaying == isPlaying) {
+            return
         }
 
+        val lastIndex = currentIndex
+        val wasPlaying = this.isPlaying
+
+        currentIndex = index
         this.isPlaying = isPlaying
+
+        if (lastIndex == index) {
+            // Only play/pause state changed for the active item
+            if (wasPlaying != isPlaying && index in 0 until itemCount) {
+                notifyItemChanged(index, PAYLOAD_UPDATE_POSITION)
+            }
+            return
+        }
+
+        // Active song changed: update the range between lastIndex and new index so
+        // isFuture and playing indicator states are updated without re-rendering the whole queue.
+        val start = minOf(lastIndex, index).coerceAtLeast(0)
+        val end = maxOf(lastIndex, index).coerceAtMost(itemCount - 1)
+        if (start <= end) {
+            notifyItemRangeChanged(start, end - start + 1, PAYLOAD_UPDATE_POSITION)
+        }
     }
 
     private companion object {
