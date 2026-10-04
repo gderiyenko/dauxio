@@ -31,18 +31,27 @@ internal interface TagParser {
 private data object TagParserImpl : TagParser {
     override fun parse(metadata: Metadata): ParsedTags {
         val compilation = metadata.isCompilation()
-        var artistMusicBrainzIds = metadata.artistMusicBrainzIds() ?: listOf()
-        var artistNames = metadata.artistNames()
-        var artistSortNames = metadata.artistSortNames() ?: listOf()
-        if (artistNames == null) {
+        val composerNames = metadata.composerNames()
+        val artistNames: List<String>
+        val artistSortNames: List<String>
+        val artistMusicBrainzIds: List<String>
+        if (metadata.artistNames() != null) {
+            artistNames = metadata.artistNames()!!
+            artistSortNames = metadata.artistSortNames() ?: listOf()
+            artistMusicBrainzIds = metadata.artistMusicBrainzIds() ?: listOf()
+        } else if (composerNames != null) {
             // We don't have a first-class composer type, it's just a fallback for artist
             // when we don't seem to have any.
             //
             // In this case we override to composer in a single go so we don't accidentally
             // hybridize sort tags or MBIDs between artist/composer.
-            artistMusicBrainzIds = metadata.composerMusicBrainzIds() ?: listOf()
-            artistNames = metadata.composerNames() ?: listOf()
+            artistNames = composerNames
             artistSortNames = metadata.composerSortNames() ?: listOf()
+            artistMusicBrainzIds = metadata.composerMusicBrainzIds() ?: listOf()
+        } else {
+            artistNames = listOf()
+            artistSortNames = metadata.artistSortNames() ?: listOf()
+            artistMusicBrainzIds = metadata.artistMusicBrainzIds() ?: listOf()
         }
         return ParsedTags(
             durationMs = metadata.properties.durationMs,
