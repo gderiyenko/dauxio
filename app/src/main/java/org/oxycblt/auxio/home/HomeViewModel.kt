@@ -201,6 +201,19 @@ constructor(
         listSettings.songSort = sort
     }
 
+    /** Whether to exclude songs included in playlists from the songs list. */
+    val excludePlaylistSongs: Boolean
+        get() = listSettings.excludePlaylistSongs
+
+    /**
+     * Apply a new exclude-playlist-songs filter to [songList].
+     *
+     * @param exclude true to exclude playlist songs, false otherwise.
+     */
+    fun applyExcludePlaylistSongs(exclude: Boolean) {
+        listSettings.excludePlaylistSongs = exclude
+    }
+
     /**
      * Apply a new [Sort] to [albumList].
      *

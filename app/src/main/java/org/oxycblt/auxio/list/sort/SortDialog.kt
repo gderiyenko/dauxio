@@ -38,6 +38,12 @@ abstract class SortDialog :
 
     abstract fun getModeChoices(): List<Sort.Mode>
 
+    open fun onSetupFilters(binding: DialogSortBinding) {}
+
+    open fun applyFilters() {}
+
+    open fun hasFilterChanges(): Boolean = false
+
     override fun onCreateBinding(inflater: LayoutInflater) = DialogSortBinding.inflate(inflater)
 
     override fun onBindingCreated(binding: DialogSortBinding, savedInstanceState: Bundle?) {
@@ -51,11 +57,17 @@ abstract class SortDialog :
         binding.sortModeRecycler.adapter = modeAdapter
         binding.sortCancel.setOnClickListener { dismiss() }
         binding.sortSave.setOnClickListener {
-            applyChosenSort(requireNotNull(getCurrentSort()))
+            val sort = getCurrentSort()
+            if (sort != null) {
+                applyChosenSort(sort)
+            }
+            applyFilters()
             dismiss()
         }
         binding.sortDirectionAsc.setOnClickListener { updateDirection(Sort.Direction.ASCENDING) }
         binding.sortDirectionDsc.setOnClickListener { updateDirection(Sort.Direction.DESCENDING) }
+
+        onSetupFilters(binding)
 
         // --- STATE SETUP ---
         modeAdapter.update(getModeChoices(), UpdateInstructions.Diff)
@@ -80,9 +92,10 @@ abstract class SortDialog :
         updateButtons()
     }
 
-    private fun updateButtons() {
+    protected fun updateButtons() {
         val binding = requireBinding()
-        binding.sortSave.isEnabled = getCurrentSort().let { it != null && it != getInitialSort() }
+        val sortChanged = getCurrentSort().let { it != null && it != getInitialSort() }
+        binding.sortSave.isEnabled = sortChanged || hasFilterChanges()
     }
 
     private fun getCurrentSort(): Sort? {

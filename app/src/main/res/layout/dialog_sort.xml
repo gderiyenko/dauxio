@@ -17,6 +17,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/sort_filter_unplaylisted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_medium"
+        android:layout_marginBottom="@dimen/spacing_tiny"
+        android:text="@string/lbl_filter_unplaylisted_songs"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
     <TextView
         android:id="@+id/sort_name"
         style="@style/Widget.Auxio.TextView.Primary"

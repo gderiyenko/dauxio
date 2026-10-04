@@ -29,6 +29,8 @@ import org.oxycblt.auxio.settings.Settings
 interface ListSettings : Settings<ListSettings.Listener> {
     /** The [Sort] mode used in Song lists. */
     var songSort: Sort
+    /** Whether to exclude songs that are included in any playlist from the main songs list. */
+    var excludePlaylistSongs: Boolean
     /** The [Sort] mode used in Album lists. */
     var albumSort: Sort
     /** The [Sort] mode used in Artist lists. */
@@ -46,6 +48,8 @@ interface ListSettings : Settings<ListSettings.Listener> {
 
     interface Listener {
         fun onSongSortChanged() {}
+
+        fun onExcludePlaylistSongsChanged() {}
 
         fun onAlbumSortChanged() {}
 
@@ -73,6 +77,19 @@ class ListSettingsImpl @Inject constructor(@ApplicationContext val context: Cont
         set(value) {
             sharedPreferences.edit {
                 putInt(getString(R.string.set_key_songs_sort), value.intCode)
+                apply()
+            }
+        }
+
+    override var excludePlaylistSongs: Boolean
+        get() =
+            sharedPreferences.getBoolean(
+                getString(R.string.set_key_exclude_playlist_songs),
+                false,
+            )
+        set(value) {
+            sharedPreferences.edit {
+                putBoolean(getString(R.string.set_key_exclude_playlist_songs), value)
                 apply()
             }
         }
@@ -173,6 +190,8 @@ class ListSettingsImpl @Inject constructor(@ApplicationContext val context: Cont
     override fun onSettingChanged(key: String, listener: ListSettings.Listener) {
         when (key) {
             getString(R.string.set_key_songs_sort) -> listener.onSongSortChanged()
+            getString(R.string.set_key_exclude_playlist_songs) ->
+                listener.onExcludePlaylistSongsChanged()
             getString(R.string.set_key_albums_sort) -> listener.onAlbumSortChanged()
             getString(R.string.set_key_album_songs_sort) -> listener.onAlbumSongSortChanged()
             getString(R.string.set_key_artists_sort) -> listener.onArtistSortChanged()
