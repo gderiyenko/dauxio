@@ -30,7 +30,6 @@ import org.oxycblt.auxio.list.sort.SortDialog
 @AndroidEntryPoint
 class SongSortDialog : SortDialog() {
     private val homeModel: HomeViewModel by activityViewModels()
-    private var initialExcludePlaylistSongs = false
 
     override fun getInitialSort() = homeModel.songSort
 
@@ -39,23 +38,9 @@ class SongSortDialog : SortDialog() {
     }
 
     override fun onSetupFilters(binding: DialogSortBinding) {
-        initialExcludePlaylistSongs = homeModel.excludePlaylistSongs
         binding.sortFilterUnplaylisted.visibility = View.VISIBLE
-        binding.sortFilterUnplaylisted.isChecked = initialExcludePlaylistSongs
-        binding.sortFilterUnplaylisted.setOnCheckedChangeListener { _, _ ->
-            updateButtons()
-        }
-    }
-
-    override fun hasFilterChanges(): Boolean {
-        val binding = binding ?: return false
-        return binding.sortFilterUnplaylisted.isChecked != initialExcludePlaylistSongs
-    }
-
-    override fun applyFilters() {
-        val binding = binding ?: return
-        val isChecked = binding.sortFilterUnplaylisted.isChecked
-        if (isChecked != initialExcludePlaylistSongs) {
+        binding.sortFilterUnplaylisted.isChecked = homeModel.excludePlaylistSongs
+        binding.sortFilterUnplaylisted.setOnCheckedChangeListener { _, isChecked ->
             homeModel.applyExcludePlaylistSongs(isChecked)
         }
     }

@@ -40,10 +40,6 @@ abstract class SortDialog :
 
     open fun onSetupFilters(binding: DialogSortBinding) {}
 
-    open fun applyFilters() {}
-
-    open fun hasFilterChanges(): Boolean = false
-
     override fun onCreateBinding(inflater: LayoutInflater) = DialogSortBinding.inflate(inflater)
 
     override fun onBindingCreated(binding: DialogSortBinding, savedInstanceState: Bundle?) {
@@ -55,15 +51,6 @@ abstract class SortDialog :
             insets
         }
         binding.sortModeRecycler.adapter = modeAdapter
-        binding.sortCancel.setOnClickListener { dismiss() }
-        binding.sortSave.setOnClickListener {
-            val sort = getCurrentSort()
-            if (sort != null) {
-                applyChosenSort(sort)
-            }
-            applyFilters()
-            dismiss()
-        }
         binding.sortDirectionAsc.setOnClickListener { updateDirection(Sort.Direction.ASCENDING) }
         binding.sortDirectionDsc.setOnClickListener { updateDirection(Sort.Direction.DESCENDING) }
 
@@ -75,27 +62,29 @@ abstract class SortDialog :
         val initial = getInitialSort()
         if (initial != null) {
             modeAdapter.setSelected(initial.mode)
-            updateDirection(initial.direction)
+            updateDirectionState(initial.direction)
         }
-        updateButtons()
     }
 
     override fun onClick(item: Sort.Mode, viewHolder: RecyclerView.ViewHolder) {
         modeAdapter.setSelected(item)
-        updateButtons()
+        applyCurrentSort()
     }
 
     private fun updateDirection(direction: Sort.Direction) {
+        updateDirectionState(direction)
+        applyCurrentSort()
+    }
+
+    private fun updateDirectionState(direction: Sort.Direction) {
         val binding = requireBinding()
         binding.sortDirectionAsc.isChecked = direction == Sort.Direction.ASCENDING
         binding.sortDirectionDsc.isChecked = direction == Sort.Direction.DESCENDING
-        updateButtons()
     }
 
-    protected fun updateButtons() {
-        val binding = requireBinding()
-        val sortChanged = getCurrentSort().let { it != null && it != getInitialSort() }
-        binding.sortSave.isEnabled = sortChanged || hasFilterChanges()
+    private fun applyCurrentSort() {
+        val sort = getCurrentSort() ?: return
+        applyChosenSort(sort)
     }
 
     private fun getCurrentSort(): Sort? {
