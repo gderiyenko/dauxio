@@ -39,10 +39,7 @@ import org.oxycblt.musikr.Genre
 import org.oxycblt.musikr.Song
 import timber.log.Timber as L
 
-/**
- * A picker [ViewBindingMaterialDialogFragment] intended for when [Genre] playback is ambiguous.
- *
- */
+/** A picker [ViewBindingMaterialDialogFragment] intended for when [Genre] playback is ambiguous. */
 @AndroidEntryPoint
 class PlayFromGenreDialog :
     ViewBindingMaterialDialogFragment<DialogMusicChoicesBinding>(), ClickableListListener<Genre> {

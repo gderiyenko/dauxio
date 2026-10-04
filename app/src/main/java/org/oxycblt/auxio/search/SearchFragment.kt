@@ -70,7 +70,6 @@ import timber.log.Timber as L
 /**
  * The [ListFragment] providing search functionality for the music library.
  *
- *
  * TODO: Better keyboard management
  */
 @AndroidEntryPoint

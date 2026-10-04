@@ -32,10 +32,7 @@ import org.oxycblt.musikr.Song
 import org.oxycblt.musikr.tag.Name
 import timber.log.Timber as L
 
-/**
- * Implements the fuzzy-ish searching algorithm used in the search view.
- *
- */
+/** Implements the fuzzy-ish searching algorithm used in the search view. */
 interface SearchEngine {
     /**
      * Begin a search.

@@ -29,7 +29,6 @@ import com.google.android.material.textfield.TextInputEditText
  * just like a normal block of selectable/copyable text, but with nicer aesthetics.
  *
  * Adapted from Material Files: https://github.com/zhanghai/MaterialFiles
- *
  */
 class ReadOnlyTextInput
 @JvmOverloads

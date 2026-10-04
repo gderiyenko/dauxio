@@ -29,10 +29,7 @@ import org.oxycblt.musikr.Music
 import org.oxycblt.musikr.Song
 import timber.log.Timber as L
 
-/**
- * A [ViewModel] that stores the choices shown in the playback picker dialogs.
- *
- */
+/** A [ViewModel] that stores the choices shown in the playback picker dialogs. */
 @HiltViewModel
 class PlaybackPickerViewModel @Inject constructor(private val musicRepository: MusicRepository) :
     ViewModel(), MusicRepository.UpdateListener {

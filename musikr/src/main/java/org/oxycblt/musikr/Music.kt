@@ -39,7 +39,6 @@ import org.oxycblt.musikr.util.toUuidOrNull
 /**
  * Abstract music data. This contains universal information about all concrete music
  * implementations, such as identification information and names.
- *
  */
 sealed interface Music {
     /**
@@ -69,7 +68,6 @@ sealed interface Music {
      *
      * Note: Generally try to use [UID] as a black box that can only be read, written, and compared.
      * It will not be fun if you try to manipulate it in any other manner.
-     *
      */
     @Parcelize
     class UID
@@ -250,19 +248,13 @@ sealed interface Music {
     }
 }
 
-/**
- * An abstract grouping of [Song]s and other [Music] data.
- *
- */
+/** An abstract grouping of [Song]s and other [Music] data. */
 sealed interface MusicParent : Music {
     /** The child [Song]s of this [MusicParent]. */
     val songs: Collection<Song>
 }
 
-/**
- * A song.
- *
- */
+/** A song. */
 interface Song : Music {
     override val name: Name.Known
     /** The track number. Will be null if no valid track number was present in the metadata. */
@@ -323,7 +315,6 @@ interface Song : Music {
 /**
  * An abstract release group. While it may be called an album, it encompasses other types of
  * releases like singles, EPs, and compilations.
- *
  */
 interface Album : MusicParent {
     /** The [Date.Range] that [Song]s in the [Album] were released. */
@@ -350,7 +341,6 @@ interface Album : MusicParent {
 /**
  * An abstract artist. These are actually a combination of the artist and album artist tags from
  * within the library, derived from [Song]s and [Album]s respectively.
- *
  */
 interface Artist : MusicParent {
     /** Albums directly credited to this [Artist] via a "Album Artist" tag. */
@@ -368,10 +358,7 @@ interface Artist : MusicParent {
     val genres: List<Genre>
 }
 
-/**
- * A genre.
- *
- */
+/** A genre. */
 interface Genre : MusicParent {
     /** The artists indirectly linked to by the [Artist]s of this [Genre]. */
     val artists: Collection<Artist>
@@ -381,10 +368,7 @@ interface Genre : MusicParent {
     val covers: CoverCollection
 }
 
-/**
- * A playlist.
- *
- */
+/** A playlist. */
 interface Playlist : MusicParent {
     override val name: Name.Known
     override val songs: List<Song>

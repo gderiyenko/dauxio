@@ -54,10 +54,7 @@ import org.oxycblt.musikr.Song
 import org.oxycblt.musikr.playlist.m3u.M3U
 import timber.log.Timber as L
 
-/**
- * A [ListFragment] that shows information for a particular [Playlist].
- *
- */
+/** A [ListFragment] that shows information for a particular [Playlist]. */
 @AndroidEntryPoint
 class PlaylistDetailFragment :
     DetailFragment<Playlist, Song>(), PlaylistDetailListAdapter.Listener {

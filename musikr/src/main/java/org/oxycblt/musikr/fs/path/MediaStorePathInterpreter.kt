@@ -24,10 +24,7 @@ import android.provider.MediaStore
 import org.oxycblt.musikr.fs.Components
 import org.oxycblt.musikr.fs.Path
 
-/**
- * Wrapper around a [Cursor] that interprets path information on a per-API/manufacturer basis.
- *
- */
+/** Wrapper around a [Cursor] that interprets path information on a per-API/manufacturer basis. */
 internal sealed interface MediaStorePathInterpreter {
     /**
      * Extract a [Path] from the wrapped [Cursor]. This should be called after the cursor has been

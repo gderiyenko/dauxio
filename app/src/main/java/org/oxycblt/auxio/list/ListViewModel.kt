@@ -38,10 +38,7 @@ import org.oxycblt.musikr.Playlist
 import org.oxycblt.musikr.Song
 import timber.log.Timber as L
 
-/**
- * A [ViewModel] that orchestrates menu dialogs and selection state.
- *
- */
+/** A [ViewModel] that orchestrates menu dialogs and selection state. */
 @HiltViewModel
 class ListViewModel
 @Inject

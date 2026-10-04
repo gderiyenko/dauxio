@@ -27,10 +27,7 @@ import org.oxycblt.auxio.BuildConfig
 import org.oxycblt.auxio.R
 import org.oxycblt.auxio.util.fixDoubleRipple
 
-/**
- * The companion dialog to [IntListPreference]. Use [from] to create an instance.
- *
- */
+/** The companion dialog to [IntListPreference]. Use [from] to create an instance. */
 class IntListPreferenceDialog : PreferenceDialogFragmentCompat() {
     private val listPreference: IntListPreference
         get() = (preference as IntListPreference)

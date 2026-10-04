@@ -29,10 +29,7 @@ import com.google.android.material.divider.MaterialDivider
 import org.oxycblt.auxio.R
 import org.oxycblt.auxio.util.getDimenPixels
 
-/**
- * A [RecyclerView] intended for use in dialogs, with NestedScrollView-style scroll indicators.
- *
- */
+/** A [RecyclerView] intended for use in dialogs, with NestedScrollView-style scroll indicators. */
 class DialogRecyclerView
 @JvmOverloads
 constructor(context: Context, attrs: AttributeSet? = null, @AttrRes defStyleAttr: Int = 0) :

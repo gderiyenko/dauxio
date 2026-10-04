@@ -41,7 +41,6 @@ import timber.log.Timber as L
  *
  * Internal consumers should usually use [Listener], however the component that manages the player
  * itself should instead use [PlaybackStateHolder].
- *
  */
 interface PlaybackStateManager {
     /** The current [Progression] of the audio player */

@@ -115,7 +115,6 @@ data class SortHeader(@StringRes override val titleRes: Int) : PlainHeader
 /**
  * A [RecyclerView.ViewHolder] that displays a [SortHeader] and it's actions. Use [from] to create
  * an instance.
- *
  */
 private class SortHeaderViewHolder(private val binding: ItemSortHeaderBinding) :
     RecyclerView.ViewHolder(binding.root) {

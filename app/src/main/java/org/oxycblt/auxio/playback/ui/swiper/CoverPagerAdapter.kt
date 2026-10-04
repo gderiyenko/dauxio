@@ -43,10 +43,7 @@ class CoverPagerAdapter(private val listener: StepperOverlay.Listener) :
     }
 }
 
-/**
- * A [RecyclerView.ViewHolder] that displays a [Song]'s cover and step gesture overlays.
- *
- */
+/** A [RecyclerView.ViewHolder] that displays a [Song]'s cover and step gesture overlays. */
 class CoverViewHolder private constructor(private val binding: ItemCoverBinding) :
     RecyclerView.ViewHolder(binding.root) {
     /**

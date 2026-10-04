@@ -22,36 +22,36 @@ import android.annotation.SuppressLint
 import android.app.SearchManager
 import android.content.ActivityNotFoundException
 import android.content.Intent
-import android.provider.DocumentsContract
-import android.provider.MediaStore
-import androidx.activity.result.IntentSenderRequest
-import androidx.lifecycle.lifecycleScope
-import com.google.android.material.snackbar.Snackbar
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import org.oxycblt.auxio.music.MusicViewModel
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.provider.DocumentsContract
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.updatePadding
 import androidx.dynamicanimation.animation.SpringForce
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.math.abs
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.oxycblt.auxio.R
 import org.oxycblt.auxio.databinding.FragmentPlaybackPanelBinding
 import org.oxycblt.auxio.detail.DetailViewModel
 import org.oxycblt.auxio.list.ListViewModel
+import org.oxycblt.auxio.music.MusicViewModel
 import org.oxycblt.auxio.music.resolve
 import org.oxycblt.auxio.music.resolveNames
 import org.oxycblt.auxio.playback.queue.QueueViewModel
@@ -76,7 +76,6 @@ import timber.log.Timber as L
 /**
  * A [ViewBindingFragment] more information about the currently playing song, alongside all
  * available controls.
- *
  *
  * TODO: Improve flickering situation on play button
  */
@@ -106,7 +105,8 @@ class PlaybackPanelFragment :
         super.onBindingCreated(binding, savedInstanceState)
 
         deleteResultLauncher =
-            registerForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { result ->
+            registerForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { result
+                ->
                 if (result.resultCode == android.app.Activity.RESULT_OK) {
                     musicModel.refresh()
                     context?.showToast(R.string.lng_songs_deleted)
@@ -192,16 +192,18 @@ class PlaybackPanelFragment :
                 val artist = song.artists.resolveNames(context)
                 val songName = song.name.resolve(context)
                 val query = "$artist $songName lyrics".trim()
-                val webIntent = Intent(Intent.ACTION_WEB_SEARCH).apply {
-                    putExtra(SearchManager.QUERY, query)
-                }
+                val webIntent =
+                    Intent(Intent.ACTION_WEB_SEARCH).apply {
+                        putExtra(SearchManager.QUERY, query)
+                    }
                 try {
                     startActivity(webIntent)
                 } catch (e: ActivityNotFoundException) {
-                    val fallbackIntent = Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse("https://www.google.com/search?q=" + Uri.encode(query))
-                    )
+                    val fallbackIntent =
+                        Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse("https://www.google.com/search?q=" + Uri.encode(query)),
+                        )
                     try {
                         startActivity(fallbackIntent)
                     } catch (e2: ActivityNotFoundException) {
@@ -249,30 +251,33 @@ class PlaybackPanelFragment :
             var isUndone = false
             var countdown = 3
 
-            val snackbar = Snackbar.make(
-                root,
-                getString(R.string.fmt_song_delete_countdown, countdown),
-                Snackbar.LENGTH_INDEFINITE,
-            ).setAction(R.string.lbl_undo) {
-                isUndone = true
-                pendingDeleteJob?.cancel()
-                L.d("Song deletion undone for $songToDelete")
-            }
+            val snackbar =
+                Snackbar.make(
+                        root,
+                        getString(R.string.fmt_song_delete_countdown, countdown),
+                        Snackbar.LENGTH_INDEFINITE,
+                    )
+                    .setAction(R.string.lbl_undo) {
+                        isUndone = true
+                        pendingDeleteJob?.cancel()
+                        L.d("Song deletion undone for $songToDelete")
+                    }
             snackbar.show()
 
-            pendingDeleteJob = viewLifecycleOwner.lifecycleScope.launch {
-                while (countdown > 1) {
-                    delay(1000)
-                    countdown--
-                    if (isUndone) break
-                    snackbar.setText(getString(R.string.fmt_song_delete_countdown, countdown))
+            pendingDeleteJob =
+                viewLifecycleOwner.lifecycleScope.launch {
+                    while (countdown > 1) {
+                        delay(1000)
+                        countdown--
+                        if (isUndone) break
+                        snackbar.setText(getString(R.string.fmt_song_delete_countdown, countdown))
+                    }
+                    if (!isUndone) {
+                        delay(1000)
+                        snackbar.dismiss()
+                        executeSongDeletion(songToDelete)
+                    }
                 }
-                if (!isUndone) {
-                    delay(1000)
-                    snackbar.dismiss()
-                    executeSongDeletion(songToDelete)
-                }
-            }
             return true
         }
 
@@ -285,7 +290,10 @@ class PlaybackPanelFragment :
 
         playbackModel.removeSong(song)
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && song.uri.authority == MediaStore.AUTHORITY) {
+        if (
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.R &&
+                song.uri.authority == MediaStore.AUTHORITY
+        ) {
             val mediaStoreUris = listOf(song.uri)
             val pendingIntent = MediaStore.createDeleteRequest(resolver, mediaStoreUris)
             val request = IntentSenderRequest.Builder(pendingIntent.intentSender).build()

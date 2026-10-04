@@ -75,10 +75,7 @@ class SortModeAdapter(private val listener: ClickableListListener<Sort.Mode>) :
     }
 }
 
-/**
- * A [RecyclerView.ViewHolder] that displays a [Sort.Mode].
- *
- */
+/** A [RecyclerView.ViewHolder] that displays a [Sort.Mode]. */
 class SortModeViewHolder private constructor(private val binding: ItemSortModeBinding) :
     RecyclerView.ViewHolder(binding.root) {
     /**

@@ -176,7 +176,6 @@ interface ForegroundListener {
 /**
  * Wrapper around [NotificationCompat.Builder] intended for use for [NotificationCompat]s that
  * signal a Service's ongoing foreground state.
- *
  */
 abstract class ForegroundServiceNotification(context: Context, info: ChannelInfo) :
     NotificationCompat.Builder(context, info.id) {

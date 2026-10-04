@@ -45,10 +45,7 @@ import org.oxycblt.musikr.MusicParent
 import org.oxycblt.musikr.Playlist
 import org.oxycblt.musikr.Song
 
-/**
- * A [ListFragment] that shows a list of [Playlist]s.
- *
- */
+/** A [ListFragment] that shows a list of [Playlist]s. */
 class PlaylistListFragment :
     ListFragment<Playlist, FragmentHomeListBinding>(),
     FastScrollRecyclerView.PopupProvider,

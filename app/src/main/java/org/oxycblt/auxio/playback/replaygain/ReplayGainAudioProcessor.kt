@@ -42,7 +42,6 @@ import timber.log.Timber as L
  *
  * Note: This audio processor must be attached to a respective [Player] instance as a
  * [Player.Listener] to function properly.
- *
  */
 @OptIn(markerClass = [UnstableApi::class])
 class ReplayGainAudioProcessor

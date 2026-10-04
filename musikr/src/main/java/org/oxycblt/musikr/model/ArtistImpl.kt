@@ -33,10 +33,7 @@ internal interface ArtistCore {
     fun resolveGenres(): Set<Genre>
 }
 
-/**
- * Library-backed implementation of [Artist].
- *
- */
+/** Library-backed implementation of [Artist]. */
 internal class ArtistImpl(private val core: ArtistCore) : Artist {
     override val uid = core.preArtist.uid
     override val name = core.preArtist.name

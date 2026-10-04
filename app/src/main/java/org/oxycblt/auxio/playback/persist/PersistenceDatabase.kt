@@ -31,10 +31,7 @@ import androidx.room.migration.Migration
 import org.oxycblt.auxio.playback.state.RepeatMode
 import org.oxycblt.musikr.Music
 
-/**
- * Provides raw access to the database storing the persisted playback state.
- *
- */
+/** Provides raw access to the database storing the persisted playback state. */
 @Database(
     entities = [PlaybackState::class, QueueHeapItem::class, QueueShuffledMappingItem::class],
     version = 38,
@@ -67,10 +64,7 @@ abstract class PersistenceDatabase : RoomDatabase() {
     }
 }
 
-/**
- * Provides control of the persisted playback state table.
- *
- */
+/** Provides control of the persisted playback state table. */
 @Dao
 interface PlaybackStateDao {
     /**
@@ -91,10 +85,7 @@ interface PlaybackStateDao {
     @Insert(onConflict = OnConflictStrategy.ABORT) suspend fun insertState(state: PlaybackState)
 }
 
-/**
- * Provides control of the persisted queue state tables.
- *
- */
+/** Provides control of the persisted queue state tables. */
 @Dao
 interface QueueDao {
     /**

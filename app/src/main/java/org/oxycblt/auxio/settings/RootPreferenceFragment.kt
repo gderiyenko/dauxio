@@ -33,9 +33,7 @@ import org.oxycblt.auxio.util.navigateSafe
 import org.oxycblt.auxio.util.openInBrowser
 import timber.log.Timber as L
 
-/**
- * The [PreferenceFragmentCompat] that displays the root settings list.
- */
+/** The [PreferenceFragmentCompat] that displays the root settings list. */
 @AndroidEntryPoint
 class RootPreferenceFragment : BasePreferenceFragment(R.xml.preferences_root) {
     private val musicModel: MusicViewModel by activityViewModels()

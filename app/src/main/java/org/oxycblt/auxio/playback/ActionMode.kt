@@ -23,7 +23,6 @@ import org.oxycblt.auxio.IntegerTable
 /**
  * Represents a configuration option for what kind of "secondary" action to show in a particular UI
  * context.
- *
  */
 enum class ActionMode {
     /** Use a "Skip next" button for the secondary action. */

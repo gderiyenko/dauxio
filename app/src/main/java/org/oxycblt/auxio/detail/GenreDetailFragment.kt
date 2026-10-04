@@ -45,10 +45,7 @@ import org.oxycblt.musikr.MusicParent
 import org.oxycblt.musikr.Song
 import timber.log.Timber as L
 
-/**
- * A [ListFragment] that shows information for a particular [Genre].
- *
- */
+/** A [ListFragment] that shows information for a particular [Genre]. */
 @AndroidEntryPoint
 class GenreDetailFragment : DetailFragment<Genre, Music>() {
     // Information about what genre to display is initially within the navigation arguments

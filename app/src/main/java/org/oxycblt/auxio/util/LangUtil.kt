@@ -108,11 +108,10 @@ fun jaroWinklerSimilarity(s1: CharSequence, s2: CharSequence): Double {
         k++
     }
 
-    val jaro = (
-        (matches.toDouble() / s1.length) +
-        (matches.toDouble() / s2.length) +
-        ((matches - transpositions / 2.0) / matches)
-    ) / 3.0
+    val jaro =
+        ((matches.toDouble() / s1.length) +
+            (matches.toDouble() / s2.length) +
+            ((matches - transpositions / 2.0) / matches)) / 3.0
 
     var prefix = 0
     val maxPrefix = minOf(4, minOf(s1.length, s2.length))
@@ -122,4 +121,3 @@ fun jaroWinklerSimilarity(s1: CharSequence, s2: CharSequence): Double {
 
     return jaro + prefix * 0.1 * (1.0 - jaro)
 }
-

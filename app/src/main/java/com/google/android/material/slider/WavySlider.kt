@@ -49,7 +49,6 @@ import timber.log.Timber
 /**
  * Slider with active-track wave rendering that ports MDC LinearProgressIndicator's wavy draw
  * behavior.
- *
  */
 class WavySlider
 @JvmOverloads

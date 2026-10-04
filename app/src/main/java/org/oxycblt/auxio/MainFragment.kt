@@ -75,7 +75,6 @@ import timber.log.Timber as L
 
 /**
  * A wrapper around the home fragment that shows the playback fragment and high-level navigation.
- *
  */
 @AndroidEntryPoint
 class MainFragment :

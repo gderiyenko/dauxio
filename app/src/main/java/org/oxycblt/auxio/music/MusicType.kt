@@ -21,10 +21,7 @@ package org.oxycblt.auxio.music
 import org.oxycblt.auxio.IntegerTable
 import org.oxycblt.auxio.R
 
-/**
- * General configuration enum to control what kind of music is being worked with.
- *
- */
+/** General configuration enum to control what kind of music is being worked with. */
 enum class MusicType {
     SONGS,
     ALBUMS,

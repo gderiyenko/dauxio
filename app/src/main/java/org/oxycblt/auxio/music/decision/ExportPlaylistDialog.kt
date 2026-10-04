@@ -40,10 +40,7 @@ import org.oxycblt.musikr.playlist.ExportConfig
 import org.oxycblt.musikr.playlist.m3u.M3U
 import timber.log.Timber as L
 
-/**
- * A dialog that allows the user to configure how a playlist will be exported to a file.
- *
- */
+/** A dialog that allows the user to configure how a playlist will be exported to a file. */
 @AndroidEntryPoint
 class ExportPlaylistDialog : ViewBindingMaterialDialogFragment<DialogPlaylistExportBinding>() {
     private val musicModel: MusicViewModel by activityViewModels()

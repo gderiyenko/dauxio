@@ -58,7 +58,6 @@ import timber.log.Timber as L
 /**
  * [ViewModel] that manages the Song, Album, Artist, and Genre detail views. Keeps track of the
  * current item they are showing, sub-data to display, and configuration.
- *
  */
 @HiltViewModel
 class DetailViewModel
@@ -627,7 +626,6 @@ constructor(
 /**
  * A command for navigation to detail views. These can be handled partially if a certain command
  * cannot occur in a specific view.
- *
  */
 sealed interface Show {
     /**

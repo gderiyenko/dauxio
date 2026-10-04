@@ -34,10 +34,7 @@ import org.oxycblt.musikr.fs.mediastore.MediaStore
 import org.oxycblt.musikr.fs.saf.SAF
 import timber.log.Timber as L
 
-/**
- * User configuration specific to music system.
- *
- */
+/** User configuration specific to music system. */
 interface MusicSettings : Settings<MusicSettings.Listener> {
     /** The current library revision. */
     var revision: UUID?

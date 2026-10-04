@@ -28,10 +28,7 @@ import org.oxycblt.auxio.playback.PlaySong
 import org.oxycblt.musikr.MusicParent
 import timber.log.Timber as L
 
-/**
- * Manages the state information for [MenuDialogFragment] implementations.
- *
- */
+/** Manages the state information for [MenuDialogFragment] implementations. */
 @HiltViewModel
 class MenuViewModel @Inject constructor(private val musicRepository: MusicRepository) :
     ViewModel(), MusicRepository.UpdateListener {

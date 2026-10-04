@@ -26,7 +26,6 @@ import android.widget.FrameLayout
  * A [FrameLayout] that programmatically overrides the child layout to a left-to-right (LTR) layout
  * direction. This is useful for "Timeline" elements that Material Design recommends be LTR in all
  * cases. This layout can only contain one child, to prevent conflicts with other layout components.
- *
  */
 open class ForcedLTRFrameLayout
 @JvmOverloads

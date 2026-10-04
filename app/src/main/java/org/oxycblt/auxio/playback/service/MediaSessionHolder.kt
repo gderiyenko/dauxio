@@ -59,7 +59,6 @@ import timber.log.Timber as L
 /**
  * A component that mirrors the current playback state into the [MediaSessionCompat] and
  * [PlaybackNotification].
- *
  */
 class MediaSessionHolder
 private constructor(
@@ -385,7 +384,6 @@ private constructor(
 /**
  * The playback notification component. Due to race conditions regarding notification updates, this
  * component is not self-sufficient. [MediaSessionHolder] should be used instead of manage it.
- *
  */
 @SuppressLint("RestrictedApi")
 private class PlaybackNotification(

@@ -28,7 +28,6 @@ import timber.log.Timber as L
 /**
  * Abstract user configuration information. This interface has no functionality whatsoever. Concrete
  * implementations should be preferred instead.
- *
  */
 interface Settings<Listener> {
     /**

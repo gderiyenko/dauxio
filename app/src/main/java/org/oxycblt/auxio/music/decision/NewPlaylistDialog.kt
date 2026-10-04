@@ -39,7 +39,6 @@ import timber.log.Timber as L
 
 /**
  * A dialog allowing the name of a new playlist to be chosen before committing it to the database.
- *
  */
 @AndroidEntryPoint
 class NewPlaylistDialog : ViewBindingMaterialDialogFragment<DialogPlaylistNameBinding>() {

@@ -21,10 +21,7 @@ package org.oxycblt.auxio.playback.state
 import org.oxycblt.auxio.IntegerTable
 import org.oxycblt.auxio.R
 
-/**
- * Represents the current repeat mode of the player.
- *
- */
+/** Represents the current repeat mode of the player. */
 enum class RepeatMode {
     /**
      * Do not repeat. Songs are played immediately, and playback is paused when the queue repeats.

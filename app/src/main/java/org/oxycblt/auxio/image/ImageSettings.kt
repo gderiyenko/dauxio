@@ -26,10 +26,7 @@ import org.oxycblt.auxio.R
 import org.oxycblt.auxio.settings.Settings
 import timber.log.Timber as L
 
-/**
- * User configuration specific to image loading.
- *
- */
+/** User configuration specific to image loading. */
 interface ImageSettings : Settings<ImageSettings.Listener> {
     /** The strategy to use when loading album covers. */
     val coverMode: CoverMode

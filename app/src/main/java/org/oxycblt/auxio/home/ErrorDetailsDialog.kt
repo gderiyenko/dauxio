@@ -37,7 +37,6 @@ import org.oxycblt.auxio.util.showToast
 /**
  * A dialog that shows a stack trace for a music loading error.
  *
- *
  * TODO: Extend to other errors
  */
 class ErrorDetailsDialog : ViewBindingMaterialDialogFragment<DialogErrorDetailsBinding>() {

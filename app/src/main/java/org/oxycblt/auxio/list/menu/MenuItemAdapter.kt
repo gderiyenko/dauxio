@@ -42,10 +42,7 @@ class MenuItemAdapter(private val listener: ClickableListListener<MenuItem>) :
     }
 }
 
-/**
- * A [RecyclerView.ViewHolder] that displays a [MenuItem].
- *
- */
+/** A [RecyclerView.ViewHolder] that displays a [MenuItem]. */
 class MenuItemViewHolder private constructor(private val binding: ItemMenuOptionBinding) :
     RecyclerView.ViewHolder(binding.root) {
     /**

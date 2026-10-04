@@ -85,7 +85,6 @@ class AccentAdapter(private val listener: ClickableListListener<Accent>) :
 
 /**
  * A [RecyclerView.ViewHolder] that displays an [Accent] choice. Use [from] to create an instance.
- *
  */
 class AccentViewHolder private constructor(private val binding: ItemAccentBinding) :
     RecyclerView.ViewHolder(binding.root) {

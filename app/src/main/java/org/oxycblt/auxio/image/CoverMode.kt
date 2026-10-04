@@ -20,10 +20,7 @@ package org.oxycblt.auxio.image
 
 import org.oxycblt.auxio.IntegerTable
 
-/**
- * Represents the options available for album cover loading.
- *
- */
+/** Represents the options available for album cover loading. */
 enum class CoverMode {
     OFF,
     SAVE_SPACE,

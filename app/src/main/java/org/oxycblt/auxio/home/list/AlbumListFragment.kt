@@ -47,10 +47,7 @@ import org.oxycblt.musikr.Music
 import org.oxycblt.musikr.MusicParent
 import org.oxycblt.musikr.Song
 
-/**
- * A [ListFragment] that shows a list of [Album]s.
- *
- */
+/** A [ListFragment] that shows a list of [Album]s. */
 @AndroidEntryPoint
 class AlbumListFragment :
     ListFragment<Album, FragmentHomeListBinding>(),

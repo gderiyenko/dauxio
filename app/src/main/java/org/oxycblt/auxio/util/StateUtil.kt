@@ -28,10 +28,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 
-/**
- * A wrapper around [StateFlow] exposing a one-time consumable event.
- *
- */
+/** A wrapper around [StateFlow] exposing a one-time consumable event. */
 interface Event<T> {
     /** The inner [StateFlow] contained by the [Event]. */
     val flow: StateFlow<T?>
@@ -47,7 +44,6 @@ interface Event<T> {
 /**
  * A wrapper around [StateFlow] exposing a one-time consumable event that can be modified by it's
  * owner.
- *
  */
 class MutableEvent<T> : Event<T> {
     override val flow = MutableStateFlow<T?>(null)

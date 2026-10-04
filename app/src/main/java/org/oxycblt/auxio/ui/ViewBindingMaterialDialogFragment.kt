@@ -34,7 +34,6 @@ import timber.log.Timber as L
 /**
  * A lifecycle-aware [DialogFragment] that automatically manages the [ViewBinding] lifecycle as a
  * material dialog.
- *
  */
 abstract class ViewBindingMaterialDialogFragment<VB : ViewBinding> : DialogFragment() {
     private var _binding: VB? = null

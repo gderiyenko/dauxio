@@ -41,7 +41,6 @@ import timber.log.Timber as L
 
 /**
  * A picker [ViewBindingMaterialDialogFragment] intended for when [Artist] playback is ambiguous.
- *
  */
 @AndroidEntryPoint
 class PlayFromArtistDialog :

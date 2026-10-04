@@ -39,10 +39,7 @@ import org.oxycblt.musikr.Playlist
 import org.oxycblt.musikr.Song
 import timber.log.Timber as L
 
-/**
- * The ViewModel for managing the tab data and lists of the home view.
- *
- */
+/** The ViewModel for managing the tab data and lists of the home view. */
 @HiltViewModel
 class HomeViewModel
 @Inject

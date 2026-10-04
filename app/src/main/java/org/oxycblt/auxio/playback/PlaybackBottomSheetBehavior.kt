@@ -36,10 +36,7 @@ import org.oxycblt.auxio.util.getDimenPixels
 import org.oxycblt.auxio.util.replaceSystemBarInsetsCompat
 import org.oxycblt.auxio.util.systemBarInsetsCompat
 
-/**
- * The [BaseBottomSheetBehavior] for the playback bottom sheet. This bottom sheet
- *
- */
+/** The [BaseBottomSheetBehavior] for the playback bottom sheet. This bottom sheet */
 class PlaybackBottomSheetBehavior<V : View>(context: Context, attributeSet: AttributeSet?) :
     BaseBottomSheetBehavior<V>(context, attributeSet) {
     lateinit var sheetBackgroundDrawable: MaterialShapeDrawable

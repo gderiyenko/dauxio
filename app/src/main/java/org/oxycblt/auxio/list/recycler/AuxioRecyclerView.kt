@@ -31,7 +31,6 @@ import org.oxycblt.auxio.util.systemBarInsetsCompat
  * A [RecyclerView] with a few QoL extensions, such as:
  * - Automatic edge-to-edge support
  * - Automatic [setHasFixedSize] setup
- *
  */
 open class AuxioRecyclerView
 @JvmOverloads

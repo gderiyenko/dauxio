@@ -38,7 +38,6 @@ import org.oxycblt.auxio.util.context
 import org.oxycblt.auxio.util.getAttrColorCompat
 import org.oxycblt.auxio.util.inflater
 import org.oxycblt.musikr.Song
-import timber.log.Timber as L
 
 /**
  * A [RecyclerView.Adapter] that shows an editable list of queue items.
@@ -116,7 +115,6 @@ class QueueAdapter(private val listener: EditClickListListener<Song>) :
 /**
  * A [PlayingIndicatorAdapter.ViewHolder] that displays an queue [Song] which can be re-ordered and
  * removed. Use [from] to create an instance.
- *
  */
 class QueueSongViewHolder private constructor(private val binding: ItemEditableSongBinding) :
     PlayingIndicatorAdapter.ViewHolder(binding.root), MaterialDragCallback.ViewHolder {

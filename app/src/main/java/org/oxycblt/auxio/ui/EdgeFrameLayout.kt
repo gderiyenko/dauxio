@@ -26,10 +26,7 @@ import androidx.annotation.AttrRes
 import androidx.core.view.updatePadding
 import org.oxycblt.auxio.util.systemBarInsetsCompat
 
-/**
- * A [FrameLayout] that automatically applies bottom insets.
- *
- */
+/** A [FrameLayout] that automatically applies bottom insets. */
 class EdgeFrameLayout
 @JvmOverloads
 constructor(context: Context, attrs: AttributeSet? = null, @AttrRes defStyleAttr: Int = 0) :

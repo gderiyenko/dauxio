@@ -43,7 +43,6 @@ import timber.log.Timber as L
 /**
  * A component that manages the "Now Playing" state. This is kept separate from the [WidgetProvider]
  * itself to prevent possible memory leaks and enable extension to more widgets in the future.
- *
  */
 class WidgetComponent
 private constructor(

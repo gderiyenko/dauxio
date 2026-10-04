@@ -43,7 +43,6 @@ import timber.log.Timber as L
  * A highly customized [ItemTouchHelper.Callback] that enables some extra eye candy in editable UIs,
  * such as an animation when lifting items. Note that this requires a [ViewHolder] implementation in
  * order to function.
- *
  */
 abstract class MaterialDragCallback : ItemTouchHelper.Callback() {
     data class AnimBundle(

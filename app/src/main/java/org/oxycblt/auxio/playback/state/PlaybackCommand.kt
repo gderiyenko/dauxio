@@ -30,10 +30,7 @@ import org.oxycblt.musikr.MusicParent
 import org.oxycblt.musikr.Playlist
 import org.oxycblt.musikr.Song
 
-/**
- * A playback command that can be passed to [PlaybackStateManager] to start new playback.
- *
- */
+/** A playback command that can be passed to [PlaybackStateManager] to start new playback. */
 interface PlaybackCommand {
     /** A particular [Song] to play, or null to play the first [Song] in the new queue. * */
     val song: Song?

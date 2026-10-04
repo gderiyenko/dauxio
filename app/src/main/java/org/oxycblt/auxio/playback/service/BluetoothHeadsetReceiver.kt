@@ -23,9 +23,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 
-/**
- * A [BroadcastReceiver] that starts music playback when a bluetooth headset is connected.
- */
+/** A [BroadcastReceiver] that starts music playback when a bluetooth headset is connected. */
 class BluetoothHeadsetReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.action == android.bluetooth.BluetoothA2dp.ACTION_CONNECTION_STATE_CHANGED) {

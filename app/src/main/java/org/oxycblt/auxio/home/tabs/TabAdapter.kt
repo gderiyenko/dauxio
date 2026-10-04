@@ -90,10 +90,7 @@ class TabAdapter(private val listener: EditClickListListener<Tab>) :
     }
 }
 
-/**
- * A [RecyclerView.ViewHolder] that displays a [Tab]. Use [from] to create an instance.
- *
- */
+/** A [RecyclerView.ViewHolder] that displays a [Tab]. Use [from] to create an instance. */
 class TabViewHolder private constructor(private val binding: ItemTabBinding) :
     RecyclerView.ViewHolder(binding.root) {
     /**

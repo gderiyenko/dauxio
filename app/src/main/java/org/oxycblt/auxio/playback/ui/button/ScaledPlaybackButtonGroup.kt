@@ -34,7 +34,6 @@ import kotlin.math.min
  * classes. So either you clip on smaller phones or jump to an unusable button row sizing.
  *
  * Fix this by just force-scaling down buttons.
- *
  */
 class ScaledPlaybackButtonGroup
 @JvmOverloads

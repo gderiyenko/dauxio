@@ -28,7 +28,6 @@ import org.oxycblt.musikr.Song
 /**
  * The designated "source of truth" for the current playback state. Should only be used by
  * [PlaybackStateManager], which mirrors a more refined version of the state held here.
- *
  */
 interface PlaybackStateHolder {
     /** The current [Progression] state of the audio player. */
@@ -160,7 +159,6 @@ interface PlaybackStateHolder {
  * An acknowledgement that the state of the [PlaybackStateHolder] has changed. This is sent back to
  * [PlaybackStateManager] once an operation in [PlaybackStateHolder] has completed so that the new
  * state can be mirrored to the rest of the application.
- *
  */
 sealed interface StateAck {
     /**

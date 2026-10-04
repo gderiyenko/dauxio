@@ -26,10 +26,7 @@ import org.oxycblt.auxio.R
 import org.oxycblt.auxio.music.MusicType
 import org.oxycblt.auxio.settings.Settings
 
-/**
- * User configuration specific to the search UI.
- *
- */
+/** User configuration specific to the search UI. */
 interface SearchSettings : Settings<Nothing> {
     /** The type of Music the search view should filter to. */
     var filters: Set<MusicType>

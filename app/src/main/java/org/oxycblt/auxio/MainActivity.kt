@@ -39,7 +39,6 @@ import timber.log.Timber as L
 /**
  * Auxio's single [AppCompatActivity].
  *
- *
  * TODO: Add error screens
  * TODO: Custom language support
  * TODO: Use proper material attributes (Not the weird dimen attributes I currently have)

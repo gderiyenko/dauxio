@@ -28,7 +28,6 @@ import org.oxycblt.musikr.util.positiveOrNull
  * This class only encodes the timestamp spec and it's conversion to a human-readable date, without
  * any other time management or validation. In general, this should only be used for display. Use
  * [from] to create an instance.
- *
  */
 class Date private constructor(private val tokens: List<Int>) : Comparable<Date> {
     val year = tokens[0]
@@ -81,7 +80,6 @@ class Date private constructor(private val tokens: List<Int>) : Comparable<Date>
      * A range of [Date]s. This is used in contexts where the [Date] of an item is derived from
      * several sub-items and thus can have a "range" of release dates. Use [from] to create an
      * instance.
-     *
      */
     class Range(
         /** The earliest [Date] in the range. */

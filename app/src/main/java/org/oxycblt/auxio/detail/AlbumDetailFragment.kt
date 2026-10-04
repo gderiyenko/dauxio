@@ -47,10 +47,7 @@ import org.oxycblt.musikr.MusicParent
 import org.oxycblt.musikr.Song
 import timber.log.Timber as L
 
-/**
- * A [ListFragment] that shows information about an [Album].
- *
- */
+/** A [ListFragment] that shows information about an [Album]. */
 @AndroidEntryPoint
 class AlbumDetailFragment : DetailFragment<Album, Song>() {
     // Information about what album to display is initially within the navigation arguments

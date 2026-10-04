@@ -37,7 +37,6 @@ import timber.log.Timber as L
  * A [ViewBindingMaterialDialogFragment] that allows the user to configure the separator characters
  * used to split tags with multiple values.
  *
- *
  * TODO: Replace with unsplit names dialog
  */
 @AndroidEntryPoint

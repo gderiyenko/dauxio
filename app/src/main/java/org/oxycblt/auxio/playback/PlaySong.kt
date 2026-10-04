@@ -32,7 +32,6 @@ import org.oxycblt.musikr.Playlist
  * transferred between views at points (such as menus). [PlaySong] provides both of these, being a
  * enum-like datatype when configuration is needed, and an algebraic datatype when data transfer is
  * needed.
- *
  */
 sealed interface PlaySong {
     /**

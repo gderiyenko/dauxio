@@ -35,10 +35,7 @@ import org.oxycblt.auxio.util.collectImmediately
 import org.oxycblt.musikr.Song
 import timber.log.Timber as L
 
-/**
- * A [ViewBindingMaterialDialogFragment] that shows information about a Song.
- *
- */
+/** A [ViewBindingMaterialDialogFragment] that shows information about a Song. */
 @AndroidEntryPoint
 class SongDetailDialog : ViewBindingMaterialDialogFragment<DialogSongDetailBinding>() {
     private val detailModel: DetailViewModel by activityViewModels()

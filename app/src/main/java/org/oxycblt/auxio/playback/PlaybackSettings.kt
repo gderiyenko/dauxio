@@ -29,10 +29,7 @@ import org.oxycblt.auxio.playback.replaygain.ReplayGainPreAmp
 import org.oxycblt.auxio.settings.Settings
 import timber.log.Timber as L
 
-/**
- * User configuration specific to the playback system.
- *
- */
+/** User configuration specific to the playback system. */
 interface PlaybackSettings : Settings<PlaybackSettings.Listener> {
     /** The action to display on the playback bar. */
     val barAction: ActionMode

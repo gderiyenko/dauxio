@@ -43,10 +43,7 @@ import org.oxycblt.auxio.util.collect
 import org.oxycblt.auxio.util.showToast
 import org.oxycblt.musikr.Song
 
-/**
- * A subset of ListFragment that implements aspects of the selection UI.
- *
- */
+/** A subset of ListFragment that implements aspects of the selection UI. */
 abstract class SelectionFragment<VB : ViewBinding> :
     ViewBindingFragment<VB>(), Toolbar.OnMenuItemClickListener {
     protected abstract val listModel: ListViewModel

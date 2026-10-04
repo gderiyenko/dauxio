@@ -36,10 +36,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.sqlite.db.SupportSQLiteQueryBuilder
 import org.oxycblt.musikr.Music
 
-/**
- * Allows persistence of all user-created music information.
- *
- */
+/** Allows persistence of all user-created music information. */
 @Database(
     entities = [PlaylistInfo::class, PlaylistSong::class, PlaylistSongCrossRef::class],
     version = 75,
@@ -126,10 +123,7 @@ internal abstract class PlaylistDatabase : RoomDatabase() {
 // TODO: Handle playlist defragmentation? I really don't want dead songs to accumulate in this
 //  database.
 
-/**
- * The DAO for persisted playlist information.
- *
- */
+/** The DAO for persisted playlist information. */
 @Dao
 internal abstract class PlaylistDao {
     /**

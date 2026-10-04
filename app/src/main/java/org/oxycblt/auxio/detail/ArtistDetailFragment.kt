@@ -47,10 +47,7 @@ import org.oxycblt.musikr.Song
 import org.oxycblt.musikr.tag.Name
 import timber.log.Timber as L
 
-/**
- * A [ListFragment] that shows information about an [Artist].
- *
- */
+/** A [ListFragment] that shows information about an [Artist]. */
 @AndroidEntryPoint
 class ArtistDetailFragment : DetailFragment<Artist, Music>() {
     // Information about what artist to display is initially within the navigation arguments

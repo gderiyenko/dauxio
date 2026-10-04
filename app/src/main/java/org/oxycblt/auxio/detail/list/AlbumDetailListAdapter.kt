@@ -102,10 +102,7 @@ class AlbumDetailListAdapter(private val listener: Listener<Song>) :
     }
 }
 
-/**
- * A wrapper around [Disc] signifying that a header should be shown for a disc group.
- *
- */
+/** A wrapper around [Disc] signifying that a header should be shown for a disc group. */
 data class DiscHeader(val inner: Disc?) : Header
 
 data class DiscDivider(override val anchor: DiscHeader?) : Divider<DiscHeader>
@@ -113,7 +110,6 @@ data class DiscDivider(override val anchor: DiscHeader?) : Divider<DiscHeader>
 /**
  * A [RecyclerView.ViewHolder] that displays a [DiscHeader] to delimit different disc groups. Use
  * [from] to create an instance.
- *
  */
 private class DiscHeaderViewHolder(private val binding: ItemDiscHeaderBinding) :
     RecyclerView.ViewHolder(binding.root) {
@@ -156,10 +152,7 @@ private class DiscHeaderViewHolder(private val binding: ItemDiscHeaderBinding) :
     }
 }
 
-/**
- * A [RecyclerView.ViewHolder] that displays a [DiscHeader]. Use [from] to create an instance.
- *
- */
+/** A [RecyclerView.ViewHolder] that displays a [DiscHeader]. Use [from] to create an instance. */
 class DiscDividerViewHolder private constructor(divider: MaterialDivider) :
     RecyclerView.ViewHolder(divider) {
 
@@ -203,7 +196,6 @@ class DiscDividerViewHolder private constructor(divider: MaterialDivider) :
 /**
  * A [RecyclerView.ViewHolder] that displays a [Song] in the context of an [Album]. Use [from] to
  * create an instance.
- *
  */
 private class AlbumSongViewHolder private constructor(private val binding: ItemAlbumSongBinding) :
     SelectionIndicatorAdapter.ViewHolder(binding.root) {

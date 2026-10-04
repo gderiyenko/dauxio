@@ -28,7 +28,6 @@ import kotlin.math.min
 /**
  * A [Transformation] that performs a center crop-style transformation on an image. Allowing this
  * behavior to be intrinsic without any view configuration.
- *
  */
 class SquareCropTransformation : Transformation() {
     override val cacheKey: String

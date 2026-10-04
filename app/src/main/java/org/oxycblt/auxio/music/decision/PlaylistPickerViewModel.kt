@@ -35,10 +35,7 @@ import org.oxycblt.musikr.Song
 import org.oxycblt.musikr.playlist.ExportConfig
 import timber.log.Timber as L
 
-/**
- * A [ViewModel] managing the state of the playlist picker dialogs.
- *
- */
+/** A [ViewModel] managing the state of the playlist picker dialogs. */
 @HiltViewModel
 class PlaylistPickerViewModel @Inject constructor(private val musicRepository: MusicRepository) :
     ViewModel(), MusicRepository.UpdateListener {
@@ -321,10 +318,7 @@ data class PendingRenamePlaylist(
     val reason: PlaylistDecision.Rename.Reason,
 )
 
-/**
- * Represents the (processed) user input from the playlist naming dialogs.
- *
- */
+/** Represents the (processed) user input from the playlist naming dialogs. */
 sealed interface ChosenName {
     /** The current name is valid. */
     data class Valid(val value: String) : ChosenName

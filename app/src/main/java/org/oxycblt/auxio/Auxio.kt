@@ -32,10 +32,7 @@ import org.oxycblt.auxio.ui.UISettings
 import org.oxycblt.auxio.util.CopyleftNoticeTree
 import timber.log.Timber
 
-/**
- * A simple, rational music player for android.
- *
- */
+/** A simple, rational music player for android. */
 @HiltAndroidApp
 class Auxio : Application() {
     @Inject lateinit var imageSettings: ImageSettings

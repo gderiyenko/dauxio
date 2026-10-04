@@ -22,10 +22,7 @@ import androidx.recyclerview.widget.RecyclerView
 import org.oxycblt.auxio.detail.DetailViewModel
 import org.oxycblt.auxio.list.recycler.MaterialDragCallback
 
-/**
- * A [MaterialDragCallback] extension for playlist-specific item editing.
- *
- */
+/** A [MaterialDragCallback] extension for playlist-specific item editing. */
 class PlaylistDragCallback(private val detailModel: DetailViewModel) : MaterialDragCallback() {
     override fun onMove(
         recyclerView: RecyclerView,

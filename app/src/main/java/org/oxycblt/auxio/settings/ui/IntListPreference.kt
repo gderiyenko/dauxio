@@ -38,7 +38,6 @@ import org.oxycblt.auxio.util.lazyReflectedField
  *
  * The dialog this preference corresponds to is not handled automatically, so a preference screen
  * must override onDisplayPreferenceDialog in order to handle it.
- *
  */
 class IntListPreference
 @JvmOverloads

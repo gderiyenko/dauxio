@@ -37,10 +37,7 @@ import org.oxycblt.musikr.fs.Format
 import org.oxycblt.musikr.fs.Path
 import org.oxycblt.musikr.tag.Date
 
-/**
- * An adapter for [SongProperty] instances.
- *
- */
+/** An adapter for [SongProperty] instances. */
 class SongPropertyAdapter :
     FlexibleListAdapter<SongProperty, SongPropertyViewHolder>(
         SongPropertyViewHolder.DIFF_CALLBACK
@@ -85,10 +82,7 @@ data class SongProperty(@StringRes val name: Int, val value: Value) {
     }
 }
 
-/**
- * A [RecyclerView.ViewHolder] that displays a [SongProperty]. Use [from] to create an instance.
- *
- */
+/** A [RecyclerView.ViewHolder] that displays a [SongProperty]. Use [from] to create an instance. */
 class SongPropertyViewHolder private constructor(private val binding: ItemSongPropertyBinding) :
     RecyclerView.ViewHolder(binding.root) {
     fun bind(property: SongProperty) {

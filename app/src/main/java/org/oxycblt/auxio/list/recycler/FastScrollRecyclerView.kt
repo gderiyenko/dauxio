@@ -95,7 +95,6 @@ import org.oxycblt.auxio.util.systemBarInsetsCompat
  * - New scroll position backend
  * - M3 (Expressive) Redesign
  * - Dynamic popups
- *
  */
 @SuppressLint("PrivateResource")
 class FastScrollRecyclerView

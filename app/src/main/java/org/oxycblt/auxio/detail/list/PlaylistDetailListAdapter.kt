@@ -150,10 +150,7 @@ class PlaylistDetailListAdapter(private val listener: Listener) :
  */
 data class EditHeader(@StringRes override val titleRes: Int) : PlainHeader
 
-/**
- * Displays an [EditHeader] and it's actions. Use [from] to create an instance.
- *
- */
+/** Displays an [EditHeader] and it's actions. Use [from] to create an instance. */
 private class EditHeaderViewHolder private constructor(private val binding: ItemEditHeaderBinding) :
     RecyclerView.ViewHolder(binding.root), PlaylistDetailListAdapter.ViewHolder {
     /**
@@ -218,7 +215,6 @@ private class EditHeaderViewHolder private constructor(private val binding: Item
 /**
  * A [PlayingIndicatorAdapter.ViewHolder] that displays a queue [Song] which can be re-ordered and
  * removed. Use [from] to create an instance.
- *
  */
 private class PlaylistSongViewHolder
 private constructor(private val binding: ItemEditableSongBinding) :

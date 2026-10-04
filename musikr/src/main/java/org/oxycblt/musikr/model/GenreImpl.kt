@@ -32,10 +32,7 @@ internal interface GenreCore {
     val artists: Set<Artist>
 }
 
-/**
- * Library-backed implementation of [Genre].
- *
- */
+/** Library-backed implementation of [Genre]. */
 internal class GenreImpl(private val core: GenreCore) : Genre {
     override val uid = Music.UID.auxio(Music.UID.Item.GENRE) { update(core.preGenre.rawName) }
     override val name = core.preGenre.name

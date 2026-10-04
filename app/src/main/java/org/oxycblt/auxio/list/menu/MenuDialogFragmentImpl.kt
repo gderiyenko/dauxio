@@ -40,10 +40,7 @@ import org.oxycblt.musikr.Genre
 import org.oxycblt.musikr.Playlist
 import org.oxycblt.musikr.Song
 
-/**
- * [MenuDialogFragment] implementation for a [Song].
- *
- */
+/** [MenuDialogFragment] implementation for a [Song]. */
 @AndroidEntryPoint
 class SongMenuDialogFragment : MenuDialogFragment<Menu.ForSong>() {
     override val menuModel: MenuViewModel by activityViewModels()
@@ -89,10 +86,7 @@ class SongMenuDialogFragment : MenuDialogFragment<Menu.ForSong>() {
     }
 }
 
-/**
- * [MenuDialogFragment] implementation for a [AlbumMenuDialogFragment].
- *
- */
+/** [MenuDialogFragment] implementation for a [AlbumMenuDialogFragment]. */
 @AndroidEntryPoint
 class AlbumMenuDialogFragment : MenuDialogFragment<Menu.ForAlbum>() {
     override val menuModel: MenuViewModel by viewModels()
@@ -137,10 +131,7 @@ class AlbumMenuDialogFragment : MenuDialogFragment<Menu.ForAlbum>() {
     }
 }
 
-/**
- * [MenuDialogFragment] implementation for a [Artist].
- *
- */
+/** [MenuDialogFragment] implementation for a [Artist]. */
 @AndroidEntryPoint
 class ArtistMenuDialogFragment : MenuDialogFragment<Menu.ForArtist>() {
     override val menuModel: MenuViewModel by viewModels()
@@ -210,10 +201,7 @@ class ArtistMenuDialogFragment : MenuDialogFragment<Menu.ForArtist>() {
     }
 }
 
-/**
- * [MenuDialogFragment] implementation for a [Genre].
- *
- */
+/** [MenuDialogFragment] implementation for a [Genre]. */
 @AndroidEntryPoint
 class GenreMenuDialogFragment : MenuDialogFragment<Menu.ForGenre>() {
     override val menuModel: MenuViewModel by viewModels()
@@ -261,10 +249,7 @@ class GenreMenuDialogFragment : MenuDialogFragment<Menu.ForGenre>() {
     }
 }
 
-/**
- * [MenuDialogFragment] implementation for a [Playlist].
- *
- */
+/** [MenuDialogFragment] implementation for a [Playlist]. */
 @AndroidEntryPoint
 class PlaylistMenuDialogFragment : MenuDialogFragment<Menu.ForPlaylist>() {
     override val menuModel: MenuViewModel by viewModels()
@@ -330,10 +315,7 @@ class PlaylistMenuDialogFragment : MenuDialogFragment<Menu.ForPlaylist>() {
     }
 }
 
-/**
- * [MenuDialogFragment] implementation for a [Song] selection.
- *
- */
+/** [MenuDialogFragment] implementation for a [Song] selection. */
 @AndroidEntryPoint
 class SelectionMenuDialogFragment : MenuDialogFragment<Menu.ForSelection>() {
     override val menuModel: MenuViewModel by activityViewModels()

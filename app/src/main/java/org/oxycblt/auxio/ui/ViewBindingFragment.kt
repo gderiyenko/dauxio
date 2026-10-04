@@ -27,10 +27,7 @@ import androidx.viewbinding.ViewBinding
 import org.oxycblt.auxio.util.unlikelyToBeNull
 import timber.log.Timber as L
 
-/**
- * A fragment enabling ViewBinding inflation and usage across the fragment lifecycle.
- *
- */
+/** A fragment enabling ViewBinding inflation and usage across the fragment lifecycle. */
 abstract class ViewBindingFragment<VB : ViewBinding> : Fragment() {
     private var _binding: VB? = null
 

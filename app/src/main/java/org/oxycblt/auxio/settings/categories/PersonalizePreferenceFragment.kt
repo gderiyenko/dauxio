@@ -25,10 +25,7 @@ import org.oxycblt.auxio.settings.ui.WrappedDialogPreference
 import org.oxycblt.auxio.util.navigateSafe
 import timber.log.Timber as L
 
-/**
- * Personalization settings interface.
- *
- */
+/** Personalization settings interface. */
 class PersonalizePreferenceFragment : BasePreferenceFragment(R.xml.preferences_personalize) {
     override fun onOpenDialogPreference(preference: WrappedDialogPreference) {
         if (preference.key == getString(R.string.set_key_home_tabs)) {

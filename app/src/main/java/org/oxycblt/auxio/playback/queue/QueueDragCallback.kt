@@ -25,7 +25,6 @@ import org.oxycblt.auxio.list.recycler.MaterialDragCallback
 /**
  * A highly customized [ItemTouchHelper.Callback] that enables some extra eye candy in the queue UI,
  * such as an animation when lifting items.
- *
  */
 class QueueDragCallback(private val queueModel: QueueViewModel) : MaterialDragCallback() {
     override fun onMove(

@@ -29,10 +29,7 @@ import org.oxycblt.auxio.settings.Settings
 import org.oxycblt.auxio.ui.accent.Accent
 import timber.log.Timber as L
 
-/**
- * User configuration for the general app UI.
- *
- */
+/** User configuration for the general app UI. */
 interface UISettings : Settings<UISettings.Listener> {
     /** The current theme. Represented by the AppCompatDelegate constants. */
     val theme: Int

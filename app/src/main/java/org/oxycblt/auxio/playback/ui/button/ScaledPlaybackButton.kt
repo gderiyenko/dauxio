@@ -35,10 +35,7 @@ import java.lang.reflect.Method
 import kotlin.math.max
 import org.oxycblt.auxio.util.lazyReflectedMethod
 
-/**
- * Companion scalable button to [ScaledPlaybackButtonGroup], see that.
- *
- */
+/** Companion scalable button to [ScaledPlaybackButtonGroup], see that. */
 @SuppressLint("RestrictedApi")
 class ScaledPlaybackButton
 @JvmOverloads

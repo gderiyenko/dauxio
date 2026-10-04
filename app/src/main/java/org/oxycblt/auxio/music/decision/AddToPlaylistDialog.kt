@@ -39,10 +39,7 @@ import org.oxycblt.auxio.util.navigateSafe
 import org.oxycblt.musikr.Song
 import timber.log.Timber as L
 
-/**
- * A dialog that allows the user to pick a specific playlist to add song(s) to.
- *
- */
+/** A dialog that allows the user to pick a specific playlist to add song(s) to. */
 @AndroidEntryPoint
 class AddToPlaylistDialog :
     ViewBindingMaterialDialogFragment<DialogMusicChoicesBinding>(),

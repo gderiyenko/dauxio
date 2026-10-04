@@ -36,10 +36,7 @@ import org.oxycblt.auxio.util.collectImmediately
 import org.oxycblt.musikr.Song
 import timber.log.Timber as L
 
-/**
- * A [ViewBindingFragment] that displays an editable queue.
- *
- */
+/** A [ViewBindingFragment] that displays an editable queue. */
 @AndroidEntryPoint
 class QueueFragment : ViewBindingFragment<FragmentQueueBinding>(), EditClickListListener<Song> {
     private val queueModel: QueueViewModel by viewModels()

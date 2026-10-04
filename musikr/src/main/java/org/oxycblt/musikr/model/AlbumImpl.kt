@@ -32,10 +32,7 @@ internal interface AlbumCore {
     fun resolveArtists(): List<Artist>
 }
 
-/**
- * Library-backed implementation of [Album].
- *
- */
+/** Library-backed implementation of [Album]. */
 class AlbumImpl internal constructor(private val core: AlbumCore) : Album {
     private val preAlbum = core.preAlbum
 

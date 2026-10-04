@@ -94,7 +94,6 @@ class IndexingNotification(private val context: Context) :
 /**
  * A static [ForegroundServiceNotification] that signals to the user that the app is currently
  * monitoring the music library for changes.
- *
  */
 class ObservingNotification(context: Context) :
     ForegroundServiceNotification(context, indexerChannel) {

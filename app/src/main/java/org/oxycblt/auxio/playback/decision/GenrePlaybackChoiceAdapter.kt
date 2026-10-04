@@ -50,7 +50,6 @@ class GenrePlaybackChoiceAdapter(private val listener: ClickableListListener<Gen
 /**
  * A [RecyclerView.ViewHolder] that displays a smaller variant of a typical [Genre] item, for use
  * [GenrePlaybackChoiceAdapter]. Use [from] to create an instance.
- *
  */
 class GenrePlaybackChoiceViewHolder
 private constructor(private val binding: ItemPickerChoiceBinding) :

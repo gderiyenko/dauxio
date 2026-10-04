@@ -27,7 +27,6 @@ import androidx.annotation.AttrRes
 /**
  * A [FrameLayout] that works around the pre-Android 10 behavior of propagating mutated insets to
  * sibling views. Wrap this around views that to isolate mutated window insets.
- *
  */
 class EatInsetsFrameLayout
 @JvmOverloads

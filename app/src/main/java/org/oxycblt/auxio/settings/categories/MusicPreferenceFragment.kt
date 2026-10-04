@@ -31,10 +31,7 @@ import org.oxycblt.auxio.settings.ui.WrappedDialogPreference
 import org.oxycblt.auxio.util.navigateSafe
 import timber.log.Timber as L
 
-/**
- * "Content" settings.
- *
- */
+/** "Content" settings. */
 @AndroidEntryPoint
 class MusicPreferenceFragment : BasePreferenceFragment(R.xml.preferences_music) {
     private val musicModel: MusicViewModel by viewModels()

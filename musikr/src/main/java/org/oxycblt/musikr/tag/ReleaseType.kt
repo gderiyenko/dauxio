@@ -23,7 +23,6 @@ package org.oxycblt.musikr.tag
  *
  * This class is derived from the MusicBrainz Release Group Type specification. It can be found at:
  * https://musicbrainz.org/doc/Release_Group/Type
- *
  */
 sealed interface ReleaseType {
     /**

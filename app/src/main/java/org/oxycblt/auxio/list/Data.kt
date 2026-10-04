@@ -26,10 +26,7 @@ typealias Item = Any
 
 interface Header
 
-/**
- * A "header" used for delimiting groups of data.
- *
- */
+/** A "header" used for delimiting groups of data. */
 interface PlainHeader : Header {
     /** The string resource used for the header's title. */
     val titleRes: Int

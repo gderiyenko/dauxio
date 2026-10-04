@@ -38,7 +38,6 @@ import timber.log.Timber as L
 /**
  * A lifecycle-aware [DialogFragment] that automatically manages the [ViewBinding] lifecycle as a
  * [BottomSheetDialogFragment].
- *
  */
 abstract class ViewBindingBottomSheetDialogFragment<VB : ViewBinding> :
     BackportBottomSheetDialogFragment() {

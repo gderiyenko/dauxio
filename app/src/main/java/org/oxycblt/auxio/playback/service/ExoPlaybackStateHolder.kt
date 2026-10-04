@@ -19,7 +19,6 @@
 package org.oxycblt.auxio.playback.service
 
 import android.content.Context
-import android.content.Intent
 import android.provider.OpenableColumns
 import androidx.annotation.OptIn
 import androidx.media3.common.AudioAttributes
@@ -647,7 +646,7 @@ class ExoPlaybackStateHolder(
                         DefaultAudioSink.Builder(context)
                             .setAudioProcessors(arrayOf(replayGainProcessor))
                             .build(),
-                    ),
+                    )
                 )
             }
 

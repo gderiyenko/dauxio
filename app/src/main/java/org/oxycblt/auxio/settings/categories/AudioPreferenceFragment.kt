@@ -25,10 +25,7 @@ import org.oxycblt.auxio.settings.ui.WrappedDialogPreference
 import org.oxycblt.auxio.util.navigateSafe
 import timber.log.Timber as L
 
-/**
- * Audio settings interface.
- *
- */
+/** Audio settings interface. */
 class AudioPreferenceFragment : BasePreferenceFragment(R.xml.preferences_audio) {
 
     override fun onOpenDialogPreference(preference: WrappedDialogPreference) {

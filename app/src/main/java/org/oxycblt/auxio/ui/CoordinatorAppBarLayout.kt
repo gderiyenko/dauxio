@@ -41,7 +41,6 @@ import timber.log.Timber as L
  * view to use. Failure to specify this will result in the layout not working.
  *
  * Derived from Material Files: https://github.com/zhanghai/MaterialFiles
- *
  */
 open class CoordinatorAppBarLayout
 @JvmOverloads

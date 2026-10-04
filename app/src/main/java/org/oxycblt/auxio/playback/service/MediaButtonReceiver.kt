@@ -33,7 +33,6 @@ import timber.log.Timber as L
 /**
  * A [BroadcastReceiver] that forwards [Intent.ACTION_MEDIA_BUTTON] [Intent]s to
  * [PlaybackServiceFragment].
- *
  */
 @AndroidEntryPoint
 class MediaButtonReceiver : BroadcastReceiver() {

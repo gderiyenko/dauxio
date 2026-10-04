@@ -21,7 +21,6 @@ package org.oxycblt.auxio
 /**
  * A table containing all of the magic integer codes that the codebase has currently reserved. May
  * be non-contiguous.
- *
  */
 object IntegerTable {
     /** SongViewHolder */

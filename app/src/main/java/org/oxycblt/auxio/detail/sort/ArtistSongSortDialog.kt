@@ -30,10 +30,7 @@ import org.oxycblt.auxio.util.collectImmediately
 import org.oxycblt.musikr.Artist
 import timber.log.Timber as L
 
-/**
- * A [SortDialog] that controls the [Sort] of [DetailViewModel.artistSongSort].
- *
- */
+/** A [SortDialog] that controls the [Sort] of [DetailViewModel.artistSongSort]. */
 @AndroidEntryPoint
 class ArtistSongSortDialog : SortDialog() {
     private val detailModel: DetailViewModel by activityViewModels()

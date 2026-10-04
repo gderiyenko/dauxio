@@ -81,7 +81,6 @@ import org.oxycblt.musikr.covers.CoverCollection
  * all of this functionality is enabled. The playback indicator and selection badge selectively
  * disabled with the "playbackIndicatorEnabled" and "selectionBadgeEnabled" attributes, and image
  * itself can be overridden if populated like a normal [FrameLayout].
- *
  */
 @AndroidEntryPoint
 open class CoverView

@@ -41,10 +41,7 @@ import org.oxycblt.musikr.Library
 import org.oxycblt.musikr.Song
 import timber.log.Timber as L
 
-/**
- * An [ViewModel] that keeps performs search operations and tracks their results.
- *
- */
+/** An [ViewModel] that keeps performs search operations and tracks their results. */
 @HiltViewModel
 class SearchViewModel
 @Inject

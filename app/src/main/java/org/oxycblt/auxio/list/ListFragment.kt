@@ -22,10 +22,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import org.oxycblt.musikr.Music
 
-/**
- * A Fragment containing a selectable list.
- *
- */
+/** A Fragment containing a selectable list. */
 abstract class ListFragment<in T : Music, VB : ViewBinding> :
     SelectionFragment<VB>(), SelectableListListener<T> {
     /**

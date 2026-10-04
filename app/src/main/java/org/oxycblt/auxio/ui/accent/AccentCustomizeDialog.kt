@@ -33,10 +33,7 @@ import org.oxycblt.auxio.ui.ViewBindingMaterialDialogFragment
 import org.oxycblt.auxio.util.unlikelyToBeNull
 import timber.log.Timber as L
 
-/**
- * A [ViewBindingMaterialDialogFragment] that allows the user to configure the current [Accent].
- *
- */
+/** A [ViewBindingMaterialDialogFragment] that allows the user to configure the current [Accent]. */
 @AndroidEntryPoint
 class AccentCustomizeDialog :
     ViewBindingMaterialDialogFragment<DialogAccentBinding>(), ClickableListListener<Accent> {

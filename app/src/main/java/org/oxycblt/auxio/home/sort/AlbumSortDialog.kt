@@ -24,10 +24,7 @@ import org.oxycblt.auxio.home.HomeViewModel
 import org.oxycblt.auxio.list.sort.Sort
 import org.oxycblt.auxio.list.sort.SortDialog
 
-/**
- * A [SortDialog] that controls the [Sort] of [HomeViewModel.albumList].
- *
- */
+/** A [SortDialog] that controls the [Sort] of [HomeViewModel.albumList]. */
 @AndroidEntryPoint
 class AlbumSortDialog : SortDialog() {
     private val homeModel: HomeViewModel by activityViewModels()

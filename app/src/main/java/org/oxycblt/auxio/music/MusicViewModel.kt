@@ -42,10 +42,7 @@ import org.oxycblt.musikr.playlist.ExportConfig
 import org.oxycblt.musikr.playlist.ExternalPlaylistManager
 import timber.log.Timber as L
 
-/**
- * A [ViewModel] providing data specific to the music loading process.
- *
- */
+/** A [ViewModel] providing data specific to the music loading process. */
 @HiltViewModel
 class MusicViewModel
 @Inject
@@ -388,7 +385,6 @@ constructor(
 
 /**
  * Navigation command for when a [Playlist] must have some operation performed on it by the user.
- *
  */
 sealed interface PlaylistDecision {
     /**

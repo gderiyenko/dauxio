@@ -51,7 +51,6 @@ import timber.log.Timber as L
 /**
  * An [ViewModel] that provides a safe UI frontend for the current playback state.
  *
- *
  * TODO: Debug subtle backwards movement of position on pause
  */
 @HiltViewModel
@@ -666,10 +665,7 @@ data class PagerQueue(val queue: List<Song>, val index: Int)
 
 data class PagerCommand(val update: UpdateInstructions?, val scroll: Int?)
 
-/**
- * Command for controlling the main playback panel UI.
- *
- */
+/** Command for controlling the main playback panel UI. */
 enum class OpenPanel {
     /** Open the main view, collapsing all other panels. */
     MAIN,
@@ -682,10 +678,7 @@ enum class OpenPanel {
     QUEUE,
 }
 
-/**
- * Command for opening decision dialogs when playback from a [Song] is ambiguous.
- *
- */
+/** Command for opening decision dialogs when playback from a [Song] is ambiguous. */
 sealed interface PlaybackDecision {
     /** The [Song] currently attempting to be played from. */
     val song: Song

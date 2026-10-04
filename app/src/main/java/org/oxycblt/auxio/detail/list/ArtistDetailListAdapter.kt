@@ -88,7 +88,6 @@ class ArtistDetailListAdapter(private val listener: Listener<Music>) :
 /**
  * A [RecyclerView.ViewHolder] that displays an [Album] in the context of an [Artist]. Use [from] to
  * create an instance.
- *
  */
 private class ArtistAlbumViewHolder private constructor(private val binding: ItemParentBinding) :
     SelectionIndicatorAdapter.ViewHolder(binding.root) {
@@ -141,7 +140,6 @@ private class ArtistAlbumViewHolder private constructor(private val binding: Ite
 /**
  * A [RecyclerView.ViewHolder] that displays a [Song] in the context of an [Artist]. Use [from] to
  * create an instance.
- *
  */
 private class ArtistSongViewHolder private constructor(private val binding: ItemSongBinding) :
     SelectionIndicatorAdapter.ViewHolder(binding.root) {

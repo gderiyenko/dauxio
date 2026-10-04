@@ -30,10 +30,7 @@ import org.oxycblt.auxio.util.isNight
 import org.oxycblt.auxio.util.navigateSafe
 import timber.log.Timber as L
 
-/**
- * Display preferences.
- *
- */
+/** Display preferences. */
 @AndroidEntryPoint
 class UIPreferenceFragment : BasePreferenceFragment(R.xml.preferences_ui) {
     @Inject lateinit var uiSettings: UISettings

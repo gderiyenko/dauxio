@@ -66,7 +66,6 @@ abstract class FlexibleListAdapter<T, VH : RecyclerView.ViewHolder>(
 /**
  * Arbitrary instructions that can be given to a [FlexibleListAdapter] to direct how it updates
  * data.
- *
  */
 sealed interface UpdateInstructions {
     /** Use an asynchronous diff. Useful for unpredictable updates, but looks chaotic and janky. */
@@ -104,10 +103,7 @@ sealed interface UpdateInstructions {
     data class Remove(val at: Int, val size: Int) : UpdateInstructions
 }
 
-/**
- * Vendor of AsyncListDiffer with more flexible update functionality.
- *
- */
+/** Vendor of AsyncListDiffer with more flexible update functionality. */
 private class FlexibleListDiffer<T>(
     adapter: RecyclerView.Adapter<*>,
     diffCallback: DiffUtil.ItemCallback<T>,

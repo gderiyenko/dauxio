@@ -40,10 +40,7 @@ import org.oxycblt.auxio.ui.AuxioToolbar
 import org.oxycblt.auxio.util.systemBarInsetsCompat
 import timber.log.Timber as L
 
-/**
- * Shared [PreferenceFragmentCompat] used across all preference screens.
- *
- */
+/** Shared [PreferenceFragmentCompat] used across all preference screens. */
 abstract class BasePreferenceFragment(@XmlRes private val screen: Int) :
     PreferenceFragmentCompat() {
     /**

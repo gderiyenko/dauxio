@@ -32,10 +32,7 @@ import org.oxycblt.musikr.MusicParent
 import org.oxycblt.musikr.Song
 import timber.log.Timber as L
 
-/**
- * A [ViewModel] that manages the current queue state and allows navigation through the queue.
- *
- */
+/** A [ViewModel] that manages the current queue state and allows navigation through the queue. */
 @HiltViewModel
 class QueueViewModel @Inject constructor(private val playbackManager: PlaybackStateManager) :
     ViewModel(), PlaybackStateManager.Listener {

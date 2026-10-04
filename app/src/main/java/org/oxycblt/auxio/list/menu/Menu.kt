@@ -29,10 +29,7 @@ import org.oxycblt.musikr.Music
 import org.oxycblt.musikr.Playlist
 import org.oxycblt.musikr.Song
 
-/**
- * Command to navigate to a specific menu dialog configuration.
- *
- */
+/** Command to navigate to a specific menu dialog configuration. */
 sealed interface Menu {
     /** The menu resource to inflate in the menu dialog. */
     @get:MenuRes val res: Int

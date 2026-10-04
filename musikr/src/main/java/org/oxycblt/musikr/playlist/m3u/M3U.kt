@@ -36,10 +36,7 @@ import org.oxycblt.musikr.tag.Name
 import org.oxycblt.musikr.util.correctWhitespace
 import org.oxycblt.musikr.util.unlikelyToBeNull
 
-/**
- * Minimal M3U file format implementation.
- *
- */
+/** Minimal M3U file format implementation. */
 abstract class M3U {
     /**
      * Reads an M3U file from the given [stream] and returns a [ImportedPlaylist] containing the

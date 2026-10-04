@@ -24,10 +24,7 @@ import org.oxycblt.auxio.playback.state.PlaybackStateManager
 import org.oxycblt.musikr.MusicParent
 import timber.log.Timber as L
 
-/**
- * Manages the persisted playback state in a structured manner.
- *
- */
+/** Manages the persisted playback state in a structured manner. */
 interface PersistenceRepository {
     /** Read the previously persisted [PlaybackStateManager.SavedState]. */
     suspend fun readState(): PlaybackStateManager.SavedState?

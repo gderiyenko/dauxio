@@ -20,10 +20,7 @@ package org.oxycblt.auxio.playback.replaygain
 
 import org.oxycblt.auxio.IntegerTable
 
-/**
- * The current ReplayGain configuration.
- *
- */
+/** The current ReplayGain configuration. */
 enum class ReplayGainMode {
     /** Do not apply any ReplayGain adjustments. */
     OFF,

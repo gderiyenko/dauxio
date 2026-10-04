@@ -31,7 +31,6 @@ import com.google.android.material.divider.MaterialDividerItemDecoration
 /**
  * A [MaterialDividerItemDecoration] that sets up the divider configuration to correctly separate
  * preference categories.
- *
  */
 class PreferenceHeaderItemDecoration
 @JvmOverloads

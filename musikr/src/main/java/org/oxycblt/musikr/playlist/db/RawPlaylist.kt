@@ -26,10 +26,7 @@ import androidx.room.PrimaryKey
 import androidx.room.Relation
 import org.oxycblt.musikr.Music
 
-/**
- * Raw playlist information persisted to [PlaylistDatabase].
- *
- */
+/** Raw playlist information persisted to [PlaylistDatabase]. */
 internal data class RawPlaylist(
     @Embedded val playlistInfo: PlaylistInfo,
     @Relation(
@@ -40,22 +37,13 @@ internal data class RawPlaylist(
     val songs: List<PlaylistSong>,
 )
 
-/**
- * UID and name information corresponding to a [RawPlaylist] entry.
- *
- */
+/** UID and name information corresponding to a [RawPlaylist] entry. */
 @Entity internal data class PlaylistInfo(@PrimaryKey val playlistUid: Music.UID, val name: String)
 
-/**
- * Song information corresponding to a [RawPlaylist] entry.
- *
- */
+/** Song information corresponding to a [RawPlaylist] entry. */
 @Entity internal data class PlaylistSong(@PrimaryKey val songUid: Music.UID)
 
-/**
- * Links individual songs to a playlist entry.
- *
- */
+/** Links individual songs to a playlist entry. */
 @Entity
 internal data class PlaylistSongCrossRef(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,

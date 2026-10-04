@@ -34,10 +34,7 @@ internal interface SongCore {
     fun resolveGenres(): List<Genre>
 }
 
-/**
- * Library-backed implementation of [Song].
- *
- */
+/** Library-backed implementation of [Song]. */
 internal class SongImpl(private val handle: SongCore) : Song {
     private val preSong = handle.preSong
 

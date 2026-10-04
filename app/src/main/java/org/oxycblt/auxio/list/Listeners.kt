@@ -22,10 +22,7 @@ import android.view.MotionEvent
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
-/**
- * A basic listener for list interactions.
- *
- */
+/** A basic listener for list interactions. */
 interface ClickableListListener<in T> {
     /**
      * Called when an item in the list is clicked.
@@ -48,10 +45,7 @@ interface ClickableListListener<in T> {
     }
 }
 
-/**
- * A listener for lists that can be edited.
- *
- */
+/** A listener for lists that can be edited. */
 interface EditableListListener {
     /**
      * Called when a [RecyclerView.ViewHolder] requests that it should be dragged.
@@ -77,10 +71,7 @@ interface EditableListListener {
     }
 }
 
-/**
- * A listener for lists that can be clicked and edited at the same time.
- *
- */
+/** A listener for lists that can be clicked and edited at the same time. */
 interface EditClickListListener<in T> : ClickableListListener<T>, EditableListListener {
     /**
      * Binds this instance to a list item.
@@ -102,10 +93,7 @@ interface EditClickListListener<in T> : ClickableListListener<T>, EditableListLi
     }
 }
 
-/**
- * An extension of [ClickableListListener] that enables menu and selection functionality.
- *
- */
+/** An extension of [ClickableListListener] that enables menu and selection functionality. */
 interface SelectableListListener<in T> : ClickableListListener<T> {
     /**
      * Called when an item in the list requests that a menu related to it should be opened.

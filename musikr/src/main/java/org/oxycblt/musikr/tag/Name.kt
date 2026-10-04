@@ -24,7 +24,6 @@ import java.text.CollationKey
  * The name of a music item.
  *
  * This class automatically implements advanced sorting heuristics for music naming,
- *
  */
 sealed interface Name : Comparable<Name> {
     /** A name that could be obtained for the music item. */
@@ -53,10 +52,7 @@ sealed interface Name : Comparable<Name> {
             }
     }
 
-    /**
-     * A placeholder name that is used when a [Known] name could not be obtained for the item.
-     *
-     */
+    /** A placeholder name that is used when a [Known] name could not be obtained for the item. */
     data class Unknown(val placeholder: Placeholder) : Name {
         override fun compareTo(other: Name) =
             when (other) {

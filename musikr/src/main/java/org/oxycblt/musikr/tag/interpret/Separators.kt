@@ -24,7 +24,6 @@ import org.oxycblt.musikr.util.splitEscaped
 /**
  * Defines the user-specified parsing of multi-value tags. This should be used to parse any tags
  * that may be delimited with a separator character.
- *
  */
 interface Separators {
     /**

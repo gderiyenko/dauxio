@@ -28,7 +28,6 @@ import androidx.navigation.NavDestination
  *
  * Note: This only works because of special naming used in Auxio's navigation graphs. Keep this in
  * mind when porting to other projects.
- *
  */
 class DialogAwareNavigationListener(private val callback: () -> Unit) :
     NavController.OnDestinationChangedListener {

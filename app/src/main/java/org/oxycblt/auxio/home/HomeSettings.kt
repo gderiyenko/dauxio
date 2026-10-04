@@ -29,10 +29,7 @@ import org.oxycblt.auxio.settings.Settings
 import org.oxycblt.auxio.util.unlikelyToBeNull
 import timber.log.Timber as L
 
-/**
- * User configuration specific to the home UI.
- *
- */
+/** User configuration specific to the home UI. */
 interface HomeSettings : Settings<HomeSettings.Listener> {
     /** The tabs to show in the home UI. */
     var homeTabs: Array<Tab>

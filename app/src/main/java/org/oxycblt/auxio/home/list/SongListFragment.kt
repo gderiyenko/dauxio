@@ -45,10 +45,7 @@ import org.oxycblt.musikr.Music
 import org.oxycblt.musikr.MusicParent
 import org.oxycblt.musikr.Song
 
-/**
- * A [ListFragment] that shows a list of [Song]s.
- *
- */
+/** A [ListFragment] that shows a list of [Song]s. */
 @AndroidEntryPoint
 class SongListFragment :
     ListFragment<Song, FragmentHomeListBinding>(),

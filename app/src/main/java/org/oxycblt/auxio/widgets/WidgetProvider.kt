@@ -42,7 +42,6 @@ import timber.log.Timber as L
 /**
  * The [AppWidgetProvider] for the "Now Playing" widget. This widget shows the current playback
  * state alongside actions to control it.
- *
  */
 class WidgetProvider : AppWidgetProvider() {
     override fun onUpdate(
