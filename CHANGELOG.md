@@ -1,4 +1,28 @@
+# v4.20
+
+## What's New
+- **Track Deletion from Playback Panel**: Instantly delete the currently playing track from the filesystem with a 3-second countdown and Undo prompt.
+- **Find Lyrics**: Added direct lyric search action from the playback panel.
+- **Direct Settings Access**: Replaced the toolbar overflow menu with a direct settings gear icon.
+- **Settings Consolidation**: Unified About page directly into Settings with streamlined project metadata.
+
+## What's Improved
+- **Playback Panel Redesign**: High-contrast white-on-black UI, rounded playback controls, and a bold linear seekbar.
+- **Performance & Smoothness**:
+  - Implemented precise dirty-range tracking in the playback pager, keeping UI updates $O(\Delta)$ instead of $O(N)$.
+  - Consolidated navigation event subscriptions in `MainFragment` to prevent event-drop race conditions.
+  - Replaced Apache Commons Text with an internal, lightweight Jaro-Winkler string similarity algorithm.
+- **Streamlined Home View**: Focused Home screen on tracks and playlists, removing redundant top-level tabs.
+- **Library & Dependency Cleanup**:
+  - Removed FFmpeg decoder module and unsupported legacy formats for a significantly lighter footprint.
+  - Removed external Wavelet equalizer integration in favor of native in-place track management.
+  - Dropped redundant `lifecycle-common-java8` and heavy `commons-text` dependencies.
+  - Consolidated repository structure and cleaned unused media modules.
+
+## FORK HERE: Auxio > Dauxio
+
 ## v4.1.5
+
 
 ## What's Fixed
 - Fixed playlist edits would not persist between app starts.

@@ -1,0 +1,1 @@
+Dauxio v4.20 introduces in-place track deletion with undo, lyrics search, a redesigned playback panel, streamlined settings, and massive performance and dependency optimizations.
