@@ -102,6 +102,11 @@ private class HomeGeneratorImpl(
         invalidator.invalidateMusic(MusicType.SONGS, UpdateInstructions.Replace(0))
     }
 
+    override fun onExcludePlaylistSongsChanged() {
+        super.onExcludePlaylistSongsChanged()
+        invalidator.invalidateMusic(MusicType.SONGS, UpdateInstructions.Diff)
+    }
+
     override fun onAlbumSortChanged() {
         super.onAlbumSortChanged()
         invalidator.invalidateMusic(MusicType.ALBUMS, UpdateInstructions.Replace(0))
@@ -139,6 +144,9 @@ private class HomeGeneratorImpl(
         if (changes.userLibrary && library != null) {
             L.d("Refreshing playlists")
             invalidator.invalidateMusic(MusicType.PLAYLISTS, UpdateInstructions.Diff)
+            if (listSettings.excludePlaylistSongs) {
+                invalidator.invalidateMusic(MusicType.SONGS, UpdateInstructions.Diff)
+            }
         }
     }
 
@@ -150,8 +158,17 @@ private class HomeGeneratorImpl(
 
     override fun empty() = musicRepository.library?.empty() ?: true
 
-    override fun songs() =
-        musicRepository.library?.let { listSettings.songSort.songs(it.songs) } ?: emptyList()
+    override fun songs(): List<Song> {
+        val library = musicRepository.library ?: return emptyList()
+        val baseSongs =
+            if (listSettings.excludePlaylistSongs) {
+                val playlistSongUids = library.playlists.flatMap { it.songs }.map { it.uid }.toSet()
+                library.songs.filter { it.uid !in playlistSongUids }
+            } else {
+                library.songs
+            }
+        return listSettings.songSort.songs(baseSongs)
+    }
 
     override fun albums() =
         musicRepository.library?.let { listSettings.albumSort.albums(it.albums) } ?: emptyList()

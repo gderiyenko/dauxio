@@ -18,8 +18,10 @@
  
 package org.oxycblt.auxio.home.sort
 
+import android.view.View
 import androidx.fragment.app.activityViewModels
 import dagger.hilt.android.AndroidEntryPoint
+import org.oxycblt.auxio.databinding.DialogSortBinding
 import org.oxycblt.auxio.home.HomeViewModel
 import org.oxycblt.auxio.list.sort.Sort
 import org.oxycblt.auxio.list.sort.SortDialog
@@ -33,6 +35,14 @@ class SongSortDialog : SortDialog() {
 
     override fun applyChosenSort(sort: Sort) {
         homeModel.applySongSort(sort)
+    }
+
+    override fun onSetupFilters(binding: DialogSortBinding) {
+        binding.sortFilterUnplaylisted.visibility = View.VISIBLE
+        binding.sortFilterUnplaylisted.isChecked = homeModel.excludePlaylistSongs
+        binding.sortFilterUnplaylisted.setOnCheckedChangeListener { _, isChecked ->
+            homeModel.applyExcludePlaylistSongs(isChecked)
+        }
     }
 
     override fun getModeChoices() =
