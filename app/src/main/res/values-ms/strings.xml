@@ -289,7 +289,6 @@
     <string name="cdc_mp4">Audio MPEG-4</string>
     <string name="cnt_mp4">MPEG-4 mengandungi %s</string>
     <string name="cdc_aac">(AAC) Advanced Audio Coding</string>
-    <string name="cdc_alac">(ALAC) Apple Lossless Audio Codec</string>
     <string name="cdc_ogg">Audio Ogg</string>
     <string name="cdc_flac">(FLAC) Free Lossless Audio Codec</string>
     <string name="cdc_unknown">Tidak diketahui</string>

@@ -300,7 +300,6 @@
     <string name="lng_empty_artists">Artistët e tu do të shfaqen këtu.</string>
     <string name="lng_empty_playlists">Listat tuaja për luajtje do të shfaqen këtu.</string>
     <string name="lng_empty_genres">Zhanret tuaja do të shfaqen këtu.</string>
-    <string name="cdc_alac">Apple Lossless Audio Codec (ALAC)</string>
     <string name="cdc_unknown">E panjohur</string>
     <string name="set_cover_mode_save_space">Kurseni hapësirë</string>
     <string name="cnt_mp4">MPEG-4 që përmban %s</string>

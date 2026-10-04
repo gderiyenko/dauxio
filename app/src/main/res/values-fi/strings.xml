@@ -302,7 +302,6 @@
     <string name="lng_empty_artists">Esittäjäsi tulevat näkymään tässä.</string>
     <string name="lng_empty_playlists">Soittolistasi tulevat näkymään tässä.</string>
     <string name="lng_empty_genres">Tyylilajisi tulevat näkymään tässä.</string>
-    <string name="cdc_alac">Apple Lossless Audio Codec (ALAC)</string>
     <string name="set_cover_mode_save_space">Säätä tilaa</string>
     <string name="set_with_hidden_desc">Sisällytä piilotetut äänitiedostot (esim. .cache)</string>
     <string name="set_with_hidden">Sisällytä piilotetut tiedostot</string>

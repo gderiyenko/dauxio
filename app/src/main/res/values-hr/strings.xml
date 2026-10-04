@@ -297,7 +297,6 @@
     <string name="lbl_more">Više</string>
     <string name="lbl_feedback">Povratne informacije</string>
     <string name="lbl_github">Prijavi problem na GitHubu</string>
-    <string name="cdc_alac">Appleov kodek zvuka bez gubitaka (ALAC)</string>
     <string name="def_album">Nepoznat album</string>
     <string name="cdc_unknown">Nepoznato</string>
     <string name="cnt_mp4">MPEG-4 sadrži %s</string>

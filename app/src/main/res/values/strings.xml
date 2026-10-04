@@ -407,7 +407,6 @@
     <!-- "Advanced Audio Coding" can optionally be translated -->
     <string name="cdc_aac">Advanced Audio Coding (AAC)</string>
     <!-- "Apple Lossless Audio Codec" can optionally be translated -->
-    <string name="cdc_alac">Apple Lossless Audio Codec (ALAC)</string>
     <!-- "Audio" can optionally be translated -->
     <string name="cdc_ogg">Ogg audio</string>
     <!-- "Audio" can optionally be translated -->

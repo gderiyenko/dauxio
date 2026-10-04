@@ -27,7 +27,6 @@ import android.support.v4.media.session.MediaSessionCompat
 import android.support.v4.media.session.PlaybackStateCompat
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
-import org.apache.commons.text.similarity.JaroWinklerSimilarity
 import org.oxycblt.auxio.BuildConfig
 import org.oxycblt.auxio.music.MusicRepository
 import org.oxycblt.auxio.music.resolve
@@ -37,6 +36,7 @@ import org.oxycblt.auxio.playback.state.PlaybackCommand
 import org.oxycblt.auxio.playback.state.PlaybackStateManager
 import org.oxycblt.auxio.playback.state.RepeatMode
 import org.oxycblt.auxio.playback.state.ShuffleMode
+import org.oxycblt.auxio.util.jaroWinklerSimilarity
 import org.oxycblt.musikr.Album
 import org.oxycblt.musikr.Artist
 import org.oxycblt.musikr.Genre
@@ -55,7 +55,6 @@ constructor(
     private val commandFactory: PlaybackCommand.Factory,
     private val musicRepository: MusicRepository,
 ) : MediaSessionCompat.Callback() {
-    private val jaroWinkler = JaroWinklerSimilarity()
 
     //    STUBS: We already automatically prepare playback.
     //    override fun onPrepare() {
@@ -273,7 +272,7 @@ constructor(
     }
 
     private fun fuzzy(name: Name, query: String?): Double =
-        query?.let { jaroWinkler.apply(name.resolve(context), it) } ?: 0.0
+        query?.let { jaroWinklerSimilarity(name.resolve(context), it) } ?: 0.0
 
     private fun expandMusicIntoCommand(music: Music, parent: MusicParent?) =
         when (music) {

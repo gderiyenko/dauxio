@@ -297,7 +297,6 @@
     <string name="lbl_more">Mais</string>
     <string name="lbl_github">Crie uma issue no GitHub</string>
     <string name="cnt_mp4">MPEG-4 contendo %s</string>
-    <string name="cdc_alac">Apple Lossless Audio Codec (ALAC)</string>
     <string name="cdc_unknown">Desconhecido</string>
     <string name="def_album">Álbum desconhecido</string>
     <string name="lbl_feedback">Enviar feedback</string>

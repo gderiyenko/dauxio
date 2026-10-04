@@ -315,7 +315,6 @@
         <item quantity="other">%d ألبوم</item>
     </plurals>
     <string name="cnt_mp4">MPEG-4 تحتوي على %s</string>
-    <string name="cdc_alac">ترميز Apple صوتي دون خسارة (ALAC)</string>
     <string name="set_cover_mode_as_is">كما هي</string>
     <string name="set_with_hidden_desc">ضمّن ملفات الصوت المخفية (مثال: ذاكرة التخزين المؤقت)</string>
     <string name="set_with_hidden">ضمّن الملفات المخفية</string>

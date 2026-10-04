@@ -299,7 +299,6 @@
     <string name="lng_empty_artists">Dina artister kommer visas här.</string>
     <string name="lng_empty_playlists">Dina spellistor kommer visas här.</string>
     <string name="lng_empty_genres">Dina genrer kommer visas här.</string>
-    <string name="cdc_alac">Apples förlustfria ljudkodek (ALAC)</string>
     <string name="lbl_start_playback">Påbörja uppspelning</string>
     <string name="set_cover_mode_save_space">Spara utrymme</string>
     <string name="cnt_mp4">MPEG-4 innehållande %s</string>

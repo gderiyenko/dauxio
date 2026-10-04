@@ -63,3 +63,63 @@ fun lazyReflectedMethod(clazz: KClass<*>, method: String, vararg params: KClass<
         it.isAccessible = true
     }
 }
+
+/**
+ * Computes the Jaro-Winkler string similarity between two char sequences.
+ *
+ * @return A similarity score between 0.0 (no similarity) and 1.0 (exact match).
+ */
+fun jaroWinklerSimilarity(s1: CharSequence, s2: CharSequence): Double {
+    if (s1 == s2) return 1.0
+    if (s1.isEmpty() || s2.isEmpty()) return 0.0
+
+    val maxLen = maxOf(s1.length, s2.length)
+    val matchWindow = maxOf(0, (maxLen / 2) - 1)
+
+    val s1Matches = BooleanArray(s1.length)
+    val s2Matches = BooleanArray(s2.length)
+
+    var matches = 0
+    for (i in s1.indices) {
+        val start = maxOf(0, i - matchWindow)
+        val end = minOf(i + matchWindow + 1, s2.length)
+        for (j in start until end) {
+            if (!s2Matches[j] && s1[i] == s2[j]) {
+                s1Matches[i] = true
+                s2Matches[j] = true
+                matches++
+                break
+            }
+        }
+    }
+
+    if (matches == 0) return 0.0
+
+    var transpositions = 0
+    var k = 0
+    for (i in s1.indices) {
+        if (!s1Matches[i]) continue
+        while (!s2Matches[k]) {
+            k++
+        }
+        if (s1[i] != s2[k]) {
+            transpositions++
+        }
+        k++
+    }
+
+    val jaro = (
+        (matches.toDouble() / s1.length) +
+        (matches.toDouble() / s2.length) +
+        ((matches - transpositions / 2.0) / matches)
+    ) / 3.0
+
+    var prefix = 0
+    val maxPrefix = minOf(4, minOf(s1.length, s2.length))
+    while (prefix < maxPrefix && s1[prefix] == s2[prefix]) {
+        prefix++
+    }
+
+    return jaro + prefix * 0.1 * (1.0 - jaro)
+}
+

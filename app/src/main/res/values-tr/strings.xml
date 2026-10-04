@@ -306,7 +306,6 @@
     <string name="lng_tasker_start">Auxio\'yu önceden kaydedilen durumla başlatır. Eğer kayıtlı bir durum yoksa bütün şarkılar hemen karışık olarak çalmaya başlanacak.\n\nUYARI: Bu servisi kullanırken dikkatli olun. Kapatırsanız ve sonra tekrar kullanmaya çalışırsanız muhtemelen uygulamayı çökertirsiniz.</string>
     <string name="set_cover_mode_save_space">Az alan kullan</string>
     <string name="cnt_mp4">MPEG-4 %s içeriyor</string>
-    <string name="cdc_alac">Apple Kayıpsız Ses Kodeği (ALAC)</string>
     <string name="lbl_feedback">Geri bildirim</string>
     <string name="lbl_github">Github\'da rapor aç</string>
     <string name="err_export_failed">Bu dosyaya bir çalma listesi aktarılamıyor</string>

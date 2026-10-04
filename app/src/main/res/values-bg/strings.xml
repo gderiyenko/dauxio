@@ -300,7 +300,6 @@
     <string name="lng_empty_playlists">Вашите плейлисти ще се показват тук.</string>
     <string name="lng_empty_artists">Вашите изпълнители ще се появят тук.</string>
     <string name="lng_empty_genres">Вашите жанрове ще се показват тук.</string>
-    <string name="cdc_alac">Apple Lossless Audio Codec (ALAC)</string>
     <string name="def_album">Неизвестен албум</string>
     <string name="cdc_unknown">Неизвестен</string>
     <string name="set_with_hidden">Включи скрити файлове</string>

@@ -36,10 +36,6 @@ sealed interface Format {
         override val mimeType = "audio/aac"
     }
 
-    data object ALAC : Format {
-        override val mimeType = "audio/alac"
-    }
-
     data class Ogg(val containing: Format?) : Format {
         override val mimeType = "audio/ogg"
     }
@@ -73,7 +69,6 @@ sealed interface Format {
                 "audio/aacp" to AAC,
                 "audio/3gpp" to AAC,
                 "audio/3gpp2" to AAC,
-                "audio/alac" to ALAC,
                 "audio/opus" to Opus,
                 "audio/vorbis" to Vorbis,
                 "audio/flac" to FLAC,

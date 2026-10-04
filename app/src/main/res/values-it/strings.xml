@@ -306,7 +306,6 @@
     <string name="lbl_more">Espandi</string>
     <string name="set_cover_mode_save_space">Bassa qualità</string>
     <string name="cnt_mp4">MPEG-4 contenente %s</string>
-    <string name="cdc_alac">Apple Lossless Audio Codec (ALAC)</string>
     <string name="cdc_unknown">Sconosciuto</string>
     <string name="set_cover_mode_as_is">Qualità originale</string>
     <string name="set_with_hidden_desc">Include file audio nascosti (per esempio in .cache)</string>

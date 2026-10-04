@@ -289,7 +289,6 @@
     <string name="cdc_mp4">MPEG-4 audio</string>
     <string name="cnt_mp4">MPEG-4 ບັນຈຸ %s</string>
     <string name="cdc_aac">ການເຂົ້າລະຫັດສຽງຂັ້ນສູງ (AAC)</string>
-    <string name="cdc_alac">ລະຫັດສຽງ Apple Lossless (ALAC)</string>
     <string name="cdc_ogg">Ogg audio</string>
     <string name="cdc_flac">ໂຄເດັກສຽງແບບບໍ່ສູນເສຍຄຸນນະພາບ (FLAC)</string>
     <string name="cdc_unknown">ບໍ່ຮູ້ຈັກ</string>

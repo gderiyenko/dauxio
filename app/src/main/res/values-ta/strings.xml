@@ -337,7 +337,6 @@
     <string name="set_saf_multithread_desc">வேகமானது, ஆனால் சில சாதனங்களில் தோல்வியடையும்</string>
     <string name="err_share_too_large">இது பகிர முடியாத அளவுக்கு அதிகமாக உள்ளது</string>
     <string name="err_share_failed">இதைப் பகிர முடியவில்லை</string>
-    <string name="cdc_alac">ஆப்பிள் லாச்லெச் ஆடியோ கோடெக் (ALAC)</string>
     <string name="fmt_lib_total_size">மொத்த அளவு: %s</string>
     <plurals name="fmt_seconds">
         <item quantity="one">%d நொடி</item>

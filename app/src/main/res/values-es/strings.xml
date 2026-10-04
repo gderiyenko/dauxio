@@ -300,7 +300,6 @@
     <string name="def_album">Álbum desconocido</string>
     <string name="cdc_unknown">Desconocido</string>
     <string name="cnt_mp4">El MPEG-4 contiene %s</string>
-    <string name="cdc_alac">Códec de audio sin pérdida de Apple (ALAC)</string>
     <string name="lng_empty_albums">Sus álbumes aparecerán aquí.</string>
     <string name="lng_empty_artists">Sus artistas aparecerán aquí.</string>
     <string name="lng_empty_genres">Los géneros aparecerán aquí.</string>

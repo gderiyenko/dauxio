@@ -161,7 +161,6 @@ fun Format.resolve(context: Context): String =
             containing?.let { context.getString(R.string.cnt_mp4, it.resolve(context)) }
                 ?: context.getString(R.string.cdc_mp4)
         is Format.AAC -> context.getString(R.string.cdc_aac)
-        is Format.ALAC -> context.getString(R.string.cdc_alac)
         is Format.Ogg ->
             containing?.let { context.getString(R.string.cnt_ogg, it.resolve(context)) }
                 ?: context.getString(R.string.cdc_ogg)

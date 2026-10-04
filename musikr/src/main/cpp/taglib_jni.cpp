@@ -222,9 +222,6 @@ bool dispatchAndParse(const std::string &name, TagLib::File *file,
             case Codec::AAC:
                 jBuilder.setMimeType("audio/aac");
                 break;
-            case Codec::ALAC:
-                jBuilder.setMimeType("audio/alac");
-                break;
             default:
                 break;
             }

@@ -54,12 +54,6 @@ object Media3Modules {
           "Media3 decoder module",
           allowKt = false,
         ),
-      "lib-decoder-ffmpeg" to
-        Media3Module(
-          "libraries/decoder_ffmpeg",
-          "media3-decoder-ffmpeg",
-          "Media3 FFmpeg decoder module",
-        ),
       "lib-exoplayer" to
         Media3Module(
           "libraries/exoplayer",

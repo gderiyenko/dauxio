@@ -330,7 +330,6 @@
     <string name="desc_add_folder">Legg til mappe</string>
     <string name="def_album">Ukjent album</string>
     <string name="cnt_mp4">MPEG-4 som inneheld %s</string>
-    <string name="cdc_alac">Apples tapsfrie ljodkodek (ALAC)</string>
     <string name="cdc_unknown">Ukjent</string>
     <plurals name="fmt_seconds">
         <item quantity="one">%d sekund</item>

@@ -117,7 +117,6 @@ dependencies {
     // Lifecycle
     def lifecycle_version = "2.11.0"
     implementation "androidx.lifecycle:lifecycle-common:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
 
@@ -151,7 +150,6 @@ dependencies {
 
     // Exoplayer (Vendored)
     implementation "androidx.media3:media3-exoplayer:1.11.0"
-    implementation "androidx.media3:media3-decoder-ffmpeg:1.11.0"
 
     // Image loading
     implementation 'io.coil-kt.coil3:coil-core:3.6.0'
@@ -175,7 +173,4 @@ dependencies {
 
     // Tasker integration
     implementation 'com.joaomgcd:taskerpluginlibrary:0.4.10'
-
-    // Fuzzy search
-    implementation 'org.apache.commons:commons-text:1.15.0'
 }

@@ -583,7 +583,6 @@ deletion
 
 #### What's New
 - Added support for disc subtitles
-- Added support for ALAC files
 - Song properties view now shows tags
 - Added option to control whether articles like "the" are ignored when sorting
 

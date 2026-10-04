@@ -298,7 +298,6 @@
     <string name="set_remember_pause_desc">キューをスキップまたは編集しても、再生/一時停止を維持する</string>
     <string name="cdc_unknown">不明</string>
     <string name="set_cover_mode_save_space">スペースの節約</string>
-    <string name="cdc_alac">アップルロスレスオーディオコーデック（ALAC）</string>
     <string name="lbl_more">さらに</string>
     <string name="lng_tasker_start">事前に保存した状態でAuxioを起動します。保存状態がない場合は、すべての曲がシャッフルされます。再生はすぐに開始されます\n\n警告: このサービスの操作には注意してください。このサービスを終了してから再度使用しようとすると、アプリがクラッシュする可能性があります</string>
     <string name="lbl_sort_mode">並べ替える</string>
